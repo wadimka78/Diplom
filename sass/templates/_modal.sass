@@ -1,0 +1,116 @@
+.modal
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    z-index: 199
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($dark, 0.6)
+    display: flex
+    justify-content: center
+    align-items: center
+    &--visible
+        opacity: 1
+        visibility: visible
+    &__dialog
+        position: relative
+        max-width: 36.36rem
+        max-height: 36.36rem
+        width: 506px
+        background: $dark url('../img/bg-lines.png') no-repeat center
+        background-position-y: inherit
+        padding: 2.357rem 3.5rem 1.928rem
+        color: $light
+    &__close
+        position: absolute
+        right: 0
+        top: 0
+        width: 28px
+        height: 28px
+        background: transparent url('../img/close.svg') no-repeat center
+        border: none
+        margin: 12px
+        cursor: pointer
+    &__title
+        font-family: 'Yeseva One', cursive
+        font-size: 1.357rem
+        text-align: center
+        margin: 0
+        margin-bottom: 2.428rem
+        padding: 0px 50px
+        line-height: 2.3rem
+        font-weight: 100
+    &__form
+        display: flex
+        flex-direction: column
+        & div:nth-child(4) 
+            & .modal__policy div
+                bottom: 14px
+    &__input
+        &-group
+            position: relative
+            display: flex
+            flex-direction: column
+            margin-bottom: 4.4rem
+            margin-top: -0.3rem
+            &:last-of-type
+                margin-top: -3rem   
+        
+    &__policy
+        margin: -1.1rem auto 2.7rem 1.1rem
+    &__button
+        align-self: flex-end
+        padding: 1.428rem 4.428rem
+        margin-top: -5rem
+        margin-right: 2.142rem
+    & div.invalid 
+        bottom: -18px
+
+    //Окно благодарности
+
+.thanks 
+    visibility: hidden
+    position: fixed
+    z-index: 1999
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 30rem
+    max-height: 25rem
+    display: flex
+    align-items: center
+    justify-content: center
+    &__wrap 
+        position: relative
+        max-width: 80vw
+        width: 500px
+        max-height: 60vh
+        height: 300px
+        background:  url(../img/bg-lines.png)  #a9ab26 no-repeat center
+        color: #441d17
+        text-align: center
+        justify-content: center
+        align-items: center
+        display: flex
+        font-size: 1.7rem
+    &__close 
+        position: absolute
+        right: 0
+        top: 0
+        width: 40px
+        height: 40px
+        background: transparent url(../img/close1.png) center no-repeat
+        background-size: cover
+        border: none
+        margin: .9rem
+        margin-top: .7rem
+        margin-right: 1rem
+        cursor: pointer
+
+.thanks--visible 
+    opacity: 1
+    visibility: visible
