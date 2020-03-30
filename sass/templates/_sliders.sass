@@ -1,0 +1,132 @@
+//Общие стили
+.swiper-container 
+    width: 100%
+    height: 100%
+.swiper-slide 
+    text-align: center
+    font-size: 18px
+    background: #fff
+
+    display: flex
+
+    justify-content: center
+
+    align-items: center
+
+
+// Страница 1 - ГЛАВНЫЙ слайдер (секция Hero)
+.slider-hero
+    &__sale
+        position: absolute
+        top: 14.5%
+        z-index: 10
+        color: white
+        transform: translateX(-55.3%)
+        text-align: left
+        &--psevdo
+            position: relative
+        &--psevdo::before   //Бордер
+            content: ''
+            position: absolute
+            bottom: 0
+            right: 0
+            width: 50px
+            border-bottom: 2px solid $primary
+    &__layer
+        position: absolute
+        right: 3%
+        z-index: 999
+    
+.sale
+    &__border-block
+        position: relative
+        height: 12.1rem
+        width: 38rem
+        border-top: 2px solid $primary
+        &::before    //Бордер
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            height: 20px
+            border-left: 2px solid #ffd11a
+        &::after    //Бордер
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            height: 30px
+            border-left: 2px solid #ffd11a
+        &__text
+            font-size: 24px
+            line-height: 28px
+            text-transform: uppercase
+            font-family: "Roboto Light"
+            font-weight: 300
+            & span
+                font-family: "Roboto Medium"
+                font-size: 24px
+                font-weight: 500 
+        & > div
+            margin-left: -1rem
+    &__everyday
+        padding-top: 3.2rem
+        font-family: Roboto-Light
+        font-size: 48px
+        font-weight: 300
+        line-height: 18px
+        text-transform: uppercase
+    &__club-cards
+        padding-top: 3rem
+        color: $primary
+        font-family: Roboto-Light
+        font-size: 72px
+        line-height: 18px
+        text-transform: uppercase
+        width: 50rem
+    &__pricetag
+        font-size: 48px
+        font-weight: 400
+        line-height: 18px
+        text-transform: uppercase
+
+
+// Страница 1 - секция "Наши услуги"
+
+.service-middle .swiper-container
+    width: 90%
+
+.slider-service 
+    &__next, &__prev
+        width: 50px
+        height: 50px
+        background-color: $primary
+        border-radius: 50%
+        color: #1e1c34
+        &::after
+            font-size: calc(var(--swiper-navigation-size)/ 2) !important
+
+
+// Страница 1 - секция "Фотогалерея"
+
+//Через блоки задаётся "рваный" бордер
+
+//.sale__border-block 
+ //   position:relative
+//.sale__everyday, .sale__club-cards 
+  //  position:absolute
+   // top: 20px
+   // bottom: 20px
+   // width: 50px
+   // border: 2px solid #DA9A2E
+   // z-index: 99
+
+//.sale__everyday 
+   // left: 20px
+  //  border-right-width: 0
+  //  border-radius: 8px 0 0 8px
+
+//.sale__club-cards 
+ //   right: 20px
+  //  border-left-width: 0
+  //  border-radius: 0 8px 8px 0
