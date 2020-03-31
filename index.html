@@ -47,14 +47,19 @@
 
                     <div class="logo top-header__logo wow fadeInRight">
                         <img src="img/logo.png" alt="logo">
-                        <a href="http://wadimka.ru/repair/index.html"> Сеть фитнес клубов</a>
+                        <!--   <a href="/index.html">  -->
                     </div>
 
-                    <div class="top-header__choose">
-                        <button onclick="ym(61332526,'reachGoal','button'); return true;"
-                            class="button main__button button--secondary" data-toggle="modal">
+                    <div class="select top-header__select ">
+
+                        <button onclick="myFunction()" class="button select__button button--secondary">
+                            <img src="img/icons/arrow_down3.png" alt="стрелочка вниз" class="select__image">
                             Выбрать клуб
                         </button>
+                        <div id="myDropdown" class="select__dropdown-content">
+                            <a href="#mosaica">Мозаика</a>
+                            <a href="#shelkovo">Щёлково</a>
+                        </div>
                     </div>
 
                     <div class="top-header__record">
@@ -64,13 +69,14 @@
 
                     <div class="contacts top-header__contacts">
                         <span>Звоните круглосуточно!</span>
-                        <a href="tel:+79993153578" class="phone contacts__phone">+7 (499) 315-35-78</a>
+                        <a href="tel:+79993153578" class="phone top-header__phone">
+                            +7 (499) 315 35 78</a>
                     </div>
 
                     <div class="top-header__call">
                         <button onclick="ym(61332526,'reachGoal','button'); return true;"
                             class="button main__button button--primary" data-toggle="modal">
-                            Заказать звонок
+                            Перезвоните мне
                         </button>
                     </div>
 
@@ -106,9 +112,6 @@
 
         <main>
 
-
-
-
             <div class="section hero">
                 <div class="swiper-container slider-hero">
                     <div class="swiper-wrapper">
@@ -125,7 +128,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sale__pricetag">за 22 000 Р
+                                <div class="sale__pricetag">за 22 000 ₽
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
@@ -240,30 +243,34 @@
             <!-- /.section hero -->
 
 
+            <section class="choose">
+                <div class="container">
 
-            <div class="container">
-                <section class="choose">
                     <h2 class="section-title choose__title">Выберите свой клуб</h2>
                     <div class="choose__wrap">
                         <div class="card-club col-50 choose__card-club ">
                             <div class="card-club__image">
                                 <img data-src="img/first-page/club_mozaika.jpg" alt="Клуб Мозаика" class="lazyload"
                                     src="a">
+                                <div class="card-club__title">
+                                    Лето Мозаика
+
+                                </div>
                             </div>
                             <div class="card-club__contacts-wrap">
-                                <div class="card-club__image-before">
+                                <div class="card-club__image-bottom">
                                     <img src="img/first-page/icon_1.png" alt="просто иконка">
                                 </div>
-                                <!-- /.image-before -->
+                                <!-- /.image-bottom -->
                                 <div class="card-club__contacts">
                                     <span class="card-club__name">"Лето в ТРЦ "Мозаика"</span>
                                     <div class="span card-club__adress">Россия, Москва, 7-ая Кожуховская ул, 9
                                     </div>
                                 </div>
-                                <div class="card-club__image-after">
+                                <div class="card-club__image-bottom">
                                     <img src="img/first-page/icon_1.png" alt="просто иконка">
                                 </div>
-                                <!-- /.image-after -->
+                                <!-- /.image-bottom -->
                             </div>
                             <!-- /.card-club__contacts-wrap -->
                         </div>
@@ -273,50 +280,59 @@
                             <div class="card-club__image">
                                 <img data-src="img/first-page/club_shelkovo.jpg" alt="Клуб Щёлково" class="lazyload"
                                     src="a">
+                                <div class="card-club__title">
+                                    Лето Щёлково
+                                </div>
                             </div>
 
 
                             <div class="card-club__contacts-wrap">
-                                <div class="card-club__image-before">
+                                <div class="card-club__image-bottom">
                                     <img src="img/first-page/icon_1.png" alt="просто иконка">
+
                                 </div>
-                                <!-- /.image-before -->
+                                <!-- /.image-bottom -->
                                 <div class="card-club__contacts">
                                     <span class="card-club__name">"Лето в в БЦ Спиртзавод</span>
                                     <div class="span card-club__adress">Россия, г. Щёлково, ул. Советская, д. 16
                                     </div>
                                 </div>
-                                <div class="card-club__image-after">
+                                <div class="card-club__image-bottom">
                                     <img src="img/first-page/icon_1.png" alt="просто иконка">
                                 </div>
-                                <!-- /.image-after -->
+                                <!-- /.image-bottom -->
                             </div>
                             <!-- /.card-club__contacts-wrap -->
                         </div>
                         <!-- /.card-club -->
                     </div>
                     <!-- /.choose__wrap -->
-                </section>
-                <!-- /.choose -->
+                </div>
+                <!-- /.container -->
+            </section>
+            <!-- /.choose -->
 
 
 
 
-                <section class="service">
+            <section class="service">
 
-                    <div class="service-record">
-                        <h2 class="section-title service__section-title">Записаться на бесплатный визит</h2>
+                <div class="service-record">
+                    <div class="container">
+                        <h2 class="section-title service-record__section-title">Записаться на бесплатный визит</h2>
 
                         <form action="send.php" method="POST" class="form service-record__form">
                             <div class="service-record__input-group">
-                                <label for="user-name-service-record" class="label form__label service-record__label">Имя</label>
+                                <label for="user-name-service-record"
+                                    class="label form__label service-record__label">Имя</label>
                                 <input type="text" name="userName" class="input form__input service-record__input"
                                     id="user-name-service-record" placeholder="Ваше имя">
                             </div>
                             <!-- /.input-group -->
 
                             <div class="service-record__input-group">
-                                <label for="user-phone-service-record" class="label form__label service-record__label">Телефон</label>
+                                <label for="user-phone-service-record"
+                                    class="label form__label service-record__label">Телефон</label>
                                 <input type="tel" name="userPhone" class="input form__input service-record__input"
                                     id="user-phone-service-record" placeholder="Ваш номер телефона">
                             </div>
@@ -333,9 +349,12 @@
                         </form>
                         <!-- /.form service-record__form -->
                     </div>
-                    <!-- /.service-record -->
+                    <!-- /.container -->
+                </div>
+                <!-- /.service-record -->
 
-                    <div class="service-middle">
+                <div class="service-middle">
+                    <div class="container">
                         <h2 class="section-title">Услуги наших клубов</h2>
                         <div class="swiper-container slider-service">
                             <div class="swiper-wrapper">
@@ -368,10 +387,13 @@
                         <div class="swiper-button-next slider-service__next"></div>
                         <div class="swiper-button-prev slider-service__prev"></div>
                     </div>
-                    <!-- /.service-middle -->
+                    <!-- /.container -->
+                </div>
+                <!-- /.service-middle -->
 
 
-                    <div class="service-gallery">
+                <div class="service-gallery">
+                    <div class="container">
                         <h2 class="section-title">Фотогалерея</h2>
 
                         <div class="swiper-container slider-gallery">
@@ -410,25 +432,27 @@
                         </div>
                         <!-- /.swiper-container -->
                     </div>
-                    <!-- /.service-gallery -->
-                </section>
-                <!-- /.service -->
+                    <!-- /.container -->
+                </div>
+                <!-- /.service-gallery -->
+            </section>
+            <!-- /.service -->
 
 
 
 
 
-                <a href="#" id="scroll_top" title="Крутим вверх"></a>
-                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-                <script src="js/swiper.min.js"></script>
-                <script src="js/jquery.fancybox.min.js"></script>
-                <script src="js/wow.min.js"></script>
-                <script src="js/jquery.validate.js"></script>
-                <script src="js/jquery.mask.min.js"></script>
-                <script src="js/main.js"></script>
-            </div>
-            <!-- /.container -->
-        </main>
+            <a href="#" id="scroll_top" title="Крутим вверх"></a>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="js/swiper.min.js"></script>
+            <script src="js/jquery.fancybox.min.js"></script>
+            <script src="js/wow.min.js"></script>
+            <script src="js/jquery.validate.js"></script>
+            <script src="js/jquery.mask.min.js"></script>
+            <script src="js/main.js"></script>
+    </div>
+    <!-- /.container -->
+    </main>
     </div>
 </body>
 

@@ -17,6 +17,28 @@ $(document).ready(function () {
 
 });
 
+//Кнопка "Выбрать клуб"
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("select--toggle");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.select__button')) {
+
+    var dropdowns = document.getElementsByClassName("select__dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('select--toggle')) {
+        openDropdown.classList.remove('select--toggle');
+      }
+    }
+  }
+}
+
+
     //Слайдер секции "Hero"  на главной странице
 
     var heroSwiper = new Swiper('.slider-hero', {

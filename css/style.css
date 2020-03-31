@@ -419,6 +419,31 @@ template {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 2.1rem;
+  text-align: center;
+}
+
+.card-club__image {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-club__title {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-family: Roboto-Light;
 }
 
 .card-club__contacts {
@@ -438,6 +463,11 @@ template {
   font-family: "Roboto";
   font-family: "Roboto-Light";
   font-weight: 300;
+}
+
+.card-club__image-bottom {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 .container {
@@ -492,6 +522,7 @@ img {
 
 a {
   color: unset;
+  text-decoration: none;
 }
 
 a:active, a:focus {
@@ -514,11 +545,21 @@ button:active, button:focus {
   max-width: 1140px;
 }
 
-button {
-  border: none;
-  font-size: 12px;
-  font-weight: 400;
+.button {
+  font-size: 1rem;
+  font-weight: 500;
   text-transform: uppercase;
+  padding: 1rem 1.542rem;
+  border: 1px solid #ffd11a;
+  border-radius: 2rem;
+  letter-spacing: -1px;
+  background-color: #ffd11a;
+  color: #1e1c34;
+}
+
+.button--secondary {
+  background-color: unset;
+  color: #ffd11a;
 }
 
 .section-title {
@@ -543,11 +584,112 @@ button {
 .section-title::before {
   content: '';
   position: absolute;
-  bottom: -1rem;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  right: 50%;
+  bottom: -1.6rem;
   width: 90px;
   height: 2px;
   background-color: #E3B873;
-  margin-left: 2.5rem;
+}
+
+.top-header {
+  background: #2e2e2e url("../img/first-page/top-header_bg.jpg") no-repeat center/cover;
+  height: 95px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-header__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-header__select {
+  position: relative;
+  margin-left: auto;
+  -webkit-transform: translateX(2.6rem);
+          transform: translateX(2.6rem);
+}
+
+.top-header__select a:hover {
+  background-color: #ddd;
+}
+
+.top-header__record {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: -3.1rem;
+}
+
+.top-header__record span {
+  padding-left: 1rem;
+}
+
+.top-header__contacts {
+  margin-right: 1.4rem;
+  margin-left: auto;
+  font-family: "Roboto-Light";
+  text-align: right;
+  line-height: 1.45rem;
+}
+
+.top-header__contacts span {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.top-header__phone {
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: .08rem;
+}
+
+.select__button {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.87rem;
+  letter-spacing: 0;
+  padding-right: 2.3rem;
+}
+
+.select__dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.select__dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.select__image {
+  width: 1rem;
+  margin: 0 0.6rem;
+}
+
+.select--toggle {
+  display: block;
 }
 
 .menu {
@@ -581,28 +723,52 @@ button {
   width: 1px;
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
+  margin-left: 2.2rem;
+}
+
+.choose__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.choose__card-club:nth-child(1) {
+  margin-right: 15px;
+}
+
+.choose__card-club:nth-child(2) {
   margin-left: 15px;
 }
 
-.top-header {
-  background: #2e2e2e url("../img/first-page/top-header_bg.jpg") no-repeat center/cover;
-  height: 95px;
+.choose__title {
+  margin-top: 4.3rem;
+  margin-bottom: 3.8rem;
+}
+
+.service-record {
+  background: #2e2e2e url("../img/first-page/record_bg.jpg") no-repeat center/cover;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.top-header__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.service-record__section-title {
+  color: #fff;
+}
+
+.service-record__section-title::before {
+  content: none;
+}
+
+.service-middle {
+  position: relative;
 }
 
 .swiper-container {
@@ -645,6 +811,11 @@ button {
   right: 2.5rem;
   width: 16.5rem;
   border-bottom: 2px solid #ffd11a;
+}
+
+.slider-hero__pagination {
+  -webkit-transform: translateY(-3.2rem);
+          transform: translateY(-3.2rem);
 }
 
 .slider-hero__layer {
@@ -693,7 +864,7 @@ button {
   font-family: "Roboto-Light";
   font-weight: 300;
   padding-top: 2.5rem;
-  margin-left: -0.7rem;
+  margin-left: -0.9rem;
 }
 
 .sale__text span {
@@ -729,7 +900,7 @@ button {
   line-height: 18px;
   text-transform: uppercase;
   margin-top: -0.7rem;
-  margin-left: -0.7rem;
+  margin-left: -0.9rem;
 }
 
 .slider-hero__pagination .swiper-pagination-bullet {
@@ -757,24 +928,6 @@ button {
 
 .slider-service__next::after, .slider-service__prev::after {
   font-size: calc(var(--swiper-navigation-size)/ 2) !important;
-}
-
-.choose__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.choose__card-club:nth-child(1) {
-  margin-right: 15px;
-}
-
-.choose__card-club:nth-child(2) {
-  margin-left: 15px;
-}
-
-.service-middle {
-  position: relative;
 }
 
 .modal {

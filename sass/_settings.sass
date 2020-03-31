@@ -9,6 +9,7 @@ img
     max-width: 100%
 a 
     color: unset
+    text-decoration: none
 a:active, a:focus 
     outline: none
 input, textarea 
@@ -20,11 +21,20 @@ button:active, button:focus
 .container
     max-width: 1140px
 
-button
-    border: none
-    font-size: 12px
-    font-weight: 400
+.button
+    font-size: 1rem
+    font-weight: 500
     text-transform: uppercase
+    padding: 1rem 1.542rem
+    border: 1px solid $primary
+    border-radius: 2rem
+    letter-spacing: -1px
+    background-color: $primary
+    color: $primary-text
+    &--secondary
+        background-color: unset
+        color: $primary
+    
 
 
 .section
@@ -46,8 +56,9 @@ button
         &::before
             content: ''
             position: absolute
-            bottom: -1rem
+            transform: translateX(50%)
+            right: 50%
+            bottom: -1.6rem
             width: 90px
             height: 2px
             background-color: #E3B873
-            margin-left: 2.5rem
