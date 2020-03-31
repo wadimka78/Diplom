@@ -5,12 +5,8 @@
 .swiper-slide 
     text-align: center
     font-size: 18px
-    background: #fff
-
     display: flex
-
     justify-content: center
-
     align-items: center
 
 
@@ -21,7 +17,7 @@
         top: 14.5%
         z-index: 10
         color: white
-        transform: translateX(-55.3%)
+        transform: translateX(-55.9%)
         text-align: left
         &--psevdo
             position: relative
@@ -29,18 +25,20 @@
             content: ''
             position: absolute
             bottom: 0
-            right: 0
-            width: 50px
+            right: 2.5rem
+            width: 16.5rem
             border-bottom: 2px solid $primary
     &__layer
         position: absolute
-        right: 3%
+        right: 2.4%
         z-index: 999
+    & .swiper-slide
+        background-color: #501831
     
 .sale
     &__border-block
         position: relative
-        height: 12.1rem
+        height: 12.3rem
         width: 38rem
         border-top: 2px solid $primary
         &::before    //Бордер
@@ -48,27 +46,31 @@
             position: absolute
             left: 0
             top: 0
-            height: 20px
-            border-left: 2px solid #ffd11a
+            height: 1.2rem
+            border-left: 2px solid $primary
         &::after    //Бордер
             content: ''
             position: absolute
             top: 0
             right: 0
-            height: 30px
-            border-left: 2px solid #ffd11a
-        &__text
-            font-size: 24px
-            line-height: 28px
-            text-transform: uppercase
-            font-family: "Roboto Light"
-            font-weight: 300
-            & span
-                font-family: "Roboto Medium"
-                font-size: 24px
-                font-weight: 500 
+            height: 4.8rem
+            border-left: 2px solid $primary
         & > div
             margin-left: -1rem
+    &__text
+        font-size: 24px
+        line-height: 28px
+        text-transform: uppercase
+        font-family: "Roboto-Light"
+        font-weight: 300
+        padding-top: 2.5rem
+        margin-left: -0.7rem
+        & span
+            display: block
+            margin-top: 0.5rem
+            font-family: "Roboto-Medium"
+            font-size: 24px
+            font-weight: 500 
     &__everyday
         padding-top: 3.2rem
         font-family: Roboto-Light
@@ -89,6 +91,19 @@
         font-weight: 400
         line-height: 18px
         text-transform: uppercase
+        margin-top: -0.7rem
+        margin-left: -0.7rem
+
+.slider-hero__pagination
+    & .swiper-pagination-bullet 
+        background: $light
+        width: 22px
+        height: 4px
+        border-radius: 0%
+    & .swiper-pagination-bullet-active
+        background: $primary
+        
+        
 
 
 // Страница 1 - секция "Наши услуги"

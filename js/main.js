@@ -20,6 +20,7 @@ $(document).ready(function () {
     //Слайдер секции "Hero"  на главной странице
 
     var heroSwiper = new Swiper('.slider-hero', {
+        loop: true,
         pagination: {
             el: '.slider-hero__pagination',
             clickable: true,

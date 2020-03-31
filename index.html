@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
-    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Курсовой проект</title>
 </head>
@@ -125,12 +125,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sale__pricetag">за 22 тысячи Р
+                                <div class="sale__pricetag">за 22 000 Р
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
                                     Закажите карту по телефону:<br>
-                                    +7 (495) 266-02-48
+                                    <span>+7 (495) 266-02-48</span>
                                 </div>
                             </div>
                             <!-- /.sale -->
@@ -147,60 +147,88 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sale__pricetag">за 22 тысячи Р
+                                <div class="sale__pricetag">за 22 000 Р
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
                                     Закажите карту по телефону:<br>
-                                    +7 (495) 266-02-48
+                                    <span>+7 (495) 266-02-48</span>
                                 </div>
                             </div>
                             <!-- /.sale -->
                         </div>
                         <!-- /.swiper-slide -->
+
 
                         <div class="swiper-slide slider-hero__content">
                             <img data-src="img/slider-hero/003.jpg" class="lazyload" src="а" alt="наш клуб">
                             <div class="sale slider-hero__sale">
-                                <div class="sale__border-block">
+                                <div class="slider-hero__sale--psevdo">
+                                    <div class="sale__border-block">
+                                        <div class="sale__everyday">2 круглосуточные
+                                        </div>
+                                        <div class="sale__club-cards"> клубные карты
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="sale__everyday">2 круглосуточные
-                                </div>
-                                <div class="sale-club__cards"> клубные карты
-                                </div>
-                                <div class="sale__pricetag">за 22 тысячи Р
+                                <div class="sale__pricetag">за 22 000 Р
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
                                     Закажите карту по телефону:<br>
-                                    +7 (495) 266-02-48
+                                    <span>+7 (495) 266-02-48</span>
                                 </div>
                             </div>
                             <!-- /.sale -->
                         </div>
                         <!-- /.swiper-slide -->
-
-
                         <div class="swiper-slide slider-hero__content">
-                            <img data-src="img/slider-hero/001.jpg" class="lazyload" src="а" alt="наш клуб">
+                            <img data-src="img/slider-hero/004.jpg" class="lazyload" src="а" alt="наш клуб">
                             <div class="sale slider-hero__sale">
-                                <div class="sale__border-block">
+                                <div class="slider-hero__sale--psevdo">
+                                    <div class="sale__border-block">
+                                        <div class="sale__everyday">2 круглосуточные
+                                        </div>
+                                        <div class="sale__club-cards"> клубные карты
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="sale__everyday">2 круглосуточные
-                                </div>
-                                <div class="sale-club__cards"> клубные карты
-                                </div>
-                                <div class="sale__pricetag">за 22 тысячи Р
+                                <div class="sale__pricetag">за 22 000 Р
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
                                     Закажите карту по телефону:<br>
-                                    +7 (495) 266-02-48
+                                    <span>+7 (495) 266-02-48</span>
                                 </div>
                             </div>
                             <!-- /.sale -->
                         </div>
                         <!-- /.swiper-slide -->
+                        <div class="swiper-slide slider-hero__content">
+                            <img data-src="img/slider-hero/bg_1.jpg" class="lazyload" src="а" alt="наш клуб">
+                            <img class="slider-hero__layer" src="img/slider-hero/people.png" alt="силуэты">
+                            <div class="sale slider-hero__sale">
+                                <div class="slider-hero__sale--psevdo">
+                                    <div class="sale__border-block">
+                                        <div class="sale__everyday">2 круглосуточные
+                                        </div>
+                                        <div class="sale__club-cards"> клубные карты
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sale__pricetag">за 22 000 Р
+                                </div>
+                                <div class="sale__text">
+                                    Только до 31 августа!<br>
+                                    Закажите карту по телефону:<br>
+                                    <span>+7 (495) 266-02-48</span>
+                                </div>
+                            </div>
+                            <!-- /.sale -->
+                        </div>
+                        <!-- /.swiper-slide -->
+
+
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination slider-hero__pagination">
@@ -279,32 +307,31 @@
                     <div class="service-record">
                         <h2 class="section-title service__section-title">Записаться на бесплатный визит</h2>
 
-                        <form action="send.php" method="POST" class="form control__form">
-                            <div class="control__input-group">
-                                <label for="user-name-control" class="label form__label control__label">Имя</label>
-                                <input type="text" name="userName" class="input form__input control__input"
-                                    id="user-name-control" placeholder="Как вас зовут">
+                        <form action="send.php" method="POST" class="form service-record__form">
+                            <div class="service-record__input-group">
+                                <label for="user-name-service-record" class="label form__label service-record__label">Имя</label>
+                                <input type="text" name="userName" class="input form__input service-record__input"
+                                    id="user-name-service-record" placeholder="Ваше имя">
                             </div>
                             <!-- /.input-group -->
 
-                            <div class="control__input-group">
-                                <label for="user-phone-control" class="label form__label control__label">Телефон</label>
-                                <input type="tel" name="userPhone" class="input form__input control__input"
-                                    id="user-phone-control" placeholder="Ваш номер телефона">
+                            <div class="service-record__input-group">
+                                <label for="user-phone-service-record" class="label form__label service-record__label">Телефон</label>
+                                <input type="tel" name="userPhone" class="input form__input service-record__input"
+                                    id="user-phone-service-record" placeholder="Ваш номер телефона">
                             </div>
                             <!-- /.input-group -->
 
-                            <button class="button button--primary control__button">Отправить</button>
-                            <div class="policy control__policy">
-                                <input type="checkbox" name="controlCheckbox" id="policy-checkbox"
+                            <button class="button button--primary service-record__button">Записаться</button>
+                            <div class="policy service-record__policy">
+                                <input type="checkbox" name="service-recordCheckbox" id="policy-checkbox"
                                     class="policy__checkbox" checked>
-                                <label for="policy-checkbox" class="policy__label control__policy-label">я
-                                    соглашаюсь с
-                                    обработкой данных</label>
+                                <label for="policy-checkbox" class="policy__label service-record__policy-label">я
+                                    согласен на обработку персональных данных</label>
                             </div>
                             <!-- /.policy -->
                         </form>
-                        <!-- /.form control__form -->
+                        <!-- /.form service-record__form -->
                     </div>
                     <!-- /.service-record -->
 

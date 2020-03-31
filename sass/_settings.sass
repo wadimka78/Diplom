@@ -9,7 +9,6 @@ img
     max-width: 100%
 a 
     color: unset
-    text-decoration: none
 a:active, a:focus 
     outline: none
 input, textarea 
@@ -21,10 +20,16 @@ button:active, button:focus
 .container
     max-width: 1140px
 
-    
+button
+    border: none
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+
 
 .section
     &-title
+        position: relative
         text-align: center
         color: $title
         font-size: 28px
@@ -38,4 +43,11 @@ button:active, button:focus
             font-weight: 400
             letter-spacing: -2px
             font-size: 1.929rem
- 
+        &::before
+            content: ''
+            position: absolute
+            bottom: -1rem
+            width: 90px
+            height: 2px
+            background-color: #E3B873
+            margin-left: 2.5rem
