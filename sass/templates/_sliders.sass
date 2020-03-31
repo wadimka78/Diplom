@@ -111,20 +111,66 @@
 
 // Страница 1 - секция "Наши услуги"
 
-.service-middle .swiper-container
-    width: 90%
+.service-middle
+    & .swiper-container
+        width: 96.5%
+    & .swiper-button-next, .swiper-button-prev
+        margin-top: 0
+
 
 .slider-service 
     &__next, &__prev
-        width: 50px
-        height: 50px
+        width: 35px
+        height: 35px
         background-color: $primary
         border-radius: 50%
         color: #1e1c34
+        top: 9.6rem
         &::after
-            font-size: calc(var(--swiper-navigation-size)/ 2) !important
+            font-size: calc(var(--swiper-navigation-size)/ 3) !important
+    &__next
+        right: 0
+    &__prev
+        left: 0
+    &__content
+        flex-direction: column
+    &__title
+        letter-spacing: -0.7px
+        font-weight: 500
+        margin-top: 1.3rem 
+        margin-bottom: 0.27rem
+    &__describe
+        font-size: 1rem
+        line-height: 1.29rem
+        max-width: 94%
 
+.slider-gallery
+    &__next, &__prev
+        width: 35px
+        height: 35px
+        background-color: $primary
+        border-radius: 50%
+        color: #1e1c34
+        top: 51%
+        &::after
+            font-size: calc(var(--swiper-navigation-size)/ 3) !important
+    &__next
+        right: 10.2rem
+    &__prev
+        left: 10.2rem
+    &__pagination
+        transform: translateY(-1.8rem)
+        & .swiper-pagination-bullet 
+            background: #fff
+            width: 22px
+            height: 4px
+            border-radius: 0%
 
+        & .swiper-pagination-bullet-active 
+            background: #ffd11a
+
+        //bottom: 4rem !important
+    
 // Страница 1 - секция "Фотогалерея"
 
 //Через блоки задаётся "рваный" бордер

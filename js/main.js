@@ -61,7 +61,7 @@ window.onclick = function(event) {
 
     var serviceSwiper = new Swiper('.slider-service', {
         slidesPerView: 5,
-        spaceBetween: 30,
+        spaceBetween: 15,
         centeredSlides: true,
         loop: true,
 

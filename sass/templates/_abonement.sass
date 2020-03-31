@@ -1,0 +1,85 @@
+.club-cards
+    &__section-title
+        margin-top: 4.4rem
+        margin-bottom: 3.8rem
+    &__button
+        width: 8.57rem
+        margin: 0px 2px
+        border: 1px solid $gray
+    &__booking
+        width: unset
+        margin-top: 3.7rem
+        transform: translateX(-8px)
+    &__block img
+        padding-right: 1.4rem
+    &__select
+        position: relative
+        display: flex
+        padding-top: 0.85rem
+    &__checkbox-wrap
+        position: relative
+        padding-left: 2.3rem
+        padding-top: 0.5rem
+        text-align: left
+        letter-spacing: -0.6px
+        & .club-cards
+            &__checkbox:checked + label::before
+                left: -2.2rem
+                top: 1rem
+            &__checkbox + label::before
+                left: -2.2rem
+                top: 1rem  
+    &__form
+        padding-left: 3.5rem
+    &__input-wrap
+        width: 90%
+        margin-top: 0.6rem
+    &__input-group
+        display: block
+        margin-top: 1rem
+    &__input
+        border: 1px solid rgba(39, 25, 48, 0.14)
+        border-radius: 50px
+        width: 100%
+
+    &__policy-label
+        position: relative
+        &::before
+            left: 1.55rem
+            top: 1.1rem
+    &__checkbox
+        position: absolute
+        z-index: -1
+        opacity: 0
+
+    &__checkbox + label 
+        display: inline-flex
+        align-items: center
+        user-select: none
+    
+    &__checkbox + label::before 
+        content: ''
+        position: absolute
+        display: inline-block
+        width: 1em
+        height: 1em
+        flex-shrink: 0
+        flex-grow: 0
+        font-size: 19px
+        border: 1px solid #adb5bd
+        border-radius: 0.25em
+        margin-right: 0.5em
+    
+    &__checkbox:checked + label::before 
+        content: "\2228"
+        content: "\2713"
+        position: absolute
+        border: none
+        background-color: $primary
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
+        font-size: 21px
+        color: #1e1c34
+        text-align: center
+        line-height: 15px
+    
+

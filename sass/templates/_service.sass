@@ -5,18 +5,43 @@
     display: flex
     justify-content: center
     align-items: center
+    height: 18.5rem
     &__section-title
         color: $light
+        margin: -0.2rem auto 2.1rem auto
         &::before
             content: none
-    
-    
-    
-    
-    
-    
-    
-    
+    &__policy
+        transform: translateX(62%)
+        margin-top: 1.5rem
+        display: flex
+        & .policy__checkbox
+            height: 1.3rem
+            width: 1.3rem
+    &__input-group
+        margin-left: 0.61rem
+    &__button
+        padding: 1rem 2.7rem
+        margin-left: 0.5rem
+    &__form
+        transform: translateX(1.59rem) 
+        padding-top: 5px
 .service-middle
     position: relative
+    &__section-title
+        margin-top: 4.4rem
+        margin-bottom: 3.8rem
+    &__container
+        position: relative
 
+.service-gallery
+    position: relative
+    &__section-title
+        margin-top: 4rem
+        margin-bottom: 3.9rem
+    &__background
+        background: url('../img/first-page/service_bg.jpg') no-repeat center / cover
+        position: absolute
+        transform: translateY(50%)
+        height: 19.857rem
+        width: 100%

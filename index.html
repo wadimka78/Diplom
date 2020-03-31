@@ -150,7 +150,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sale__pricetag">за 22 000 Р
+                                <div class="sale__pricetag">за 22 000 ₽
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
@@ -174,7 +174,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sale__pricetag">за 22 000 Р
+                                <div class="sale__pricetag">за 22 000 ₽
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
@@ -196,7 +196,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sale__pricetag">за 22 000 Р
+                                <div class="sale__pricetag">за 22 000 ₽
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
@@ -219,7 +219,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sale__pricetag">за 22 000 Р
+                                <div class="sale__pricetag">за 22 000 ₽
                                 </div>
                                 <div class="sale__text">
                                     Только до 31 августа!<br>
@@ -323,16 +323,16 @@
 
                         <form action="send.php" method="POST" class="form service-record__form">
                             <div class="service-record__input-group">
-                                <label for="user-name-service-record"
-                                    class="label form__label service-record__label">Имя</label>
+                                <!--                              <label for="user-name-service-record"
+                                    class="label form__label service-record__label">Имя</label> -->
                                 <input type="text" name="userName" class="input form__input service-record__input"
                                     id="user-name-service-record" placeholder="Ваше имя">
                             </div>
                             <!-- /.input-group -->
 
                             <div class="service-record__input-group">
-                                <label for="user-phone-service-record"
-                                    class="label form__label service-record__label">Телефон</label>
+                                <!--                        <label for="user-phone-service-record"
+                                    class="label form__label service-record__label">Телефон</label> -->
                                 <input type="tel" name="userPhone" class="input form__input service-record__input"
                                     id="user-phone-service-record" placeholder="Ваш номер телефона">
                             </div>
@@ -354,32 +354,59 @@
                 <!-- /.service-record -->
 
                 <div class="service-middle">
-                    <div class="container">
-                        <h2 class="section-title">Услуги наших клубов</h2>
+                    <div class="container service-middle__container">
+                        <h2 class="section-title service-middle__section-title">Услуги наших клубов</h2>
                         <div class="swiper-container slider-service">
                             <div class="swiper-wrapper">
                                 <!-- Additional required wrapper -->
 
                                 <div class="swiper-slide slider-service__content"><img
                                         data-src="img/slider-service/01.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Аква территория</h4>
+                                    <div class="slider-service__describe">
+                                        Плавание полезно для людей абсолютно любой возрастной категории. Бас-сейн 5 на 6
+                                        метров.
+                                    </div>
+                                    <!-- /.slider-service__describe -->
                                 </div>
                                 <div class="swiper-slide slider-service__content"><img
                                         data-src="img/slider-service/02.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Зона свободных весов</h4>
+                                    <div class="slider-service__describe">
+                                        Здесь есть всё необходимое, чтобы достичь максималь-ных результатов
+                                    </div>
+                                    <!-- /.slider-service__describe -->
                                 </div>
                                 <div class="swiper-slide slider-service__content"><img
                                         data-src="img/slider-service/03.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Зона TRX</h4>
+                                    <div class="slider-service__describe">
+                                        Укрепление суставов и связок, увеличение мышеч-ной массы, выносливости и
+                                        гибкости
+                                    </div>
+                                    <!-- /.slider-service__describe -->
                                 </div>
                                 <div class="swiper-slide slider-service__content"><img
                                         data-src="img/slider-service/04.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Кардиозона</h4>
+                                    <div class="slider-service__describe">
+                                        Эффективное снижение веса и улучшение работы сердечно-сосудистой системы
+                                    </div>
+                                    <!-- /.slider-service__describe -->
                                 </div>
                                 <div class="swiper-slide slider-service__content"><img
                                         data-src="img/slider-service/05.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Йога</h4>
+                                    <div class="slider-service__describe">
+                                        Йога - идеальны не только физическая форма, но и эмоциональное состояние
+                                    </div>
+                                    <!-- /.slider-service__describe -->
                                 </div>
                             </div>
                             <!-- /.swiper-wrapper -->
 
 
-                            <div class="swiper-pagination slider-service__pagination"></div>
+                            <!-- <div class="swiper-pagination slider-service__pagination"></div> -->
 
                         </div>
                         <!-- /.swiper-container -->
@@ -393,8 +420,10 @@
 
 
                 <div class="service-gallery">
+                    <div class="service-gallery__background"></div>
+                    <!-- /.service-gallery__background -->
                     <div class="container">
-                        <h2 class="section-title">Фотогалерея</h2>
+                        <h2 class="section-title service-gallery__section-title">Фотогалерея</h2>
 
                         <div class="swiper-container slider-gallery">
                             <div class="swiper-wrapper  swiper-no-swiping">
@@ -412,9 +441,9 @@
                                 <div class="swiper-slide slider-gallery__content"><img
                                         data-src="img/slider-gallery/04.jpg" class="lazyload" src="а" alt="наш клуб">
                                 </div>
-                                <div class="swiper-slide slider-gallery__content"><img
+                                <!--                                 <div class="swiper-slide slider-gallery__content"><img
                                         data-src="img/slider-gallery/05.jpg" class="lazyload" src="а" alt="наш клуб">
-                                </div>
+                                </div> -->
                                 <div class="swiper-slide slider-gallery__content"><img
                                         data-src="img/slider-gallery/06.jpg" class="lazyload" src="а" alt="наш клуб">
                                 </div>
@@ -438,6 +467,98 @@
             </section>
             <!-- /.service -->
 
+            <section class="abonement">
+                <div class="club-cards">
+                    <div class="container">
+                        <h2 class="section-title club-cards__section-title">Клубные карты</h2>
+                        <div class="row">
+                            <div class="col-50 club-cards__block">
+                                <img src="img/first-page/select.png" alt="фото декоративное">
+                            </div>
+                            <!-- /.col-50 club-cards__block -->
+                            <div class="col-50 club-cards__block">
+
+                                <form action="send.php" method="POST" class="form club-cards__form">
+                                    <!-- Выбор абонемента -->
+                                    <button class="button button--primary club-cards__button">1 месяц</button>
+                                    <button class="button button--primary club-cards__button">6 месяцев</button>
+                                    <button class="button button--primary club-cards__button">9 месяцев</button>
+                                    <button class="button button--primary club-cards__button">12 месяцев</button>
+                                    <div class="club-cards__checkbox-wrap">
+                                        <!--  Чекбокс "Мозаика" -->
+                                        <div class="policy club-cards__select">
+                                            <input type="checkbox" name="club-cardsCheckbox" id="mozaika-checkbox"
+                                                class="policy__checkbox club-cards__checkbox" checked>
+                                            <label for="mozaika-checkbox"
+                                                class="policy__label club-cards__policy-select">
+                                                <div class="card-club__contacts">
+                                                    <span class="card-club__name">Лето"Мозаика"</span>
+                                                    <div class="span card-club__adress">Россия, Москва, 7-ая Кожуховская
+                                                        ул,
+                                                        9
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <!--  Чекбокс "Щёлково" -->
+                                        <div class="policy club-cards__select">
+                                            <input type="checkbox" name="club-cardsCheckbox" id="shelkovo-checkbox"
+                                                class="policy__checkbox club-cards__checkbox">
+                                            <label for="shelkovo-checkbox"
+                                                class="policy__label club-cards__policy-select">
+                                                <div class="card-club__contacts">
+                                                    <span class="card-club__name">Лето "Щёлково"</span>
+                                                    <div class="span card-club__adress">Россия, Москва, 7-ая Кожуховская
+                                                        ул,
+                                                        9
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-club__checkbox-wrap -->
+                                    <!-- Формы ввода имени и номера телефона -->
+                                    <div class="club-cards__input-wrap">
+                                        <div class="club-cards__input-group">
+                                            <!--  -->
+                                            <input type="text" name="userName"
+                                                class="input form__input club-cards__input" id="user-name-club-cards"
+                                                placeholder="Ваше имя">
+                                        </div>
+                                        <!-- /.input-group -->
+                                        <div class="club-cards__input-group">
+                                            <!--  -->
+                                            <input type="tel" name="userPhone"
+                                                class="input form__input club-cards__input" id="user-phone-club-cards"
+                                                placeholder="Ваш номер телефона">
+                                        </div>
+                                        <!-- /.input-group -->
+
+                                    </div>
+
+                                    <!--  Чекбокс "Бронирование карты" -->
+                                    <div class="policy club-cards__policy">
+                                        <input type="checkbox" name="club-cardsCheckbox" id="booking-checkbox"
+                                            class="policy__checkbox club-cards__checkbox" checked>
+                                        <label for="booking-checkbox" class="policy__label club-cards__policy-label">я
+                                            согласен на обработку персональных данных</label>
+                                    </div>
+
+                                    <button class="button button--primary club-cards__booking">Забронировать
+                                        карту</button>
+                                    <!-- /.policy -->
+                                </form>
+                                <!-- /.form club-cards__form -->
+                            </div>
+                            <!-- /.col-50 club-cards__block -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.club-cards -->
+            </section>
+            <!-- /.abonement -->
 
 
 
