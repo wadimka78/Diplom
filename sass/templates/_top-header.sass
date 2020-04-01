@@ -22,17 +22,16 @@
     &__contacts
         margin-right: 1.4rem
         margin-left: auto
-        font-family: "Roboto-Light"
-        text-align: right
-        line-height: 1.45rem
         & span
             display: block
             font-size: 0.9rem
-    &__phone
-        font-size: 1.22rem
-        font-weight: 600
-        line-height: 24px
-        letter-spacing: .08rem
+    &__ouvert
+        border-radius: 20px 20px 0px 0px
+        background-color: $primary
+        z-index: 5
+        & .button--secondary
+                    color: $primary-text
+    
 
 .select  //Выбор клуба
     &__button 
@@ -48,18 +47,32 @@
     &__dropdown-content 
         display: none
         position: absolute
-        background-color: #f1f1f1
+        background-color: $primary
         min-width: 160px
         overflow: auto
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
-        z-index: 1
+        z-index: 37
+        padding: 25px 0px 5px 30px
+        border-radius: 0 7px 7px 7px
+        width: 265px
+        border: none
+        top: 38px
     &__dropdown-content a
+        position: relative
+        display: block
         color: black
         padding: 12px 16px
         text-decoration: none
-        display: block
+        box-sizing: border-box
+        background: none
+        padding: 0 0 20px 0px
+        padding-bottom: 1.45rem
+        cursor: pointer
+        color: $primary-text
+        & span
+            display: block
     &__image
         width: 1rem    
         margin: 0 0.6rem
     &--toggle 
         display: block
+

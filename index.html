@@ -50,15 +50,21 @@
                         <!--   <a href="/index.html">  -->
                     </div>
 
-                    <div class="select top-header__select ">
+                    <div class="select top-header__select">
 
                         <button onclick="myFunction()" class="button select__button button--secondary">
                             <img src="img/icons/arrow_down3.png" alt="стрелочка вниз" class="select__image">
                             Выбрать клуб
                         </button>
                         <div id="myDropdown" class="select__dropdown-content">
-                            <a href="#mosaica">Мозаика</a>
-                            <a href="#shelkovo">Щёлково</a>
+                            <a href="#mosaica">
+                                <strong>"Лето" в ТРЦ "Мозаика"</strong>
+                                <span>Москва, 7-ая Кожуховская ул.,9</span>
+                            </a>
+                            <a href="#shelkovo">
+                                <strong>"Лето" в БЦ "Спиртзавод"</strong>
+                                <span>г.Щёлково, ул. Советская, д. 16</span>
+                            </a>
                         </div>
                     </div>
 
@@ -508,9 +514,8 @@
                                                 class="policy__label club-cards__policy-select">
                                                 <div class="card-club__contacts">
                                                     <span class="card-club__name">Лето "Щёлково"</span>
-                                                    <div class="span card-club__adress">Россия, Москва, 7-ая Кожуховская
-                                                        ул,
-                                                        9
+                                                    <div class="span card-club__adress">Россия, г.Щёлково, ул.
+                                                        Советская, дом 16
                                                     </div>
                                                 </div>
                                             </label>
@@ -559,7 +564,152 @@
                 <!-- /.club-cards -->
             </section>
             <!-- /.abonement -->
+            <section class="footer">
 
+                <div class="footer__wrap">
+                    <div class="container">
+                        <div class="footer__row">
+
+                            <div class="logo footer__logo wow fadeInLeft">
+                                <img src="img/logo.png" alt="logo">
+                                <!--   <a href="/index.html">  -->
+                            </div>
+
+
+                            <div class="footer__menu">
+                                <nav class="nav footer__nav" id="footer-menu">
+                                    <span class="footer__title">"Лето"</span>
+                                    <a href="#home-page" class="footer__nav--item">Клубы</a>
+                                    <a href="#projects" class="footer__nav--item">Новости</a>
+                                    <a href="#control" class="footer__nav--item">Акции</a>
+                                    <a href="#team" class="footer__nav--item">Фотогалерея</a>
+                                    <a href="#review" class="footer__nav--item">Наши контакты</a>
+
+                                </nav>
+                            </div>
+                            <!-- /.footer__menu -->
+                            <div class="footer__menu">
+                                <nav class="nav footer__nav" id="footer-menu">
+                                    <span class="footer__title">Клиентам</span>
+                                    <a href="#control" class="footer__nav--item">Клубные карты</a>
+                                    <a href="#team" class="footer__nav--item">Расписание</a>
+                                    <a href="#projects" class="footer__nav--item">Услуги</a>
+                                    <a href="#review" class="footer__nav--item">Тренеры</a>
+                                </nav>
+                            </div>
+                            <!-- /.footer__menu -->
+                            <div class="footer__checkbox">
+                                <span class="footer__title">Выбрать клуб</span>
+                                <div class="footer__checkbox-wrap">
+
+
+
+                                    <!--  Чекбокс футер - "Мозаика" -->
+                                    <!--                       <div class="policy club-cards__select">
+                                        <input type="checkbox" name="mozaikaCheckbox" id="footer-mozaika-checkbox"
+                                            class="policy__checkbox footer__checkbox" checked>
+                                        <label for="footer-mozaika-checkbox"
+                                            class="policy__label club-cards__policy-select">
+                                            <div class="card-club__contacts card-club__contacts--footer">
+                                                <span class="card-club__name">Лето"Мозаика"</span>
+                                                <div class="span card-club__adress">г. Москва, 7-ая Кожуховская
+                                                    ул, 9
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div> -->
+                                    <!--     форма -->
+                                    <form action="send.php" method="POST" class="footer__form">
+
+
+
+                                        <input type="radio" id="footer-mozaika-checkbox" class="footer__button--radio"
+                                            name="footer-radio" value="Клуб Мозаика">
+
+                                        <label for="footer-mozaika-checkbox"><span
+                                                class="footer__label--radio">Лето"Мозаика"</span>
+                                            <div class="span card-club__adress">г. Москва, 7-ая Кожуховская
+                                                ул, 9
+                                            </div>
+                                        </label>
+
+
+                                        <input type="radio" id="footer-shelkovo-checkbox" class="footer__button--radio"
+                                            name="footer-radio" value="Клуб Щёлково">
+
+                                        <label for="footer-shelkovo-checkbox"><span class="footer__label--radio">Лето
+                                                "Щёлково"</span>
+                                            <div class="span card-club__adress">г.Щёлково, ул.
+                                                Советская, дом 16
+                                            </div>
+                                        </label>
+                                    </form>
+                                    <!-- /.form -->
+
+                                    <!--  Чекбокс футер - "Щёлково" -->
+                                    <!--                                     <div class="policy club-cards__select">
+                                        <input type="checkbox" name="shelkovoCheckbox" id="footer-shelkovo-checkbox"
+                                            class="policy__checkbox footer__checkbox">
+                                        <label for="footer-shelkovo-checkbox"
+                                            class="policy__label club-cards__policy-select">
+                                            <div class="card-club__contacts card-club__contacts--footer">
+                                                <span class="card-club__name">Лето "Щёлково"</span>
+                                                <div class="span card-club__adress">г.Щёлково, ул.
+                                                    Советская, дом 16
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>-->
+                                </div>
+                            </div>
+                            <!-- /.footer__checkbox -->
+
+
+
+                            <div class="footer__connect">
+                                <div class="footer__record">
+                                    <span>Единый телефон</span>
+                                </div>
+
+                                <div class="contacts footer__contacts">
+
+                                    <a href="tel:+79993153578" class="phone footer__phone">
+                                        +7 (495) 266 02 78</a>
+                                </div>
+
+                                <div class="footer__call">
+                                    <button onclick="ym(61332526,'reachGoal','button'); return true;"
+                                        class="button main__button button--primary" data-toggle="modal">
+                                        Перезвоните мне
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row footer__last-row last-row">
+                            <div class="last-row__block">
+                                <span class="last-row__copywrite">© Фитнес-центр «Лето», 2017. Все права
+                                    защищены.</span>
+                            </div>
+                            <!-- /.col-50 last-row__block -->
+                            <div class="last-row__block">
+                                <div class="social last-row__social">
+                                    <img src="img/icons/vk.png" alt="иконка ВК">
+                                    <img src="img/icons/inst.png" alt="иконка Инстаграмма">
+                                    <img src="img/icons/youtube.png" alt="иконка Ютуба">
+                                    <img src="img/icons/fb.png" alt="иконка Фейсбука">
+                                    <img src="img/icons/twitter.png" alt="иконка Твиттера">
+                                </div>
+                            </div>
+                            <!-- /.col-50 last-row__block -->
+                        </div>
+                        <!-- /.row -->
+
+                    </div>
+                    <!-- /.container -->
+                </div>
+
+            </section>
 
 
 
