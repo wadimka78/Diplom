@@ -97,26 +97,31 @@ var gallerySwiper = new Swiper('.slider-gallery', {
 var serviceSwiper = new Swiper('.slider-service', {
     //  slidesPerView: 5,
     // spaceBetween: 15,
-    centeredSlides: true,
+
     loop: true,
     breakpoints: {
         // when window width is >= 320px
         320: {
             slidesPerView: 1,
-            spaceBetween: 20
+            spaceBetween: 15
         },
         // when window width is >= 480px
-        480: {
+        768: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 15
         },
         // when window width is >= 768px
-        640: {
+        990: {
             slidesPerView: 3,
-            spaceBetween: 30
+            spaceBetween: 15
+        },
+        // when window width is >= 768px
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 15
         },
         // when window width is >= 62.857rem
-        1200: {
+        1360: {
             slidesPerView: 5,
             spaceBetween: 15
         }
@@ -180,69 +185,38 @@ $('#scroll_top').click(function () {
 
 //Добавляем класс
 
-$('.mobile-menu__button').click(function () {
-    if (!$(this).is('.mobile-menu__ouvert')) {
-        $(this).addClass('mobile-menu__ouvert');
-    } else {
-        $(this).removeClass('mobile-menu__ouvert');
-    }
-});
 
-$('.mobile-menu__close').click(function () {
-    if (!$(this).is('.mobile-menu__ferme')) {
-        $(this).addClass('mobile-menu__ferme');
-    } else {
-        $(this).removeClass('mobile-menu__ferme');
-    }
-});
+//Мобильное меню
+$(document).ready(function () {
+    var menuMob = $('.mobile-menu__wrap'),
+        menuMobBtn = $('[data-toggle=open-menu]'),
+        closeBtn = $('.mobile-menu__close');
 
-    //Прежний файл
-
-    var modal = $('.modal'),
-        modalBtn = $('[data-toggle=modal]'),
-        closeBtn = $('.modal__close');
-    fenetre = $('.thanks'),
-        fenetreBtn = $('[data-toggle=thanks]'),
-        closeFenetreBtn = $('.thanks__close');
-
-    modalBtn.on('click', function () {
-        modal.toggleClass('modal--visible');
+    menuMobBtn.on('click', function () {
+        menuMob.toggleClass('mobile-menu--visible');
     });
 
     closeBtn.on('click', function () {
-        modal.toggleClass('modal--visible');
+        menuMob.toggleClass('mobile-menu--visible');
     });
-
-    //Окно благодарности
-
-    fenetreBtn.on('click', function () {
-        fenetre.toggleClass('thanks--visible');
-    });
-
-    closeFenetreBtn.on('click', function () {
-        fenetre.toggleClass('thanks--visible');
-    });
+});
 
 
-    /*Закрытие по фону*/
+/*Закрытие по фону*/
 
-    $(document).click(function (e) {
-        if ($(e.target).is('.modal')) {
-            modal.toggleClass('modal--visible');
-        }
-    });
+$(document).click(function (e) {
+    if ($(e.target).is('.mobile-menu')) {
+        menuMob.toggleClass('mobile-menu--visible');
+    }
+});
 
-    /*Закрытие по кнопке*/
+/*Закрытие по кнопке*/
 
-    $(document).keydown(function (e) {
-        if (e.keyCode === 27) {
-            modal.toggleClass('modal--visible');
-        }
-    });
-
-
-
-
+$(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+        menuMob.toggleClass('mobile-menu--visible');
+    }
+});
 
 
 

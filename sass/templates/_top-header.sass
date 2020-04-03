@@ -76,7 +76,6 @@
         &__button 
             background: url('../img/icons/select_2.png') no-repeat left
             background-size: 1.286rem
-
             background-position-x: 1.857rem
 .for-seo
     display: none
@@ -88,6 +87,8 @@
         position: absolute
         top: 0
         z-index: 100
+        opacity: 0
+        visibility: hidden
         background-color: $primary-text
         color: $light
         width: 45%
@@ -111,6 +112,7 @@
             right: 5rem
             color: #ffd11a
             font-size: 1.4rem
+            text-transform: none
     &__button:before 
         content: ''
         position: absolute
@@ -139,3 +141,6 @@
         left: 87%
         width: 20px
         height: 20px
+    &--visible 
+        opacity: 1
+        visibility: visible

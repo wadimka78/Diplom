@@ -517,7 +517,7 @@ button:active, button:focus {
 .form__input {
   width: 17.15rem;
   font-size: 0.94rem;
-  padding: 1rem 0rem;
+  padding: 1.06rem 0rem;
   padding-left: 1.84rem;
   border-radius: 50px;
   border: none;
@@ -583,7 +583,7 @@ button:active, button:focus {
 
 .choose-club__contacts {
   color: #2e2e2e;
-  font-size: 1.214rem;
+  font-size: 17px;
   font-weight: 300;
   line-height: 1.714rem;
 }
@@ -594,7 +594,7 @@ button:active, button:focus {
 
 .choose-club__name {
   font-family: "Roboto-Medium";
-  font-size: 1.286rem;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -690,7 +690,7 @@ button:active, button:focus {
   padding: 1rem 1.542rem;
   border: 1px solid rgba(39, 25, 48, 0.14);
   border-radius: 2rem;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: -1px;
   text-transform: uppercase;
@@ -1072,6 +1072,8 @@ button:active, button:focus {
   position: absolute;
   top: 0;
   z-index: 100;
+  opacity: 0;
+  visibility: hidden;
   background-color: #1e1c34;
   color: #fff;
   width: 45%;
@@ -1100,6 +1102,7 @@ button:active, button:focus {
   right: 5rem;
   color: #ffd11a;
   font-size: 1.4rem;
+  text-transform: none;
 }
 
 .mobile-menu__button:before {
@@ -1141,6 +1144,11 @@ button:active, button:focus {
   left: 87%;
   width: 20px;
   height: 20px;
+}
+
+.mobile-menu--visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu {
@@ -1643,7 +1651,7 @@ button:active, button:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 3.8rem;
-  margin-top: 4.7rem;
+  margin-top: 4.88rem;
   padding-bottom: 2.4rem;
 }
 
@@ -1688,7 +1696,8 @@ button:active, button:focus {
 }
 
 .footer__contacts {
-  padding-bottom: 1.1rem;
+  padding-bottom: 0.9rem;
+  padding-top: 0.3rem;
 }
 
 .footer__contacts span {
@@ -1966,6 +1975,17 @@ button:active, button:focus {
     top: 7%;
     left: 5%;
   }
+  .service-record {
+    background: #2e2e2e url("../img/first-page/record_fix.jpg") no-repeat center/cover;
+    background-attachment: fixed;
+  }
+  .club-cards__label {
+    width: 100%;
+    padding: 1rem 0rem;
+  }
+  .club-cards__form > label:nth-child(2n) {
+    width: 24%;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -2014,6 +2034,9 @@ button:active, button:focus {
   .club-cards__block:nth-child(2) {
     width: 60%;
   }
+  .choose-club__adress {
+    margin-top: 5px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -2028,6 +2051,16 @@ button:active, button:focus {
   }
   .club-cards__form {
     padding: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .club-cards__label {
+    width: 9rem;
+    line-height: 2rem;
+  }
+  .club-cards__select {
+    padding-top: 1.6rem;
   }
   .slider-hero__pagination {
     -webkit-transform: translateY(-1rem);
@@ -2073,6 +2106,9 @@ button:active, button:focus {
   }
   .menu__nav a::after {
     margin-left: 1.2rem;
+  }
+  .choose-club__image-bottom {
+    display: none;
   }
 }
 
@@ -2127,6 +2163,95 @@ button:active, button:focus {
   }
   #top-menu {
     display: none;
+  }
+  .sale__border-block {
+    width: 24rem;
+    height: 8rem;
+  }
+  .sale__club-cards {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+  .sale__everyday {
+    font-size: 1.7rem;
+    padding-top: 1.7rem;
+  }
+  .sale__pricetag {
+    font-size: 1.9rem;
+    margin-top: -1.9rem;
+  }
+  .sale__text {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding-top: 0.9rem;
+  }
+  .sale__text span {
+    margin-top: 0.1rem;
+    font-size: 1.4rem;
+  }
+  .slider-hero__sale--psevdo::before {
+    width: 8.5rem;
+  }
+  .choose-club__title {
+    font-size: 1.8rem;
+  }
+  .menu {
+    height: 5.1rem;
+  }
+  .slider-hero__pagination {
+    -webkit-transform: translateY(-0.1rem);
+            transform: translateY(-0.1rem);
+  }
+  .service-record {
+    position: relative;
+  }
+  .service-record__form {
+    -webkit-transform: none;
+            transform: none;
+    padding-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .service-record__input-group {
+    margin: auto;
+    margin-bottom: 0.7rem;
+    width: 50%;
+    text-align: center;
+  }
+  .service-record__button {
+    width: 35%;
+    margin: auto;
+    padding: 1.4rem 2.7rem;
+  }
+  .service-record__policy {
+    position: absolute;
+    bottom: 15px;
+  }
+  .service-record__input {
+    padding: 1.5rem 1.5rem;
+    width: 80%;
+  }
+  .service-record__section-title {
+    margin: -1.5rem auto 1.5rem auto;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .slide-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .slide-desktop {
+    display: none;
+  }
+  .service-record__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -99,7 +99,7 @@
         <header class="header">
 
             <div class="menu header__menu">
-                <div class="mobile-menu__button">
+                <div class="mobile-menu__button" data-toggle="open-menu">
                     <div class="mobile-menu__button--text">Меню</div>
                 </div>
                 <div class="container">
@@ -147,7 +147,7 @@
                 <div class="swiper-container slider-hero">
                     <div class="swiper-wrapper">
                         <!-- Additional required wrapper -->
-                        <div class="swiper-slide slider-hero__content">
+                        <div class="swiper-slide slider-hero__content slide-desktop">
                             <img data-src="img/slider-hero/bg_1.jpg" class="lazyload" src="а" alt="наш клуб">
                             <img class="slider-hero__layer" src="img/slider-hero/people.png" alt="силуэты">
                             <div class="sale slider-hero__sale">
@@ -170,6 +170,15 @@
                             <!-- /.sale -->
                         </div>
                         <!-- /.swiper-slide -->
+
+                        <div class="swiper-slide slider-hero__content slide-mobile">
+                            <img data-src="img/slider-hero/0001.jpg" class="lazyload" src="а" alt="наш клуб">
+
+                        </div>
+                        <!-- /.swiper-slide -->
+
+
+
                         <div class="swiper-slide slider-hero__content">
                             <img data-src="img/slider-hero/002.jpg" class="lazyload" src="а" alt="наш клуб">
                             <div class="sale slider-hero__sale">
@@ -523,8 +532,7 @@
                                             checked></label>
                                     <label for="select-month-1">
                                         <span class="club-cards__label">1 месяц</span></label>
-                                    <br />
-
+                                   
 
 
                                     <label>
@@ -532,7 +540,7 @@
                                             class="club-cards__input--hidden" value="3 месяца"></label>
                                     <label for="select-month-2"><span class="club-cards__label">3
                                             месяца</span></label>
-                                    <br />
+                                
 
 
 
@@ -541,7 +549,7 @@
                                             class="club-cards__input--hidden" value="6 месяцев"></label><label
                                         for="select-month-3"><span class="club-cards__label">6
                                             месяцев</span></label>
-                                    <br />
+                                  
 
 
 

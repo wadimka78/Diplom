@@ -25,6 +25,17 @@
             transform: none
             top: 7%
             left: 5%
+    .service-record  //Самая верхняя строка экрана
+        background: $title url('../img/first-page/record_fix.jpg') no-repeat center / cover
+        background-attachment: fixed
+
+    .club-cards
+        &__label
+            width: 100%
+            padding: 1rem 0rem
+        &__form > label:nth-child(2n)    
+            width: 24%
+
 
 @media screen and  ( max-width: 1199px)
     html
@@ -60,6 +71,9 @@
             width: 40%
         &__block:nth-child(2)
             width: 60%
+    .choose-club__adress
+        margin-top: 5px
+    
 
 @media screen and  ( max-width: 1023px)      
     .container
@@ -71,9 +85,15 @@
             width: 100%
         &__form
             padding: 0
+            justify-content: space-between
+        &__label 
+            width: 9rem
+            line-height: 2rem
+        &__select
+            padding-top: 1.6rem
+
     .slider-hero__pagination 
         transform: translateY(-1rem)
-
 
 
 @media screen and  (min-width: 760px)and ( max-width: 1023px)
@@ -107,6 +127,10 @@
             padding-top: 1rem
     .menu__nav a::after 
         margin-left: 1.2rem
+    .choose-club
+        &__image-bottom
+            display: none
+
 @media screen and  ( min-width: 761px)
     .mobile-menu
         display: none
@@ -138,3 +162,66 @@
             margin-top: 1rem
     #top-menu
         display: none
+    .sale
+        &__border-block
+            width: 24rem
+            height: 8rem
+        &__club-cards 
+            font-size: 2.5rem
+            padding-top: 1rem
+        &__everyday 
+            font-size: 1.7rem
+            padding-top: 1.7rem
+        &__pricetag 
+            font-size: 1.9rem
+            margin-top: -1.9rem
+        &__text 
+            font-size: 1.2rem
+            line-height: 1.7rem
+            padding-top: 0.9rem
+            & span
+                margin-top: 0.1rem
+                font-size: 1.4rem
+    .slider-hero      
+        &__sale--psevdo::before 
+            width: 8.5rem
+    .choose-club__title 
+        font-size: 1.8rem
+    .menu
+        height: 5.1rem
+    .slider-hero
+        &__pagination 
+            transform: translateY(-0.1rem)
+    .service-record
+        position: relative
+        &__form 
+            transform: none
+            padding-top: 5px
+            display: flex
+        &__input-group
+            margin: auto
+            margin-bottom: 0.7rem
+            width: 50%
+            text-align: center
+        &__button 
+            width: 35%
+            margin: auto
+            padding: 1.4rem 2.7rem
+        &__policy 
+            position: absolute
+            bottom: 15px
+        &__input
+            padding: 1.5rem 1.5rem
+            width: 80%
+        &__section-title 
+            margin: -1.5rem auto 1.5rem auto
+@media screen and  ( min-width: 576px)         
+    .slide-mobile
+        display: none
+@media screen and  ( max-width: 575px)
+    .slide-desktop
+        display: none
+    .service-record
+            &__form 
+                flex-direction: column
+
