@@ -463,6 +463,7 @@ button:active, button:focus {
   letter-spacing: -1px;
   background-color: #ffd11a;
   color: #1e1c34;
+  cursor: pointer;
 }
 
 .button--secondary {
@@ -474,9 +475,9 @@ button:active, button:focus {
   position: relative;
   text-align: center;
   color: #2e2e2e;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 400;
-  line-height: 23px;
+  line-height: 1.643rem;
   text-transform: uppercase;
 }
 
@@ -496,7 +497,7 @@ button:active, button:focus {
           transform: translateX(50%);
   right: 50%;
   bottom: -1.6rem;
-  width: 90px;
+  width: 6.429rem;
   height: 2px;
   background-color: #E3B873;
 }
@@ -573,7 +574,7 @@ button:active, button:focus {
           transform: translateY(-50%);
   top: 50%;
   color: #fff;
-  font-size: 36px;
+  font-size: 2.571rem;
   font-weight: 300;
   line-height: 20px;
   text-transform: uppercase;
@@ -582,9 +583,9 @@ button:active, button:focus {
 
 .choose-club__contacts {
   color: #2e2e2e;
-  font-size: 17px;
+  font-size: 1.214rem;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 1.714rem;
 }
 
 .choose-club__contacts--footer {
@@ -593,7 +594,7 @@ button:active, button:focus {
 
 .choose-club__name {
   font-family: "Roboto-Medium";
-  font-size: 18px;
+  font-size: 1.286rem;
   font-weight: 500;
 }
 
@@ -617,7 +618,7 @@ button:active, button:focus {
 .phone {
   font-size: 1.22rem;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.714rem;
   letter-spacing: .08rem;
 }
 
@@ -670,6 +671,10 @@ button:active, button:focus {
 
 .club-cards__section-title--one {
   margin-top: 3rem;
+}
+
+.club-cards__section-title--mozaika {
+  margin-top: 3.4rem;
 }
 
 .club-cards__button {
@@ -868,7 +873,7 @@ button:active, button:focus {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  font-size: 19px;
+  font-size: 1.357rem;
   border: 1px solid #adb5bd;
   border-radius: 0.25em;
   margin-right: 0.5em;
@@ -881,10 +886,10 @@ button:active, button:focus {
   border: none;
   background-color: #ffd11a;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  font-size: 21px;
+  font-size: 1.5rem;
   color: #1e1c34;
   text-align: center;
-  line-height: 15px;
+  line-height: 1.071rem;
 }
 
 .abonement .club-cards .form__input {
@@ -939,7 +944,7 @@ button:active, button:focus {
 
 .top-header {
   background: #2e2e2e url("../img/first-page/top-header_bg.jpg") no-repeat center/cover;
-  height: 95px;
+  height: 6.786rem;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -979,6 +984,7 @@ button:active, button:focus {
 
 .top-header__record span {
   padding-left: 1rem;
+  line-height: 1.3rem;
 }
 
 .top-header__contacts {
@@ -1003,25 +1009,26 @@ button:active, button:focus {
 
 .select__button {
   background: url("../img/icons/select_1.png") no-repeat left;
-  background-size: 18px;
-  background-position-x: 26px;
+  background-size: 1.286rem;
+  background-position-x: 1.857rem;
   padding-left: 4.1rem;
   padding-right: 2.5rem;
   font-size: 0.93rem;
+  cursor: pointer;
 }
 
 .select__dropdown-content {
   display: none;
   position: absolute;
   background-color: #ffd11a;
-  min-width: 160px;
+  min-width: 11.429rem;
   overflow: auto;
   z-index: 37;
-  padding: 25px 0px 5px 30px;
+  padding: 25px 0px 5px 2.143rem;
   border-radius: 0 7px 7px 7px;
-  width: 265px;
+  width: 18.929rem;
   border: none;
-  top: 38px;
+  top: 2.714rem;
 }
 
 .select__dropdown-content a {
@@ -1054,19 +1061,23 @@ button:active, button:focus {
 
 .top-header__ouvert .select__button {
   background: url("../img/icons/select_2.png") no-repeat left;
-  background-size: 18px;
-  background-position-x: 26px;
+  background-size: 1.286rem;
+  background-position-x: 1.857rem;
+}
+
+.for-seo {
+  display: none;
 }
 
 .menu {
   background: url("../img/menu_bg.png") no-repeat center/cover;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 1.286rem;
   text-transform: uppercase;
   color: #fff;
-  height: 66px;
+  height: 4.714rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1085,7 +1096,7 @@ button:active, button:focus {
   content: '';
   position: absolute;
   background: url("../img/menu_border.png") no-repeat right center;
-  height: 31px;
+  height: 2.214rem;
   width: 1px;
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
@@ -1112,7 +1123,7 @@ button:active, button:focus {
 }
 
 .choose__choose-club {
-  margin-bottom: 4rem;
+  margin-bottom: 4.12rem;
   border: 1px solid rgba(39, 25, 48, 0.14);
 }
 
@@ -1129,6 +1140,7 @@ button:active, button:focus {
       -ms-flex-align: center;
           align-items: center;
   height: 18.5rem;
+  margin-top: -0.1rem;
 }
 
 .service-record__section-title {
@@ -1302,7 +1314,7 @@ button:active, button:focus {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.286rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1346,6 +1358,7 @@ button:active, button:focus {
   position: absolute;
   right: 2.4%;
   z-index: 15;
+  max-height: 100%;
 }
 
 .slider-hero .swiper-slide {
@@ -1354,7 +1367,7 @@ button:active, button:focus {
 
 .slider-hero__pagination .swiper-pagination-bullet, .shelkovo-gallery__pagination .swiper-pagination-bullet {
   background: #fff;
-  width: 22px;
+  width: 1.571rem;
   height: 4px;
   border-radius: 0%;
 }
@@ -1399,8 +1412,8 @@ button:active, button:focus {
 }
 
 .sale__text {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.714rem;
+  line-height: 2.000rem;
   text-transform: uppercase;
   font-family: "Roboto-Light";
   font-weight: 300;
@@ -1412,16 +1425,16 @@ button:active, button:focus {
   display: block;
   margin-top: 0.5rem;
   font-family: "Roboto-Medium";
-  font-size: 24px;
+  font-size: 1.714rem;
   font-weight: 500;
 }
 
 .sale__everyday {
   padding-top: 3.2rem;
   font-family: Roboto-Light;
-  font-size: 48px;
+  font-size: 3.429rem;
   font-weight: 300;
-  line-height: 18px;
+  line-height: 1.286rem;
   text-transform: uppercase;
 }
 
@@ -1429,16 +1442,16 @@ button:active, button:focus {
   padding-top: 3rem;
   color: #ffd11a;
   font-family: Roboto-Light;
-  font-size: 72px;
-  line-height: 18px;
+  font-size: 5.143rem;
+  line-height: 1.286rem;
   text-transform: uppercase;
   width: 50rem;
 }
 
 .sale__pricetag {
-  font-size: 48px;
+  font-size: 3.429rem;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 1.286rem;
   text-transform: uppercase;
   margin-top: -0.7rem;
   margin-left: -0.9rem;
@@ -1521,7 +1534,7 @@ button:active, button:focus {
 
 .slider-gallery__pagination .swiper-pagination-bullet {
   background: #fff;
-  width: 22px;
+  width: 1.571rem;
   height: 4px;
   border-radius: 0%;
 }
@@ -1542,7 +1555,7 @@ button:active, button:focus {
 
 .footer__wrap {
   width: 100%;
-  height: 25.85rem;
+  height: 25.35rem;
   background-color: #181728;
   color: #fff;
 }
@@ -1555,7 +1568,7 @@ button:active, button:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 3.8rem;
-  margin-top: 4.8rem;
+  margin-top: 4.7rem;
   padding-bottom: 2.4rem;
 }
 
@@ -1638,7 +1651,7 @@ button:active, button:focus {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  font-size: 19px;
+  font-size: 1.357rem;
   border: 1px solid #adb5bd;
   border-radius: 0.25em;
   left: -2.4rem;
@@ -1651,10 +1664,10 @@ button:active, button:focus {
   border: none;
   background-color: #ffd11a;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  font-size: 21px;
+  font-size: 1.5rem;
   color: #1e1c34;
   text-align: center;
-  line-height: 15px;
+  line-height: 1.071rem;
 }
 
 .last-row {
@@ -1716,8 +1729,8 @@ button:active, button:focus {
   position: absolute;
   right: 0;
   top: 0;
-  width: 28px;
-  height: 28px;
+  width: 2rem;
+  height: 2rem;
   background: transparent url("../img/close.svg") no-repeat center;
   border: none;
   margin: 12px;
@@ -1779,7 +1792,7 @@ button:active, button:focus {
 }
 
 .modal div.invalid {
-  bottom: -18px;
+  bottom: -1.286rem;
 }
 
 .thanks {
@@ -1828,8 +1841,8 @@ button:active, button:focus {
   position: absolute;
   right: 0;
   top: 0;
-  width: 40px;
-  height: 40px;
+  width: 2.857rem;
+  height: 2.857rem;
   background: transparent url(../img/close1.png) center no-repeat;
   background-size: cover;
   border: none;
@@ -1844,15 +1857,78 @@ button:active, button:focus {
   visibility: visible;
 }
 
-@media screen and (min-width: 1600px) {
-  .projects__row, .six-steps__row {
-    max-width: unset;
+@media screen and (max-width: 1679px) {
+  .slider-hero__sale {
+    -webkit-transform: none;
+            transform: none;
+    top: 8%;
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .slider-hero__layer {
+    right: 2%;
+  }
+  .slider-hero__sale {
+    -webkit-transform: none;
+            transform: none;
+    top: 7%;
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 1359px) {
+  html {
+    font-size: 13px;
+  }
+  .slider-hero__layer {
+    right: 2%;
+  }
+  .slider-hero__sale {
+    -webkit-transform: none;
+            transform: none;
+    top: 7%;
+    left: 5%;
   }
 }
 
 @media screen and (max-width: 1199px) {
+  html {
+    font-size: 12px;
+  }
   .container {
     width: 90%;
+  }
+  .slider-hero__layer {
+    right: 2%;
+  }
+  .slider-hero__sale {
+    -webkit-transform: none;
+            transform: none;
+    top: 7%;
+    left: 5%;
+  }
+  .sale__border-block {
+    width: 34rem;
+  }
+  .sale__club-cards {
+    font-size: 4.5rem;
+  }
+  .sale__everyday {
+    font-size: 2.8rem;
+  }
+  .sale__pricetag {
+    font-size: 2.75rem;
+  }
+  .sale__text {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    padding-top: 1.7rem;
+  }
+  .slider-hero__pagination {
+    -webkit-transform: translateY(-1.7rem);
+            transform: translateY(-1.7rem);
   }
 }
 
@@ -1866,17 +1942,88 @@ button:active, button:focus {
 }
 
 @media screen and (max-width: 1023px) {
+  .container {
+    width: 90%;
+  }
   .club-cards__block:nth-child(1) {
     display: none;
   }
   .club-cards__block:nth-child(2) {
     width: 100%;
   }
+  .club-cards__form {
+    padding: 0;
+  }
+  .slider-hero__pagination {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
 }
 
-@media screen and (max-width: 1170px) {
-  .slider-hero__content .lazyload {
-    height: 400px;
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .top-header__record {
+    display: none;
+  }
+  .footer__menu {
+    margin-left: -1rem;
+  }
+  .footer__form {
+    margin-right: -2rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 11px;
+  }
+  .sale__border-block {
+    width: 32rem;
+    height: 10rem;
+  }
+  .sale__club-cards {
+    font-size: 3.8rem;
+    padding-top: 1.95rem;
+  }
+  .sale__everyday {
+    font-size: 2.4rem;
+    padding-top: 2.2rem;
+  }
+  .sale__pricetag {
+    font-size: 2.4rem;
+  }
+  .sale__text {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding-top: 1rem;
+  }
+  .menu__nav a::after {
+    margin-left: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    width: 95%;
+  }
+  .top-header__select {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-transform: none;
+            transform: none;
+    margin: auto;
+  }
+  .top-header__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .top-header__record {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .top-header__logo {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,18 @@
 
+.choose
+    &__wrap  
+        display: flex
+    &__choose-club:nth-child(1)   // отредактировать в Медиа после перестройки в 1 ряд!!!
+        margin-right: 15px
+    &__choose-club:nth-child(2)
+        margin-left: 15px
+    &__title
+        margin-top: 4.3rem
+        margin-bottom: 3.8rem
+    &__choose-club
+        margin-bottom: 4.12rem
+        border: 1px solid $gray
+
 .service-record  //Самая верхняя строка экрана
     background: $title url('../img/first-page/record_bg.jpg') no-repeat center / cover
     color: $light
@@ -6,6 +20,7 @@
     justify-content: center
     align-items: center
     height: 18.5rem
+    margin-top: -0.1rem
     &__section-title
         color: $light
         margin: -0.2rem auto 2.1rem auto

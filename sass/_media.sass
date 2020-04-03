@@ -1,11 +1,59 @@
-@media screen and ( min-width: 1600px)
-    .projects, .six-steps
-        &__row
-            max-width: unset
-@media screen and  ( max-width: 1199px)
+@media screen and ( max-width: 1679px)
+    .slider-hero  //Главный слайдер
+        &__sale
+            transform: none
+            top: 8%
+            left: 8%
 
+@media screen and  ( max-width: 1439px)
+
+    .slider-hero  //Главный слайдер
+        &__layer
+            right: 2%
+        &__sale
+            transform: none
+            top: 7%
+            left: 5%
+
+@media screen and  ( max-width: 1359px)
+    html
+        font-size: 13px
+    .slider-hero  //Главный слайдер
+        &__layer
+            right: 2%
+        &__sale
+            transform: none
+            top: 7%
+            left: 5%
+
+@media screen and  ( max-width: 1199px)
+    html
+        font-size: 12px
     .container
         width: 90%
+    .slider-hero  //Главный слайдер
+        &__layer
+            right: 2%
+        &__sale
+            transform: none
+            top: 7%
+            left: 5%
+    .sale
+        &__border-block 
+            width: 34rem
+        &__club-cards 
+            font-size: 4.5rem
+        &__everyday 
+            font-size: 2.8rem
+        &__pricetag 
+            font-size: 2.75rem
+        &__text 
+            font-size: 1.5rem
+            line-height: 1.9rem
+            padding-top: 1.7rem
+    .slider-hero__pagination 
+        transform: translateY(-1.7rem)
+
 @media screen and (min-width: 1024px)and ( max-width: 1199px)
     .club-cards
         &__block:nth-child(1)
@@ -14,13 +62,63 @@
             width: 60%
 
 @media screen and  ( max-width: 1023px)      
+    .container
+        width: 90%
     .club-cards
         &__block:nth-child(1)
             display: none
         &__block:nth-child(2)
             width: 100%
+        &__form
+            padding: 0
+    .slider-hero__pagination 
+        transform: translateY(-1rem)
 
-@media screen and  ( max-width: 1170px)      
-    .slider-hero__content
-        & .lazyload
-            height: 400px
+
+
+@media screen and  (min-width: 760px)and ( max-width: 1023px)
+    .top-header
+        &__record
+            display: none
+    .footer
+        &__menu
+            margin-left: -1rem
+        &__form
+            margin-right: -2rem
+
+@media screen and  ( max-width: 991px)
+    html
+        font-size: 11px
+    .sale
+        &__border-block 
+            width: 32rem
+            height: 10rem
+        &__club-cards 
+            font-size: 3.8rem
+            padding-top: 1.95rem
+        &__everyday 
+            font-size: 2.4rem
+            padding-top: 2.2rem
+        &__pricetag 
+            font-size: 2.4rem
+        &__text 
+            font-size: 1.4rem
+            line-height: 1.8rem
+            padding-top: 1rem
+    .menu__nav a::after 
+        margin-left: 1.2rem
+
+@media screen and  ( max-width: 760px)
+    .container 
+        width: 95%
+    .top-header
+        &__select 
+            order: -1
+            transform: none
+            margin: auto
+        &__wrap
+            flex-wrap: wrap
+        &__record
+            flex-basis: 30%
+        &__logo
+            flex-basis: 30%

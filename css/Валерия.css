@@ -283,7 +283,7 @@ template {
     position: relative;
     width: 95%;
     margin: auto;
-    max-width: 1140px;
+    max-width: 112.857rem;
     z-index: 1
 }
 
@@ -410,7 +410,7 @@ img {
     font-size: .85714rem;
     font-weight: 700;
     text-transform: uppercase;
-    border-radius: 30px;
+    border-radius: 2.143rem;
     cursor: pointer
 }
 
@@ -448,7 +448,7 @@ img {
 .input {
     padding: 1.07143rem 1.78571rem;
     min-width: 268px;
-    border-radius: 30px;
+    border-radius: 2.143rem;
     border: none;
     color: #101010;
     font-size: 13px;
@@ -515,8 +515,10 @@ img {
 
 .policy__label::before {
     content: '';
-    width: 18px;
-    height: 18px;
+    width: 1.286rem
+;
+    height: 1.286rem
+;
     margin-right: .57rem;
     border: 1px solid rgba(0, 0, 0, .4);
     border-radius: 1px;
@@ -557,7 +559,7 @@ img {
 .club-choise {
     margin: 0 7% 0 auto;
     padding: 1.14286rem 2.28571rem 1.14286rem 57px;
-    background: url(../img/down-arrow.svg) no-repeat 30px center
+    background: url(../img/down-arrow.svg) no-repeat 2.143rem center
 }
 
 .visit-signup {

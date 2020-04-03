@@ -74,7 +74,7 @@ function CBXSession()
 							top: '0px',
 							backgroundColor: '#FFEB41',
 							border: '1px solid #EDDA3C',
-							width: '630px',
+							width: '62.143rem',
 							fontFamily: 'Arial,Helvetica,sans-serif',
 							fontSize: '13px',
 							fontWeight: 'bold',

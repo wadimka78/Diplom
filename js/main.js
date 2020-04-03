@@ -95,11 +95,32 @@ var gallerySwiper = new Swiper('.slider-gallery', {
 // Слайдер  - секция "Наши услуги"
 
 var serviceSwiper = new Swiper('.slider-service', {
-    slidesPerView: 5,
-    spaceBetween: 15,
+  //  slidesPerView: 5,
+   // spaceBetween: 15,
     centeredSlides: true,
     loop: true,
-
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        // when window width is >= 768px
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        // when window width is >= 62.857rem
+        1200: {
+            slidesPerView: 5,
+            spaceBetween: 15
+        }
+    },
     navigation: {
         nextEl: '.slider-service__next',
         prevEl: '.slider-service__prev',
@@ -109,6 +130,12 @@ var serviceSwiper = new Swiper('.slider-service', {
         clickable: true,
     },
 });
+
+
+
+
+
+
 
 //Слайдеры страницы ЩЁЛКОВО
 
@@ -151,7 +178,7 @@ $('#scroll_top').click(function () {
     return false;
 });
 
-//Карта яндекса
+//Карта яндекса - Щёлково
 
 var service = $('.service');
 var serviceTop = service.offset().top;
@@ -163,12 +190,27 @@ $(window).bind('scroll', function () {
     }
 });
 
+//Карта яндекса - Мозаика
+
+var service = $('.abonement--one');
+var serviceTop = service.offset().top;
+$(window).bind('scroll', function () {
+    var windowTop = $(this).scrollTop();
+    if (windowTop > serviceTop) {
+        $('#map-mozaika').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af52a2a80ed81730f62111b8ba628c62f4ab3931be3e7063533c360f9cc789ba0&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>')
+        $(window).unbind('scroll')
+    }
+});
+
+
+
+
 //Отключаем прокрутку
 
-  //  myMap.behaviors.disable('scrollZoom')
-  //  myMap.events.add('click', function () {
-   //     myMap.behaviors.enable('scrollZoom')
-  //  })
+//  myMap.behaviors.disable('scrollZoom')
+//  myMap.events.add('click', function () {
+//     myMap.behaviors.enable('scrollZoom')
+//  })
 
 
 //Пробуем убрать рамку при клике
