@@ -488,6 +488,42 @@ template {
   letter-spacing: .08rem;
 }
 
+.functional {
+  width: 10.357rem;
+  height: 11.143rem;
+  text-align: center;
+  border: 1px solid rgba(39, 25, 48, 0.14);
+  margin: 0.8rem 0.63rem;
+}
+
+.functional__title {
+  display: block;
+  color: #2e2e2e;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.214rem;
+  margin-top: 1rem;
+  margin-bottom: auto;
+}
+
+.functional__image {
+  height: 6.571rem;
+  border-bottom: 1px solid rgba(39, 25, 48, 0.14);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.functional__icon {
+  height: 3.571rem;
+}
+
 .container {
   width: 100%;
   margin: auto;
@@ -632,6 +668,30 @@ button:active, button:focus {
   border: none;
 }
 
+.image_zoom {
+  overflow: hidden;
+}
+
+.image_zoom img {
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.image-zoom img:hover {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+}
+
+.choose__card-club a:hover + .image_zoom img {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+}
+
+.choose__card-club a:hover + .lazyload2 {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+}
+
 .top-header {
   background: #2e2e2e url("../img/first-page/top-header_bg.jpg") no-repeat center/cover;
   height: 95px;
@@ -697,11 +757,12 @@ button:active, button:focus {
 }
 
 .select__button {
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 0.87rem;
-  letter-spacing: 0;
-  padding-right: 2.3rem;
+  background: url("../img/icons/select_1.png") no-repeat left;
+  background-size: 18px;
+  background-position-x: 26px;
+  padding-left: 4.1rem;
+  padding-right: 2.5rem;
+  font-size: 0.93rem;
 }
 
 .select__dropdown-content {
@@ -744,6 +805,12 @@ button:active, button:focus {
 
 .select--toggle {
   display: block;
+}
+
+.top-header__ouvert .select__button {
+  background: url("../img/icons/select_2.png") no-repeat left;
+  background-size: 18px;
+  background-position-x: 26px;
 }
 
 .menu {
@@ -870,6 +937,10 @@ button:active, button:focus {
   position: relative;
 }
 
+.service-middle--shelkovo {
+  padding-bottom: 4.2rem;
+}
+
 .service-gallery {
   position: relative;
 }
@@ -888,9 +959,19 @@ button:active, button:focus {
   width: 100%;
 }
 
+.club-cards {
+  /* Checked */
+  /* Disabled */
+  /* Hover */
+}
+
 .club-cards__section-title {
   margin-top: 4.4rem;
   margin-bottom: 3.8rem;
+}
+
+.club-cards__section-title--shelkovo {
+  margin-top: 3rem;
 }
 
 .club-cards__button {
@@ -899,11 +980,26 @@ button:active, button:focus {
   border: 1px solid rgba(39, 25, 48, 0.14);
 }
 
+.club-cards__label {
+  display: block;
+  width: 5.37rem;
+  margin: 0px 2px;
+  padding: 1rem 1.542rem;
+  border: 1px solid rgba(39, 25, 48, 0.14);
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
 .club-cards__booking {
   width: unset;
   margin-top: 3.7rem;
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  margin-right: 1.6rem;
+  margin-left: auto;
 }
 
 .club-cards__block img {
@@ -956,13 +1052,34 @@ button:active, button:focus {
   width: 100%;
 }
 
+.club-cards__input--hidden {
+  display: none;
+}
+
+.club-cards__input[type=radio]:checked + label {
+  background: #ffe0a6;
+  color: green;
+}
+
+.club-cards__input[type=radio]:disabled + label {
+  background: blue;
+  color: #666;
+}
+
+.club-cards__label:hover {
+  color: #666;
+}
+
 .club-cards__policy-label {
-  position: relative;
+  position: absolute;
+  bottom: 4.7rem;
+  left: 7.3rem;
+  width: 100%;
 }
 
 .club-cards__policy-label::before {
-  left: 1.55rem;
-  top: 1.1rem;
+  left: -2.2rem;
+  top: 0;
 }
 
 .club-cards__checkbox {
@@ -1012,6 +1129,100 @@ button:active, button:focus {
   color: #1e1c34;
   text-align: center;
   line-height: 15px;
+}
+
+.club-cards .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: translateX(1.59rem);
+          transform: translateX(1.59rem);
+  max-width: 55rem;
+  margin: auto;
+}
+
+.active-month .club-cards__label {
+  background-color: #ffd11a;
+  border: 1px solid #ffd11a;
+  color: #1e1c34;
+}
+
+.breadcrumbs {
+  font-family: 'Roboto-Light';
+  font-weight: 300;
+  font-size: 0.929rem;
+  line-height: 3.929rem;
+  color: #959595;
+  border-bottom: 1px solid rgba(39, 25, 48, 0.14);
+}
+
+.breadcrumbs__image {
+  padding: 0px 3px;
+}
+
+.breadcrumbs a {
+  color: #2e2e2e;
+  font-family: 'Roboto-Medium';
+  font-weight: 500;
+}
+
+.schedule__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2.61rem;
+}
+
+.schedule__wrap-info {
+  margin-top: -0.3rem;
+}
+
+.schedule__contacts-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
+
+.schedule__contacts-wrap img {
+  width: 41px;
+  height: auto;
+}
+
+.schedule--contacts {
+  padding-left: 1.9rem;
+}
+
+.schedule__call {
+  margin: 1.3rem auto auto 5.45rem;
+}
+
+.schedule__button {
+  padding: 1rem 2.15rem;
+}
+
+.schedule__card-club {
+  margin-left: -8px;
+}
+
+.activite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -7px;
+  margin-top: 2.7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.activite__card:nth-child(7) {
+  margin-right: 0;
 }
 
 .swiper-container {
@@ -1069,6 +1280,23 @@ button:active, button:focus {
 
 .slider-hero .swiper-slide {
   background-color: #501831;
+}
+
+.slider-hero__pagination .swiper-pagination-bullet, .shelkovo-gallery__pagination .swiper-pagination-bullet {
+  background: #fff;
+  width: 22px;
+  height: 4px;
+  border-radius: 0%;
+}
+
+.slider-hero__pagination .swiper-pagination-bullet-active, .shelkovo-gallery__pagination .swiper-pagination-bullet-active {
+  background: #ffd11a;
+}
+
+.shelkovo-gallery__pagination {
+  -webkit-transform: translateY(-2.9rem);
+          transform: translateY(-2.9rem);
+  padding-left: 7rem;
 }
 
 .sale__border-block {
@@ -1144,17 +1372,6 @@ button:active, button:focus {
   text-transform: uppercase;
   margin-top: -0.7rem;
   margin-left: -0.9rem;
-}
-
-.slider-hero__pagination .swiper-pagination-bullet {
-  background: #fff;
-  width: 22px;
-  height: 4px;
-  border-radius: 0%;
-}
-
-.slider-hero__pagination .swiper-pagination-bullet-active {
-  background: #ffd11a;
 }
 
 .service-middle .swiper-container {
@@ -1250,6 +1467,7 @@ button:active, button:focus {
 
 .footer__title {
   font-size: 1.12rem;
+  color: #ffd11a;
 }
 
 .footer__wrap {
@@ -1269,6 +1487,10 @@ button:active, button:focus {
   padding-top: 3.8rem;
   margin-top: 4.8rem;
   padding-bottom: 2.4rem;
+}
+
+.footer__row--shelkovo {
+  margin-top: 0;
 }
 
 .footer__menu-wrap {
@@ -1558,9 +1780,33 @@ button:active, button:focus {
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1359px) {
-  .projects__row, .six-steps__row {
-    max-width: unset;
+@media screen and (max-width: 1199px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .club-cards__block:nth-child(1) {
+    width: 40%;
+  }
+  .club-cards__block:nth-child(2) {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .club-cards__block:nth-child(1) {
+    display: none;
+  }
+  .club-cards__block:nth-child(2) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .slider-hero__content .lazyload {
+    height: 400px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -37,6 +37,20 @@
         z-index: 15
     & .swiper-slide
         background-color: #501831
+
+.slider-hero__pagination, .shelkovo-gallery__pagination
+    & .swiper-pagination-bullet 
+        background: $light
+        width: 22px
+        height: 4px
+        border-radius: 0%
+    & .swiper-pagination-bullet-active
+        background: $primary
+
+.shelkovo-gallery
+    &__pagination
+        transform: translateY(-2.9rem)
+        padding-left: 7rem
     
 .sale
     &__border-block
@@ -97,16 +111,6 @@
         margin-top: -0.7rem
         margin-left: -0.9rem
 
-.slider-hero__pagination
-    & .swiper-pagination-bullet 
-        background: $light
-        width: 22px
-        height: 4px
-        border-radius: 0%
-    & .swiper-pagination-bullet-active
-        background: $primary
-        
-        
 
 
 // Страница 1 - секция "Наши услуги"

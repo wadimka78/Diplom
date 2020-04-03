@@ -60,9 +60,9 @@ $('.top-header__select').click(function () {
 //});
 //  });
 
+//Слайдеры ГЛАВНОЙ страницы
 
-
-//Слайдер секции "Hero"  на главной странице
+//Слайдер секции "Hero"
 
 var heroSwiper = new Swiper('.slider-hero', {
     loop: true,
@@ -71,36 +71,9 @@ var heroSwiper = new Swiper('.slider-hero', {
         clickable: true,
         //  type: 'bullets',
     },
-    navigation: {
-        // nextEl: '.slider-gallery__next',
-        //  prevEl: '.slider-galler__prev',
-        //   nextEl: '.swiper-button-next',
-        //  prevEl: '.swiper-button-prev',
-    },
 });
 
-
-// Слайдер 1 экран - секция "Наши услуги"
-
-var serviceSwiper = new Swiper('.slider-service', {
-    slidesPerView: 5,
-    spaceBetween: 15,
-    centeredSlides: true,
-    loop: true,
-
-    navigation: {
-        nextEl: '.slider-service__next',
-        prevEl: '.slider-service__prev',
-    },
-    pagination: {
-        el: '.slider-service__pagination',
-        clickable: true,
-    },
-});
-
-
-
-//Слайдер секции "Фотогалерея"  на главной странице
+//Слайдер секции "Фотогалерея" 
 
 
 
@@ -119,17 +92,46 @@ var gallerySwiper = new Swiper('.slider-gallery', {
     keyboard: true,
 });
 
+// Слайдер  - секция "Наши услуги"
 
-//Общее для типовых слайдеров как в Hero
+var serviceSwiper = new Swiper('.slider-service', {
+    slidesPerView: 5,
+    spaceBetween: 15,
+    centeredSlides: true,
+    loop: true,
+
+    navigation: {
+        nextEl: '.slider-service__next',
+        prevEl: '.slider-service__prev',
+    },
+    pagination: {
+        el: '.slider-service__pagination',
+        clickable: true,
+    },
+});
+
+//Слайдеры страницы ЩЁЛКОВО
+
+//Слайдер секции "Hero-Щёлково"  на главной странице
 
 
-// var nextBtn = $('.swiper-button-next');
-// var prevtBtn = $('.swiper-button-prev');
-// var bullets = $('.swiper-pagination');
 
-//nextBtn.css('left', prevtBtn.width() + 20 + bullets.width() + 20)
-//bullets.css('left', prevtBtn.width() + 20)
+var shelkovoSwiper = new Swiper('.shelkovo-gallery', {
+    loop: true,
+    pagination: {
+        el: '.shelkovo-gallery__pagination',
+        clickable: true,
+    },
+});
 
+
+//Форма секции "Выбор карты"
+
+
+$('.club-cards__form label[for*="select-month-"]').click(function () {
+    $('.club-cards__form label[for*="select-month-"]').removeClass("active-month");
+    $(this).toggleClass("active-month");
+})
 
 
 
@@ -147,4 +149,32 @@ $('#scroll_top').click(function () {
         scrollTop: 0
     }, 600);
     return false;
+});
+
+//Карта яндекса
+
+var service = $('.service');
+var serviceTop = service.offset().top;
+$(window).bind('scroll', function () {
+    var windowTop = $(this).scrollTop();
+    if (windowTop > serviceTop) {
+        $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aedf6c7282a79306d65c4ffbd9a5456f5848ecb3a26dd480eca749a350882b286&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>')
+        $(window).unbind('scroll')
+    }
+});
+
+//Отключаем прокрутку
+
+  //  myMap.behaviors.disable('scrollZoom')
+  //  myMap.events.add('click', function () {
+   //     myMap.behaviors.enable('scrollZoom')
+  //  })
+
+
+//Пробуем убрать рамку при клике
+jQuery(document).ready(function () {
+    jQuery("input").focus(
+        function () {
+            this.blur();
+        });
 });

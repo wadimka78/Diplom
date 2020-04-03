@@ -31,19 +31,14 @@
         z-index: 5
         & .button--secondary
                     color: $primary-text
-    
-
 .select  //Выбор клуба
     &__button 
-        cursor: pointer
-        font-weight: 400
-        font-size: 0.87rem
-        letter-spacing: 0
-        padding-right: 2.3rem
-    //    &::before
-     //       content: 'prev'
-    //        font-family: swiper-icons
-     //       font-size: calc(var(--swiper-navigation-size)/ 2) !important
+        background: url('../img/icons/select_1.png') no-repeat left
+        background-size: 18px
+        background-position-x: 26px
+        padding-left: 4.1rem
+        padding-right: 2.5rem
+        font-size: 0.93rem
     &__dropdown-content 
         display: none
         position: absolute
@@ -75,4 +70,9 @@
         margin: 0 0.6rem
     &--toggle 
         display: block
-
+.top-header__ouvert
+    & .select 
+        &__button 
+            background: url('../img/icons/select_2.png') no-repeat left
+            background-size: 18px
+            background-position-x: 26px

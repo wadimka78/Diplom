@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <!--  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Курсовой проект</title>
+</head>
+
+<body>
+
+    <!-- Yandex.Metrika counter -->
+    <script>
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+        ym(61332526, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/61332526" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> <!-- /Yandex.Metrika counter -->
+
+
+    <div class="main-container">
+        <div class="top-header">
+            <div class="container">
+                <div class="top-header__wrap">
+
+                    <div class="logo top-header__logo wow fadeInRight">
+                        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                        <!--   <a href="/index.html">  -->
+                    </div>
+
+                    <div class="select top-header__select">
+
+                        <button onclick="myFunction()" class="button select__button button--secondary">
+                            <!--                    <img src="img/arrow_two.png" alt="стрелочка вниз" class="select__image"> -->
+                            Выбрать клуб
+                        </button>
+                        <div id="myDropdown" class="select__dropdown-content">
+                            <a href="shelkovo.html">
+                                <strong>"Лето" в ТРЦ "Мозаика"</strong>
+                                <span>Москва, 7-ая Кожуховская ул.,9</span>
+                            </a>
+                            <a href="shelkovo.html">
+                                <strong>"Лето" в БЦ "Спиртзавод"</strong>
+                                <span>г.Щёлково, ул. Советская, д. 16</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="top-header__record">
+                        <img src="img/first-page/icon_2.png" alt="иконка записи">
+                        <span>Записаться на<br> бесплатный визит</span>
+                    </div>
+
+                    <div class="contacts top-header__contacts">
+                        <span>Звоните круглосуточно!</span>
+                        <a href="tel:+79993153578" class="phone top-header__phone">
+                            +7 (499) 315 35 78</a>
+                    </div>
+
+                    <div class="top-header__call">
+                        <button onclick="ym(61332526,'reachGoal','button'); return true;"
+                            class="button main__button button--primary" data-toggle="modal">
+                            Перезвоните мне
+                        </button>
+                    </div>
+
+                </div>
+                <!-- /.top-header__wrap  -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.top-header -->
+
+
+
+        <header class="header">
+
+            <div class="menu header__menu">
+                <div class="container">
+                    <nav class="nav menu__nav" id="top-menu">
+                        <a href="#home-page" class="nav__item">Клубы</a>
+                        <a href="#projects" class="nav__item">Услуги</a>
+                        <a href="#control" class="nav__item">Клубные карты</a>
+                        <a href="#team" class="nav__item">Расписание</a>
+                        <a href="#review" class="nav__item">Наши тренеры</a>
+                        <a href="#review" class="nav__item">Галерея</a>
+                        <a href="#review" class="nav__item">Наши акции</a>
+                        <a href="#contacts" class="nav__item">Контакты</a>
+                    </nav>
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.menu -->
+
+        </header>
+
+        <main>
+
+            <div class="section hero-shelkovo">
+                <div class="swiper-container shelkovo-gallery">
+                    <div class="swiper-wrapper">
+                        <!-- Additional required wrapper -->
+
+                        <div class="swiper-slide shelkovo-gallery__content"><img data-src="img/slider-clubs/01.jpg"
+                                class="lazyload" src="а" alt="наш клуб">
+                        </div>
+                        <div class="swiper-slide shelkovo-gallery__content"><img data-src="img/slider-clubs/02.jpg"
+                                class="lazyload" src="а" alt="наш клуб">
+                        </div>
+                        <div class="swiper-slide shelkovo-gallery__content"><img data-src="img/slider-clubs/03.jpg"
+                                class="lazyload" src="а" alt="наш клуб">
+                        </div>
+                        <div class="swiper-slide shelkovo-gallery__content"><img data-src="img/slider-clubs/04.jpg"
+                                class="lazyload" src="а" alt="наш клуб">
+                        </div>
+                        <div class="swiper-slide shelkovo-gallery__content"><img data-src="img/slider-clubs/05.jpg"
+                                class="lazyload" src="а" alt="наш клуб">
+                        </div>
+                        <div class="swiper-slide shelkovo-gallery__content"><img data-src="img/slider-clubs/06.jpg"
+                                class="lazyload" src="а" alt="наш клуб">
+                        </div>
+                    </div>
+                    <!-- /.swiper-wrapper -->
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination shelkovo-gallery__pagination"></div>
+
+                </div>
+                <!-- /.swiper-container -->
+            </div>
+            <!-- /.hero-shelkovo -->
+
+
+
+
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <a href="index.html" title="Главная" itemprop="url">Главная</a>
+                    <span><img class="breadcrumbs__image " src="img/icons/breadcrumb_arrow3.png" alt=""></span>
+                    <a href="shelkovo.html" title="Главная" itemprop="url">Клубы</a>
+                    <span><img class="breadcrumbs__image " src="img/icons/breadcrumb_arrow3.png" alt=""></span> Лето
+                    "Щёлково"
+                </div>
+                <!-- /.container -->
+            </div>
+
+            <section class="schedule">
+
+                <div class="container">
+                    <div class="schedule__wrap">
+                        <div class="card-club col-50 schedule__card-club ">
+                            <div class="card-club__image">
+                                <img data-src="img/first-page/club_shelkovo.jpg" alt="Клуб Щёлково" class="lazyload"
+                                    src="a">
+                                <div class="card-club__title">
+                                    Лето Щёлково
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-club -->
+
+                        <div class="card-club col-50 schedule__card-club">
+                            <div class="schedule__wrap-info">
+                                <div class="schedule__contacts-wrap">
+                                    <div class="card-club__image-bottom">
+                                        <img src="img/icons/icon_42.png" alt="просто иконка">
+                                    </div>
+                                    <!-- /.image-bottom -->
+                                    <div class="card-club__contacts schedule--contacts">
+                                        <span class="card-club__name">"Лето" в в БЦ Спиртзавод</span>
+                                        <div class="span card-club__adress">г. Щёлково, ул. Советская, д. 16
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule__contacts-wrap">
+                                    <div class="card-club__image-bottom">
+                                        <img src="img/icons/icon_43.png" alt="просто иконка">
+                                    </div>
+                                    <!-- /.image-bottom -->
+                                    <div class="card-club__contacts schedule--contacts ">
+                                        <span class="card-club__name">Часы работы:</span>
+                                        <div class="span card-club__adress">ПН-ВС: круглосуточно
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule__contacts-wrap">
+                                    <div class="card-club__image-bottom">
+                                        <img src="img/icons/icon_44.png" alt="просто иконка">
+                                    </div>
+                                    <!-- /.image-bottom -->
+                                    <div class="card-club__contacts schedule--contacts">
+                                        <span class="card-club__name">Единый телефон: </span>
+                                        <div class="span card-club__adress">+ 7 (495) 266-02-78
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule__contacts-wrap">
+                                    <div class="card-club__image-bottom">
+                                        <img src="img/icons/icon_45.png" alt="просто иконка">
+                                    </div>
+                                    <!-- /.image-bottom -->
+                                    <div class="card-club__contacts schedule--contacts">
+                                        <span class="card-club__name">E-mail: </span>
+                                        <div class="span card-club__adress">sell@letofit.ru
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.image-bottom -->
+                                <div class="schedule__call">
+                                    <button onclick="ym(61332526,'reachGoal','button'); return true;"
+                                        class="button schedule__button button--primary" data-toggle="modal">
+                                        Расписание клуба
+                                    </button>
+                                </div>
+                                <!-- /.card-club__contacts-wrap -->
+                            </div>
+                            <!-- /.schedule-info__wrap -->
+                        </div>
+                        <!-- /.card-club -->
+                    </div>
+                    <!-- /.choose__wrap -->
+                </div>
+                <!-- /.container -->
+            </section>
+            <!-- /.schedule -->
+
+            <section class="activite-block">
+                <div class="container">
+                    <div class="activite">
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_20.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                Общая площадь <br>2500 м2
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_21.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                               Тренажерный зал <br>900 м2
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_22.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                Два бассейна
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_23.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                Груп. программы<br>(2 зала)
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_24.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                СПА Зона
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_25.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                Фитнес бар
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_26.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                Массажный<br> кабинет<br>
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_27.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                Кроссфит<br>
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_28.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                Солярий<br>
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                        <div class="activite__card functional">
+                            <div class="functional__image">
+                                <img src="img/activite/icon_29.png" alt="вид занятия" class="functional__icon">
+                            </div>
+
+                            <span class="functional__title">
+                                Детские секции<br>
+                            </span>
+                        </div>
+                        <!-- /.functional -->
+                    </div>
+                </div>
+                <!-- /.container -->
+
+            </section>
+            <!-- /.activite-block -->
+
+            <section class="abonement shelkovo-abonements">
+                <div class="club-cards">
+                    <div class="container">
+                        <h2 class="section-title club-cards__section-title club-cards__section-title--shelkovo">Выбрать карту</h2>
+                        <div class="row">
+                            <div class="col-50 club-cards__block">
+                                <img src="img/first-page/select.png" alt="фото декоративное">
+                            </div>
+                            <!-- /.col-50 club-cards__block -->
+                            <div class="col-50 club-cards__block">
+                                <!-- Выбор карты -->
+                                <form action="send.php" method="POST" class="form shelkovo-abonements__form">
+
+
+                                    <label>
+                                        <input type="radio" checked id="select-month-1" name="select_card"
+                                            class="club-cards__input--hidden" id="select_card" value="1 месяц"
+                                            checked></label>
+                                    <label for="select-month-1">
+                                        <span class="club-cards__label">1 месяц</span></label>
+                                    <br />
+
+
+
+                                    <label>
+                                        <input type="radio" id="select-month-2" name="select_card" id="select_card"
+                                            class="club-cards__input--hidden" value="3 месяца"></label>
+                                    <label for="select-month-2"><span class="club-cards__label">3
+                                            месяца</span></label>
+                                    <br />
+
+
+
+                                    <label>
+                                        <input type="radio" id="select-month-3" name="select_card" id="select_card"
+                                            class="club-cards__input--hidden" value="6 месяцев"></label><label
+                                        for="select-month-3"><span class="club-cards__label">6
+                                            месяцев</span></label>
+                                    <br />
+
+                                    <label>
+                                        <input type="radio" id="select-month-4" name="select_card" id="select_card"
+                                            class="club-cards__input--hidden" value="12 месяцев"></label>
+                                    <label for="select-month-4"><span class="club-cards__label">12
+                                            месяцев</span></label>
+
+                                    <!-- Формы ввода имени и номера телефона -->
+                                    <div class="club-cards__input-wrap">
+                                        <div class="club-cards__input-group">
+                                            <!--  -->
+                                            <input type="text" name="userName"
+                                                class="input form__input club-cards__input" id="user-name-club-cards"
+                                                placeholder="Ваше имя *">
+                                        </div>
+                                        <!-- /.input-group -->
+                                        <div class="club-cards__input-group">
+                                            <!--  -->
+                                            <input type="tel" name="userPhone"
+                                                class="input form__input club-cards__input" id="user-phone-club-cards"
+                                                placeholder="Ваш номер телефона *">
+                                        </div>
+                                        <!-- /.input-group -->
+
+                                    </div>
+
+                                    <!--  Чекбокс "Бронирование карты" -->
+                                    <div class="policy club-cards__policy">
+                                        <input type="checkbox" name="club-cardsCheckbox" id="booking-checkbox"
+                                            class="policy__checkbox club-cards__checkbox" checked>
+                                        <label for="booking-checkbox" class="policy__label club-cards__policy-label">я
+                                            согласен на обработку персональных данных</label>
+                                    </div>
+
+                                    <button class="button button--primary club-cards__booking">Забронировать
+                                        карту</button>
+                                    <!-- /.policy -->
+                                </form>
+                                <!-- /.form club-cards__form -->
+                            </div>
+                            <!-- /.col-50 club-cards__block -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.club-cards -->
+            </section>
+            <!-- /.abonement -->
+
+
+
+
+            <section class="service">
+
+
+                <div class="service-gallery">
+                    <div class="service-gallery__background"></div>
+                    <!-- /.service-gallery__background -->
+                    <div class="container">
+                        <h2 class="section-title service-gallery__section-title">Фотогалерея</h2>
+
+                        <div class="swiper-container slider-gallery">
+                            <div class="swiper-wrapper  swiper-no-swiping">
+                                <!-- Additional required wrapper -->
+
+                                <div class="swiper-slide slider-gallery__content"><img
+                                        data-src="img/slider-gallery/01.jpg" class="lazyload" src="а" alt="наш клуб">
+                                </div>
+                                <div class="swiper-slide slider-gallery__content"><img
+                                        data-src="img/slider-gallery/02.jpg" class="lazyload" src="а" alt="наш клуб">
+                                </div>
+                                <div class="swiper-slide slider-gallery__content"><img
+                                        data-src="img/slider-gallery/03.jpg" class="lazyload" src="а" alt="наш клуб">
+                                </div>
+                                <div class="swiper-slide slider-gallery__content"><img
+                                        data-src="img/slider-gallery/04.jpg" class="lazyload" src="а" alt="наш клуб">
+                                </div>
+                                <!--                                 <div class="swiper-slide slider-gallery__content"><img
+                                        data-src="img/slider-gallery/05.jpg" class="lazyload" src="а" alt="наш клуб">
+                                </div> -->
+                                <div class="swiper-slide slider-gallery__content"><img
+                                        data-src="img/slider-gallery/06.jpg" class="lazyload" src="а" alt="наш клуб">
+                                </div>
+                            </div>
+                            <!-- /.swiper-wrapper -->
+
+
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next slider-gallery__next"></div>
+                            <div class="swiper-button-prev slider-gallery__prev"></div>
+
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination slider-gallery__pagination"></div>
+
+                        </div>
+                        <!-- /.swiper-container -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.service-gallery -->
+
+
+                <div class="service-middle service-middle--shelkovo">
+                    <div class="container service-middle__container">
+                        <h2 class="section-title service-middle__section-title">Услуги наших клубов</h2>
+                        <div class="swiper-container slider-service">
+                            <div class="swiper-wrapper">
+                                <!-- Additional required wrapper -->
+
+                                <div class="swiper-slide slider-service__content"><img
+                                        data-src="img/slider-service/01.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Аква территория</h4>
+                                    <div class="slider-service__describe">
+                                        Плавание полезно для людей абсолютно любой возрастной категории. Бас-сейн 5 на 6
+                                        метров.
+                                    </div>
+                                    <!-- /.slider-service__describe -->
+                                </div>
+                                <div class="swiper-slide slider-service__content"><img
+                                        data-src="img/slider-service/02.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Зона свободных весов</h4>
+                                    <div class="slider-service__describe">
+                                        Здесь есть всё необходимое, чтобы достичь максималь-ных результатов
+                                    </div>
+                                    <!-- /.slider-service__describe -->
+                                </div>
+                                <div class="swiper-slide slider-service__content"><img
+                                        data-src="img/slider-service/03.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Зона TRX</h4>
+                                    <div class="slider-service__describe">
+                                        Укрепление суставов и связок, увеличение мышеч-ной массы, выносливости и
+                                        гибкости
+                                    </div>
+                                    <!-- /.slider-service__describe -->
+                                </div>
+                                <div class="swiper-slide slider-service__content"><img
+                                        data-src="img/slider-service/04.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Кардиозона</h4>
+                                    <div class="slider-service__describe">
+                                        Эффективное снижение веса и улучшение работы сердечно-сосудистой системы
+                                    </div>
+                                    <!-- /.slider-service__describe -->
+                                </div>
+                                <div class="swiper-slide slider-service__content"><img
+                                        data-src="img/slider-service/05.jpg" class="lazyload" src="а" alt="наш клуб">
+                                    <h4 class="slider-service__title">Йога</h4>
+                                    <div class="slider-service__describe">
+                                        Йога - идеальны не только физическая форма, но и эмоциональное состояние
+                                    </div>
+                                    <!-- /.slider-service__describe -->
+                                </div>
+                            </div>
+                            <!-- /.swiper-wrapper -->
+
+                            <!-- <div class="swiper-pagination slider-service__pagination"></div> -->
+
+                        </div>
+                        <!-- /.swiper-container -->
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next slider-service__next"></div>
+                        <div class="swiper-button-prev slider-service__prev"></div>
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.service-middle -->
+
+
+
+                <div class="service-record">
+                    <div class="container">
+                        <h2 class="section-title service-record__section-title">Записаться на бесплатный визит</h2>
+
+                        <form action="send.php" method="POST" class="form service-record__form">
+                            <div class="service-record__input-group">
+                                <!--                              <label for="user-name-service-record"
+                                    class="label form__label service-record__label">Имя</label> -->
+                                <input type="text" name="userName" class="input form__input service-record__input"
+                                    id="user-name-service-record" placeholder="Ваше имя">
+                            </div>
+                            <!-- /.input-group -->
+
+                            <div class="service-record__input-group">
+                                <!--                        <label for="user-phone-service-record"
+                                    class="label form__label service-record__label">Телефон</label> -->
+                                <input type="tel" name="userPhone" class="input form__input service-record__input"
+                                    id="user-phone-service-record" placeholder="Ваш номер телефона">
+                            </div>
+                            <!-- /.input-group -->
+
+                            <button class="button button--primary service-record__button">Записаться</button>
+                            <div class="policy service-record__policy">
+                                <input type="checkbox" name="service-recordCheckbox" id="policy-checkbox"
+                                    class="policy__checkbox" checked>
+                                <label for="policy-checkbox" class="policy__label service-record__policy-label">я
+                                    согласен на обработку персональных данных</label>
+                            </div>
+                            <!-- /.policy -->
+                        </form>
+                        <!-- /.form service-record__form -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.service-record -->
+
+
+            </section>
+            <!-- /.service -->
+
+            <section class="location">
+
+                <div class="map location__map" id="map">
+
+            </section>
+            <!-- /.map-club -->
+
+
+
+
+            <section class="footer">
+
+                <div class="footer__wrap">
+                    <div class="container">
+                        <div class="footer__row footer__row--shelkovo">
+
+                            <div class="logo footer__logo wow fadeInLeft">
+                                <img src="img/logo.png" alt="logo">
+                                <!--   <a href="/index.html">  -->
+                            </div>
+
+
+                            <div class="footer__menu">
+                                <nav class="nav footer__nav" id="footer-menu">
+                                    <span class="footer__title">"Лето"</span>
+                                    <a href="#home-page" class="footer__nav--item">Клубы</a>
+                                    <a href="#projects" class="footer__nav--item">Новости</a>
+                                    <a href="#control" class="footer__nav--item">Акции</a>
+                                    <a href="#team" class="footer__nav--item">Фотогалерея</a>
+                                    <a href="#review" class="footer__nav--item">Наши контакты</a>
+
+                                </nav>
+                            </div>
+                            <!-- /.footer__menu -->
+                            <div class="footer__menu">
+                                <nav class="nav footer__nav" id="footer-menu">
+                                    <span class="footer__title">Клиентам</span>
+                                    <a href="#control" class="footer__nav--item">Клубные карты</a>
+                                    <a href="#team" class="footer__nav--item">Расписание</a>
+                                    <a href="#projects" class="footer__nav--item">Услуги</a>
+                                    <a href="#review" class="footer__nav--item">Тренеры</a>
+                                </nav>
+                            </div>
+                            <!-- /.footer__menu -->
+                            <div class="footer__checkbox">
+                                <span class="footer__title">Выбрать клуб</span>
+                                <div class="footer__checkbox-wrap">
+
+
+
+                                    <!--  Чекбокс футер - "Мозаика" -->
+                                    <!--                       <div class="policy club-cards__select">
+                                        <input type="checkbox" name="mozaikaCheckbox" id="footer-mozaika-checkbox"
+                                            class="policy__checkbox footer__checkbox" checked>
+                                        <label for="footer-mozaika-checkbox"
+                                            class="policy__label club-cards__policy-select">
+                                            <div class="card-club__contacts card-club__contacts--footer">
+                                                <span class="card-club__name">Лето"Мозаика"</span>
+                                                <div class="span card-club__adress">г. Москва, 7-ая Кожуховская
+                                                    ул, 9
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div> -->
+                                    <!--     форма -->
+                                    <form action="send.php" method="POST" class="footer__form">
+
+
+
+                                        <input type="radio" id="footer-mozaika-checkbox" class="footer__button--radio"
+                                            name="footer-radio" value="Клуб Мозаика">
+
+                                        <label for="footer-mozaika-checkbox"><span
+                                                class="footer__label--radio">Лето"Мозаика"</span>
+                                            <div class="span card-club__adress">г. Москва, 7-ая Кожуховская
+                                                ул, 9
+                                            </div>
+                                        </label>
+
+
+                                        <input type="radio" id="footer-shelkovo-checkbox" class="footer__button--radio"
+                                            name="footer-radio" value="Клуб Щёлково">
+
+                                        <label for="footer-shelkovo-checkbox"><span class="footer__label--radio">Лето
+                                                "Щёлково"</span>
+                                            <div class="span card-club__adress">г.Щёлково, ул.
+                                                Советская, дом 16
+                                            </div>
+                                        </label>
+                                    </form>
+                                    <!-- /.form -->
+
+                                    <!--  Чекбокс футер - "Щёлково" -->
+                                    <!--                                     <div class="policy club-cards__select">
+                                        <input type="checkbox" name="shelkovoCheckbox" id="footer-shelkovo-checkbox"
+                                            class="policy__checkbox footer__checkbox">
+                                        <label for="footer-shelkovo-checkbox"
+                                            class="policy__label club-cards__policy-select">
+                                            <div class="card-club__contacts card-club__contacts--footer">
+                                                <span class="card-club__name">Лето "Щёлково"</span>
+                                                <div class="span card-club__adress">г.Щёлково, ул.
+                                                    Советская, дом 16
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>-->
+                                </div>
+                            </div>
+                            <!-- /.footer__checkbox -->
+
+
+
+                            <div class="footer__connect">
+                                <div class="footer__record">
+                                    <span>Единый телефон</span>
+                                </div>
+
+                                <div class="contacts footer__contacts">
+
+                                    <a href="tel:+79993153578" class="phone footer__phone">
+                                        +7 (495) 266 02 78</a>
+                                </div>
+
+                                <div class="footer__call">
+                                    <button onclick="ym(61332526,'reachGoal','button'); return true;"
+                                        class="button main__button button--primary" data-toggle="modal">
+                                        Перезвоните мне
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row footer__last-row last-row">
+                            <div class="last-row__block">
+                                <span class="last-row__copywrite">© Фитнес-центр «Лето», 2017. Все права
+                                    защищены.</span>
+                            </div>
+                            <!-- /.col-50 last-row__block -->
+                            <div class="last-row__block">
+                                <div class="social last-row__social">
+                                    <img src="img/icons/vk.png" alt="иконка ВК">
+                                    <img src="img/icons/inst.png" alt="иконка Инстаграмма">
+                                    <img src="img/icons/youtube.png" alt="иконка Ютуба">
+                                    <img src="img/icons/fb.png" alt="иконка Фейсбука">
+                                    <img src="img/icons/twitter.png" alt="иконка Твиттера">
+                                </div>
+                            </div>
+                            <!-- /.col-50 last-row__block -->
+                        </div>
+                        <!-- /.row -->
+
+                    </div>
+                    <!-- /.container -->
+                </div>
+
+            </section>
+
+
+
+            <a href="#" id="scroll_top" title="Крутим вверх"></a>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="js/swiper.min.js"></script>
+            <script src="js/jquery.fancybox.min.js"></script>
+            <script src="js/wow.min.js"></script>
+            <script src="js/jquery.validate.js"></script>
+            <script src="js/jquery.mask.min.js"></script>
+            <script src="js/main.js"></script>
+    </div>
+    <!-- /.container -->
+    </main>
+    </div>
+</body>
+
+</html>

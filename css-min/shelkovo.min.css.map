@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,AAAC,CACT,WAAW,CAAE,cAAc,CAC3B,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,QAAQ,CACnB,WAAW,CAAE,IAAI,CAIQ,AAR7B,AAKI,YALQ,CAKN,CAAC,AAAC,CAEA,WAAW,CAAE,eAAe,CAC5B,WAAW,CAAE,GAAG,CAAG",
+    "sources": [
+        "../sass/templates/shelkovo.sass"
+    ],
+    "names": [],
+    "file": "shelkovo.min.css"
+}

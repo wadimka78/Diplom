@@ -46,22 +46,22 @@
                 <div class="top-header__wrap">
 
                     <div class="logo top-header__logo wow fadeInRight">
-                        <img src="img/logo.png" alt="logo">
+                        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
                         <!--   <a href="/index.html">  -->
                     </div>
 
                     <div class="select top-header__select">
 
                         <button onclick="myFunction()" class="button select__button button--secondary">
-                            <img src="img/icons/arrow_down3.png" alt="стрелочка вниз" class="select__image">
+         <!--  <img src="img/arrow_two.png" alt="стрелочка вниз" class="select__image"> -->
                             Выбрать клуб
                         </button>
                         <div id="myDropdown" class="select__dropdown-content">
-                            <a href="#mosaica">
+                            <a href="shelkovo.html">
                                 <strong>"Лето" в ТРЦ "Мозаика"</strong>
                                 <span>Москва, 7-ая Кожуховская ул.,9</span>
                             </a>
-                            <a href="#shelkovo">
+                            <a href="shelkovo.html">
                                 <strong>"Лето" в БЦ "Спиртзавод"</strong>
                                 <span>г.Щёлково, ул. Советская, д. 16</span>
                             </a>
@@ -283,14 +283,15 @@
                         <!-- /.card-club -->
 
                         <div class="card-club col-50 choose__card-club">
-                            <div class="card-club__image">
+                            <a href="shelkovo.html">
+                            <div class="card-club__image image_zoom">
                                 <img data-src="img/first-page/club_shelkovo.jpg" alt="Клуб Щёлково" class="lazyload"
                                     src="a">
                                 <div class="card-club__title">
                                     Лето Щёлково
                                 </div>
                             </div>
-
+                        </a>
 
                             <div class="card-club__contacts-wrap">
                                 <div class="card-club__image-bottom">
@@ -303,7 +304,7 @@
                                     <div class="span card-club__adress">Россия, г. Щёлково, ул. Советская, д. 16
                                     </div>
                                 </div>
-                                <div class="card-club__image-bottom">
+                                <div class="card-club__image-bottom ">
                                     <img src="img/first-page/icon_1.png" alt="просто иконка">
                                 </div>
                                 <!-- /.image-bottom -->
@@ -483,13 +484,53 @@
                             </div>
                             <!-- /.col-50 club-cards__block -->
                             <div class="col-50 club-cards__block">
-
+                                <!-- Выбор абонемента -->
                                 <form action="send.php" method="POST" class="form club-cards__form">
-                                    <!-- Выбор абонемента -->
-                                    <button class="button button--primary club-cards__button">1 месяц</button>
+
+                                    <!--         <button class="button button--primary club-cards__button">1 месяц</button>
                                     <button class="button button--primary club-cards__button">6 месяцев</button>
                                     <button class="button button--primary club-cards__button">9 месяцев</button>
                                     <button class="button button--primary club-cards__button">12 месяцев</button>
+
+                                    <form action="send.php" method="POST" class="select__form"> -->
+
+
+
+                                    <label>
+                                        <input type="radio" checked id="select-month-1" name="select_card"
+                                            class="club-cards__input--hidden" id="select_card" value="1 месяц" checked></label>
+                                    <label for="select-month-1">
+                                        <span class="club-cards__label">1 месяц</span></label>
+                                    <br />
+
+
+
+                                    <label>
+                                        <input type="radio" id="select-month-2" name="select_card" id="select_card"
+                                            class="club-cards__input--hidden" value="3 месяца"></label>
+                                    <label for="select-month-2"><span class="club-cards__label">3
+                                            месяца</span></label>
+                                    <br />
+
+
+
+                                    <label>
+                                        <input type="radio" id="select-month-3" name="select_card" id="select_card"
+                                            class="club-cards__input--hidden" value="6 месяцев"></label><label
+                                        for="select-month-3"><span class="club-cards__label">6
+                                            месяцев</span></label>
+                                    <br />
+
+
+
+                                    <label>
+                                        <input type="radio" id="select-month-4" name="select_card" id="select_card"
+                                            class="club-cards__input--hidden" value="12 месяцев"></label>
+                                    <label for="select-month-4"><span class="club-cards__label">12
+                                            месяцев</span></label>
+
+
+
                                     <div class="club-cards__checkbox-wrap">
                                         <!--  Чекбокс "Мозаика" -->
                                         <div class="policy club-cards__select">
@@ -528,14 +569,14 @@
                                             <!--  -->
                                             <input type="text" name="userName"
                                                 class="input form__input club-cards__input" id="user-name-club-cards"
-                                                placeholder="Ваше имя">
+                                                placeholder="Ваше имя *">
                                         </div>
                                         <!-- /.input-group -->
                                         <div class="club-cards__input-group">
                                             <!--  -->
                                             <input type="tel" name="userPhone"
                                                 class="input form__input club-cards__input" id="user-phone-club-cards"
-                                                placeholder="Ваш номер телефона">
+                                                placeholder="Ваш номер телефона *">
                                         </div>
                                         <!-- /.input-group -->
 
