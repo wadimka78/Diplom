@@ -37,7 +37,7 @@ window.onclick = function (event) {
         }
     }
 }
-//Добавляем класс
+//Добавляем класс в верхнюю кнопку "Выбор клуба"
 $('.top-header__select').click(function () {
     if (!$(this).is('.top-header__ouvert')) {
         $(this).addClass('top-header__ouvert');
@@ -125,7 +125,7 @@ var shelkovoSwiper = new Swiper('.shelkovo-gallery', {
 });
 
 
-//Форма секции "Выбор карты"
+//Форма секции "Выбор карты на сколько-то месяцев"
 
 
 $('.club-cards__form label[for*="select-month-"]').click(function () {
