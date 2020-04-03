@@ -31,7 +31,7 @@
         background-color: $primary
         z-index: 5
         & .button--secondary
-                    color: $primary-text
+            color: $primary-text
 .select  //Выбор клуба
     &__button 
         background: url('../img/icons/select_1.png') no-repeat left
@@ -40,7 +40,6 @@
         padding-left: 4.1rem
         padding-right: 2.5rem
         font-size: 0.93rem
-        cursor: pointer
     &__dropdown-content 
         display: none
         position: absolute
@@ -81,3 +80,62 @@
             background-position-x: 1.857rem
 .for-seo
     display: none
+
+
+//Мобильное меню
+.mobile-menu
+    &__wrap
+        position: absolute
+        top: 0
+        z-index: 100
+        background-color: $primary-text
+        color: $light
+        width: 45%
+        height: 100vh
+        padding-left: 1rem
+        padding-top: 4.5rem
+    &__button
+        position: absolute
+        display: inline-block
+        width: 3.25em
+        height: 1.6em
+        border-top: 0.2em solid $primary
+        border-bottom: 0.2em solid $primary
+        bottom: 1.3rem
+        right: 10px
+        cursor: pointer
+        transition: .5s
+        z-index: 999
+        &--text
+            position: absolute
+            right: 5rem
+            color: #ffd11a
+            font-size: 1.4rem
+    &__button:before 
+        content: ''
+        position: absolute
+        top: 0.7rem
+        left: 0 
+        width: 100%
+        border-top: 0.2em solid $primary
+        z-index: 999
+    &__nav
+        position: relative
+        font-family: Roboto-Light
+        font-size: 14px
+        font-weight: 400
+        line-height: 1.286rem
+        text-transform: uppercase
+        color: #fff
+        height: 4.714rem
+        display: flex
+        flex-direction: column
+    &__item
+        padding: 0.9rem 2rem
+    &__close
+        position: absolute
+        background: url('../img/icons/close.png') no-repeat
+        top: 1.5rem
+        left: 87%
+        width: 20px
+        height: 20px

@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'Roboto-Thin';
   src: url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
@@ -1014,7 +1014,6 @@ button:active, button:focus {
   padding-left: 4.1rem;
   padding-right: 2.5rem;
   font-size: 0.93rem;
-  cursor: pointer;
 }
 
 .select__dropdown-content {
@@ -1069,6 +1068,81 @@ button:active, button:focus {
   display: none;
 }
 
+.mobile-menu__wrap {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  background-color: #1e1c34;
+  color: #fff;
+  width: 45%;
+  height: 100vh;
+  padding-left: 1rem;
+  padding-top: 4.5rem;
+}
+
+.mobile-menu__button {
+  position: absolute;
+  display: inline-block;
+  width: 3.25em;
+  height: 1.6em;
+  border-top: 0.2em solid #ffd11a;
+  border-bottom: 0.2em solid #ffd11a;
+  bottom: 1.3rem;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 999;
+}
+
+.mobile-menu__button--text {
+  position: absolute;
+  right: 5rem;
+  color: #ffd11a;
+  font-size: 1.4rem;
+}
+
+.mobile-menu__button:before {
+  content: '';
+  position: absolute;
+  top: 0.7rem;
+  left: 0;
+  width: 100%;
+  border-top: 0.2em solid #ffd11a;
+  z-index: 999;
+}
+
+.mobile-menu__nav {
+  position: relative;
+  font-family: Roboto-Light;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.286rem;
+  text-transform: uppercase;
+  color: #fff;
+  height: 4.714rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mobile-menu__item {
+  padding: 0.9rem 2rem;
+}
+
+.mobile-menu__close {
+  position: absolute;
+  background: url("../img/icons/close.png") no-repeat;
+  top: 1.5rem;
+  left: 87%;
+  width: 20px;
+  height: 20px;
+}
+
 .menu {
   background: url("../img/menu_bg.png") no-repeat center/cover;
   font-family: Roboto;
@@ -1081,6 +1155,7 @@ button:active, button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .menu__nav {
@@ -2001,9 +2076,22 @@ button:active, button:focus {
   }
 }
 
+@media screen and (min-width: 761px) {
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu__button {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 760px) {
   .container {
     width: 95%;
+  }
+  .top-header {
+    padding: 1rem 02rem;
+    height: auto;
   }
   .top-header__select {
     -webkit-box-ordinal-group: 0;
@@ -2012,6 +2100,7 @@ button:active, button:focus {
     -webkit-transform: none;
             transform: none;
     margin: auto;
+    margin-left: 0rem;
   }
   .top-header__wrap {
     -ms-flex-wrap: wrap;
@@ -2024,6 +2113,20 @@ button:active, button:focus {
   .top-header__logo {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
+  }
+  .top-header__contacts {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .top-header__call {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin-top: 1rem;
+  }
+  #top-menu {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

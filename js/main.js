@@ -95,8 +95,8 @@ var gallerySwiper = new Swiper('.slider-gallery', {
 // Слайдер  - секция "Наши услуги"
 
 var serviceSwiper = new Swiper('.slider-service', {
-  //  slidesPerView: 5,
-   // spaceBetween: 15,
+    //  slidesPerView: 5,
+    // spaceBetween: 15,
     centeredSlides: true,
     loop: true,
     breakpoints: {
@@ -178,6 +178,75 @@ $('#scroll_top').click(function () {
     return false;
 });
 
+//Добавляем класс
+
+$('.mobile-menu__button').click(function () {
+    if (!$(this).is('.mobile-menu__ouvert')) {
+        $(this).addClass('mobile-menu__ouvert');
+    } else {
+        $(this).removeClass('mobile-menu__ouvert');
+    }
+});
+
+$('.mobile-menu__close').click(function () {
+    if (!$(this).is('.mobile-menu__ferme')) {
+        $(this).addClass('mobile-menu__ferme');
+    } else {
+        $(this).removeClass('mobile-menu__ferme');
+    }
+});
+
+    //Прежний файл
+
+    var modal = $('.modal'),
+        modalBtn = $('[data-toggle=modal]'),
+        closeBtn = $('.modal__close');
+    fenetre = $('.thanks'),
+        fenetreBtn = $('[data-toggle=thanks]'),
+        closeFenetreBtn = $('.thanks__close');
+
+    modalBtn.on('click', function () {
+        modal.toggleClass('modal--visible');
+    });
+
+    closeBtn.on('click', function () {
+        modal.toggleClass('modal--visible');
+    });
+
+    //Окно благодарности
+
+    fenetreBtn.on('click', function () {
+        fenetre.toggleClass('thanks--visible');
+    });
+
+    closeFenetreBtn.on('click', function () {
+        fenetre.toggleClass('thanks--visible');
+    });
+
+
+    /*Закрытие по фону*/
+
+    $(document).click(function (e) {
+        if ($(e.target).is('.modal')) {
+            modal.toggleClass('modal--visible');
+        }
+    });
+
+    /*Закрытие по кнопке*/
+
+    $(document).keydown(function (e) {
+        if (e.keyCode === 27) {
+            modal.toggleClass('modal--visible');
+        }
+    });
+
+
+
+
+
+
+
+
 //Карта яндекса - Щёлково
 
 var service = $('.service');
@@ -200,23 +269,4 @@ $(window).bind('scroll', function () {
         $('#map-mozaika').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af52a2a80ed81730f62111b8ba628c62f4ab3931be3e7063533c360f9cc789ba0&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>')
         $(window).unbind('scroll')
     }
-});
-
-
-
-
-//Отключаем прокрутку
-
-//  myMap.behaviors.disable('scrollZoom')
-//  myMap.events.add('click', function () {
-//     myMap.behaviors.enable('scrollZoom')
-//  })
-
-
-//Пробуем убрать рамку при клике
-jQuery(document).ready(function () {
-    jQuery("input").focus(
-        function () {
-            this.blur();
-        });
 });
