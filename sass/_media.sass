@@ -38,15 +38,27 @@
         &__label
             width: 100%
             padding: 1rem 0rem
+            &--one
+                margin-bottom: 10px
+                min-width: 11rem
         &__form > label:nth-child(2n)    
             width: 23%
             margin-right: 6px
+        &__form
             &--one
                 width: 100%
+                justify-content: center
         &__block:nth-child(1)
             width: 40%
         &__block:nth-child(2)
             width: 50%
+        &__frost
+            padding: 10px
+            min-width: 10rem
+        &__booking
+            &--one
+                margin-right: 0
+                transform: translateX(8px)
     .service-gallery
         &__background 
             transform: translateY(53%)
@@ -55,7 +67,9 @@
         &__card
             margin: 0.76rem 0.63rem !important
 
-            
+    .schedule
+        &__choose-club 
+            margin-left: 0
 @media screen and  ( max-width: 1199px)
     html
         font-size: 12px
@@ -94,6 +108,22 @@
     .service-gallery
         &__background 
             transform: translateY(60%)
+    .club-cards
+        &__booking
+            padding-top: 1.35rem
+            padding-bottom: 1.32rem
+            &--one
+                padding-top: 1.35rem
+                padding-bottom: 1.32rem
+                margin-top: 5rem
+    .location
+        &__map > ymaps
+            height: 450px !important
+@media screen and ( min-width: 1024px)and ( max-width: 1199px)
+    .club-cards
+        &__booking
+            &--one
+                margin-top: 5rem
 @media screen and  ( max-width: 1023px)      
     .container
         width: 90%
@@ -105,10 +135,15 @@
             margin-bottom: 1.5rem
         &__block:nth-child(2)
             width: 90%
+        &__block
+            &--one:nth-child(2) 
+                width: 100%
         &__form
             padding: 0
             justify-content: space-between
             transform: none
+            &--one
+                justify-content: center
         &__label 
             line-height: 2rem
         &__select
@@ -119,11 +154,12 @@
             position: relative
             bottom: -2rem
             left: 2.3rem
+            &--one
+                left: 4.5rem
     .slider-hero__pagination 
         transform: translateY(-1rem)
-
     .top-header
-        padding: 1rem 02rem
+        padding: 1rem 0.2rem
         height: auto
         &__select 
             order: -1
@@ -158,6 +194,10 @@
                 border-radius: 20px 20px 0px 0px
                 background-color: $primary
                 z-index: 5
+    .location
+        &__map > ymaps
+            height: 400px !important
+
 @media screen and  (min-width: 760px)and ( max-width: 1023px)
     .footer
         &__menu
@@ -192,17 +232,25 @@
     .service-gallery
         &__background 
             transform: translateY(69%)
+    .club-cards
+        &__booking
+            &--one
+                transform: none
+    .location
+        &__map > ymaps
+            height: 350px !important
+
 @media screen and  ( min-width: 761px)
     .mobile-menu
         display: none
     .mobile-menu__button
         display: none
+
 @media screen and  ( max-width: 760px)
     .container 
         width: 95%
     #top-menu, .footer__checkbox
         display: none
-
     .sale
         &__border-block
             width: 24rem
@@ -256,9 +304,31 @@
             width: 80%
         &__section-title 
             margin: -1.5rem auto 1.5rem auto
+            line-height: 2.1rem
     .service-gallery
         &__background 
             transform: translateY(63%)
+    .schedule
+        &__wrap
+            flex-wrap: wrap
+            justify-content: center
+            margin-top: 1rem
+        &__wrap-info
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+        &__call
+            flex-basis: 100%
+            text-align: center
+            margin-left: auto
+        &__contacts-wrap
+            flex-basis: 39%
+    .choose-club 
+        width: 100%
+    .location
+        &__map > ymaps
+            height: 300px !important
+
 @media screen and  ( max-width: 700px)
     .service-gallery
         &__background 
@@ -286,27 +356,32 @@
     .slide-desktop
         display: none
     .service-record
-            height: 26rem
-            &__form 
-                flex-direction: column
-            &__section-title 
-                line-height: 2.3rem
-            &__policy
-                transform: translateX(5%)
-            &__input-group 
-                width: 75%
-            &__button 
-                width: 50%
+        height: 26rem
+        &__form
+            flex-direction: column
+        &__section-title 
+            line-height: 2.3rem
+        &__policy
+            transform: translateX(5%)
+        &__button 
+            width: 50%
+        &__input-group 
+            width: 75%
     .choose
         &__wrap
             flex-wrap: wrap
         &__choose-club
             width: 100%
+    .choose-club
+        &__name
+            font-size: 16px
     .footer
         &__menu
             display: none
         &__row
             justify-content: space-around
+        &__wrap
+            height: 22.3rem
     .top-header
         &__record
             display: none
@@ -332,10 +407,29 @@
             width: 45%
             margin: auto
             margin-bottom: 10px
-    
+        &__booking
+            &--one
+                width: unset
+                padding: 1.4rem 1.542rem
+    .schedule
+        &__contacts-wrap 
+            flex-basis: 49%
+            margin-left: 0
+    .schedule--contacts
+        padding-left: 1rem
+    .location
+        &__map > ymaps
+            height: 250px !important
+
 @media screen and  ( max-width: 411px)
     .service-record
-            &__input-group 
-                width: 100%
+        &__input-group
+            width: 100%
             &__button
                 width: 60%
+
+@media screen and  ( max-width: 359px)
+    .top-header
+        &__call button 
+            font-size: 13px
+    

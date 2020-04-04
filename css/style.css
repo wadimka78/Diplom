@@ -454,7 +454,7 @@ button:active, button:focus {
 }
 
 .button {
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   padding: 1rem 1.542rem;
@@ -1307,7 +1307,7 @@ button:active, button:focus {
 .breadcrumbs {
   font-family: 'Roboto-Light';
   font-weight: 300;
-  font-size: 0.929rem;
+  font-size: 13px;
   line-height: 3.929rem;
   color: #959595;
   border-bottom: 1px solid rgba(39, 25, 48, 0.14);
@@ -1993,18 +1993,34 @@ button:active, button:focus {
     width: 100%;
     padding: 1rem 0rem;
   }
+  .club-cards__label--one {
+    margin-bottom: 10px;
+    min-width: 11rem;
+  }
   .club-cards__form > label:nth-child(2n) {
     width: 23%;
     margin-right: 6px;
   }
-  .club-cards__form > label:nth-child(2n)--one {
+  .club-cards__form--one {
     width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .club-cards__block:nth-child(1) {
     width: 40%;
   }
   .club-cards__block:nth-child(2) {
     width: 50%;
+  }
+  .club-cards__frost {
+    padding: 10px;
+    min-width: 10rem;
+  }
+  .club-cards__booking--one {
+    margin-right: 0;
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
   }
   .service-gallery__background {
     -webkit-transform: translateY(53%);
@@ -2017,6 +2033,9 @@ button:active, button:focus {
   }
   .activite__card {
     margin: 0.76rem 0.63rem !important;
+  }
+  .schedule__choose-club {
+    margin-left: 0;
   }
 }
 
@@ -2069,6 +2088,24 @@ button:active, button:focus {
     -webkit-transform: translateY(60%);
             transform: translateY(60%);
   }
+  .club-cards__booking {
+    padding-top: 1.35rem;
+    padding-bottom: 1.32rem;
+  }
+  .club-cards__booking--one {
+    padding-top: 1.35rem;
+    padding-bottom: 1.32rem;
+    margin-top: 5rem;
+  }
+  .location__map > ymaps {
+    height: 450px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .club-cards__booking--one {
+    margin-top: 5rem;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -2086,6 +2123,9 @@ button:active, button:focus {
   .club-cards__block:nth-child(2) {
     width: 90%;
   }
+  .club-cards__block--one:nth-child(2) {
+    width: 100%;
+  }
   .club-cards__form {
     padding: 0;
     -webkit-box-pack: justify;
@@ -2093,6 +2133,11 @@ button:active, button:focus {
             justify-content: space-between;
     -webkit-transform: none;
             transform: none;
+  }
+  .club-cards__form--one {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .club-cards__label {
     line-height: 2rem;
@@ -2108,12 +2153,15 @@ button:active, button:focus {
     bottom: -2rem;
     left: 2.3rem;
   }
+  .club-cards__policy-label--one {
+    left: 4.5rem;
+  }
   .slider-hero__pagination {
     -webkit-transform: translateY(-1rem);
             transform: translateY(-1rem);
   }
   .top-header {
-    padding: 1rem 02rem;
+    padding: 1rem 0.2rem;
     height: auto;
   }
   .top-header__select {
@@ -2176,6 +2224,9 @@ button:active, button:focus {
     background-color: #ffd11a;
     z-index: 5;
   }
+  .location__map > ymaps {
+    height: 400px !important;
+  }
 }
 
 @media screen and (min-width: 760px) and (max-width: 1023px) {
@@ -2220,6 +2271,13 @@ button:active, button:focus {
   .service-gallery__background {
     -webkit-transform: translateY(69%);
             transform: translateY(69%);
+  }
+  .club-cards__booking--one {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .location__map > ymaps {
+    height: 350px !important;
   }
 }
 
@@ -2309,10 +2367,45 @@ button:active, button:focus {
   }
   .service-record__section-title {
     margin: -1.5rem auto 1.5rem auto;
+    line-height: 2.1rem;
   }
   .service-gallery__background {
     -webkit-transform: translateY(63%);
             transform: translateY(63%);
+  }
+  .schedule__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1rem;
+  }
+  .schedule__wrap-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .schedule__call {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+    margin-left: auto;
+  }
+  .schedule__contacts-wrap {
+    -ms-flex-preferred-size: 39%;
+        flex-basis: 39%;
+  }
+  .choose-club {
+    width: 100%;
+  }
+  .location__map > ymaps {
+    height: 300px !important;
   }
 }
 
@@ -2365,11 +2458,11 @@ button:active, button:focus {
     -webkit-transform: translateX(5%);
             transform: translateX(5%);
   }
-  .service-record__input-group {
-    width: 75%;
-  }
   .service-record__button {
     width: 50%;
+  }
+  .service-record__input-group {
+    width: 75%;
   }
   .choose__wrap {
     -ms-flex-wrap: wrap;
@@ -2378,12 +2471,18 @@ button:active, button:focus {
   .choose__choose-club {
     width: 100%;
   }
+  .choose-club__name {
+    font-size: 16px;
+  }
   .footer__menu {
     display: none;
   }
   .footer__row {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .footer__wrap {
+    height: 22.3rem;
   }
   .top-header__record {
     display: none;
@@ -2428,14 +2527,35 @@ button:active, button:focus {
     margin: auto;
     margin-bottom: 10px;
   }
+  .club-cards__booking--one {
+    width: unset;
+    padding: 1.4rem 1.542rem;
+  }
+  .schedule__contacts-wrap {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+    margin-left: 0;
+  }
+  .schedule--contacts {
+    padding-left: 1rem;
+  }
+  .location__map > ymaps {
+    height: 250px !important;
+  }
 }
 
 @media screen and (max-width: 411px) {
   .service-record__input-group {
     width: 100%;
   }
-  .service-record__button {
+  .service-record__input-group__button {
     width: 60%;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .top-header__call button {
+    font-size: 13px;
   }
 }
 /*# sourceMappingURL=style.css.map */
