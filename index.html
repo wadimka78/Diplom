@@ -69,8 +69,8 @@
                         </div>
                     </div>
 
-                    <div class="top-header__record">
-                        <img src="img/first-page/icon_2.png" alt="иконка записи">
+                    <div class="top-header__record" data-toggle="modal-write">
+                        <img src="img/first-page/icon_2.png" alt="иконка записи" >
                         <span>Записаться на<br> бесплатный визит</span>
                     </div>
 
@@ -81,8 +81,7 @@
                     </div>
 
                     <div class="top-header__call">
-                        <button onclick="ym(61332526,'reachGoal','button'); return true;"
-                            class="button main__button button--primary" data-toggle="modal">
+                        <button class="button main__button button--primary" data-toggle="modal-call">
                             Перезвоните мне
                         </button>
                     </div>
@@ -771,7 +770,7 @@
 
                                 <div class="footer__call">
                                     <button onclick="ym(61332526,'reachGoal','button'); return true;"
-                                        class="button main__button button--primary" data-toggle="modal">
+                                        class="button main__button button--primary" data-toggle="modal-call">
                                         Перезвоните мне
                                     </button>
                                 </div>
@@ -780,8 +779,7 @@
                         </div>
                         <div class="row footer__last-row last-row">
                             <div class="last-row__block">
-                                <span class="last-row__copywrite">© Фитнес-центр «Лето», 2017. Все права
-                                    защищены.</span>
+                                <span class="last-row__copywrite">© GLO Academy, 2020. Мне всё равно, а им - приятно).</span>
                             </div>
                             <!-- /.col-50 last-row__block -->
                             <div class="last-row__block">
@@ -802,9 +800,9 @@
                 </div>
 
             </footer>
-<!--  Модальное окно -->
+<!--  Модальное окно "Перезвоните мне" -->
 
-            <div class="modal" id="fon">   
+            <div class="modal modal-call" id="fon">   
                 <div class="modal__dialog">
                     <button class="modal__close"></button>
                     <h2 class="modal__title">
@@ -813,13 +811,13 @@
                     <form action="send.php" method="POST" class="form modal__form" id="modal-window-form">
                         <div class="input-group modal__input-group">
             
-                            <input type="text" name="userName" class="input form__input modal__input input--light"
+                            <input type="text" name="userName" class="input form__input modal__input modal__input--top"
                                 id="user-name" placeholder="Ваше имя...">
                         </div>
                         <!-- /.input-group modal__input-group -->
                         <div class="input-group modal__input-group">
 
-                            <input type="tel" name="userPhone" class="input form__input modal__input input--light"
+                            <input type="tel" name="userPhone" class="input form__input modal__input modal__input--bottom"
                                 id="user-phone" placeholder="Ваш номер телефона...">
     
                         </div>
@@ -830,20 +828,65 @@
                             <div class="policy modal__policy">
     
                                 <input type="checkbox" name="policyCheckbox" id="policy-checkbox-modal"
-                                    class="policy__checkbox" checked>
-                                <label for="policy-checkbox-modal" class="policy__label">Я согласен на обработку персональных данных</label>
+                                    class="policy__checkbox policy__checkbox club-cards__checkbox modal__policy--checkbox" checked>
+                                <label for="policy-checkbox-modal" class="policy__label ">Я согласен на обработку <br>персональных данных</label>
                             </div>
                             <!-- /.policy -->
                         </div>
                         <!-- /.input-group modal__input-group -->
     
-                        <button class="button button--primary modal__button">Перезвоните мне</button>
+                        <button class="button button--primary modal__button" data-toggle="modal-call">Перезвоните мне</button>
                     </form>
                     <!-- /.form modal__form -->
                 </div>
                 <!-- /.modal__dialog -->
             </div>
             <!-- /.modal -->
+<!--  Модальное окно "Записаться на визит" -->
+
+            <div class="modal modal-write" id="modal-write">   
+                <div class="modal__dialog">
+                    <button class="modal__close"></button>
+                    <h2 class="modal__title">
+                        Записаться на визит
+                    </h2>
+                    <form action="send.php" method="POST" class="form modal__form" id="modal-window-form">
+                        <div class="input-group modal__input-group">
+            
+                            <input type="text" name="userName" class="input form__input modal__input modal__input--top"
+                                id="user-name" placeholder="Ваше имя...">
+                        </div>
+                        <!-- /.input-group modal__input-group -->
+                        <div class="input-group modal__input-group">
+
+                            <input type="tel" name="userPhone" class="input form__input modal__input modal__input--bottom"
+                                id="user-phone" placeholder="Ваш номер телефона...">
+    
+                        </div>
+
+                        <!-- /.input-group modal__input-group -->
+    
+                        <div class="input-group modal__input-group">
+                            <div class="policy modal__policy">
+    
+                                <input type="checkbox" name="policyCheckbox" id="policy-checkbox-modal"
+                                    class="policy__checkbox policy__checkbox club-cards__checkbox modal__policy--checkbox" checked>
+                                <label for="policy-checkbox-modal" class="policy__label ">Я согласен на обработку <br>персональных данных</label>
+                            </div>
+                            <!-- /.policy -->
+                        </div>
+                        <!-- /.input-group modal__input-group -->
+    
+                        <button class="button button--primary modal__button" data-toggle="modal-write">Записаться</button>
+                    </form>
+                    <!-- /.form modal__form -->
+                </div>
+                <!-- /.modal__dialog -->
+            </div>
+            <!-- /.modal -->
+
+
+
 
             <div class="thanks" id="thanks">
                 <div class="thanks__wrap">

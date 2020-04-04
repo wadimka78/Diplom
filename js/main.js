@@ -28,18 +28,7 @@ $('.top-header__select').click(function () {
         //    $(this).find('.select__dropdown-content').slideUp(300);
     }
 });
-//  $('.new-adr .item').click(function(){
-//   $(this).parents('.new-adr').addClass("active");
-//   $(this).parents('.new-adr').find('.ins').html($(this).html());
-//   $.ajax({
-//     url: '/ajax/save_city.php',
-//     type: 'GET',
-//   data: {'CITY_ID': $(this).attr('data-id')},
-//   success: function(responce){
-//       window.location.href = window.location.href.split('?')[0];
-//   }
-//});
-//  });
+
 
 //Слайдеры ГЛАВНОЙ страницы
 
@@ -65,7 +54,6 @@ $(document).ready(function () {
 
 
 
-
     var heroSwiper = new Swiper('.slider-hero', {
         loop: true,
         pagination: {
@@ -77,11 +65,9 @@ $(document).ready(function () {
 
     //Слайдер секции "Фотогалерея" 
 
-
-
     var gallerySwiper = new Swiper('.slider-gallery', {
         cssMode: true,
-        //    loop: true,
+        loop: true,
         navigation: {
             nextEl: '.slider-gallery__next',
             prevEl: '.slider-gallery__prev',
@@ -140,10 +126,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
     //Слайдеры страницы ЩЁЛКОВО
 
     //Слайдер секции "Hero-Щёлково"  на главной странице
@@ -192,13 +174,13 @@ $(document).ready(function () {
 
     var menuMob = $('.mobile-menu__wrap'),
         menuMobBtn = $('[data-toggle=open-menu]'),
-        closeBtn = $('.mobile-menu__close');
+        closeMobBtn = $('.mobile-menu__close');
 
     menuMobBtn.on('click', function () {
         menuMob.toggleClass('mobile-menu--visible');
     });
 
-    closeBtn.on('click', function () {
+    closeMobBtn.on('click', function () {
         menuMob.toggleClass('mobile-menu--visible');
     });
 
@@ -221,47 +203,36 @@ $(document).ready(function () {
     });
 
 
-
-
-    //Карта яндекса - Щёлково
-
-    var service = $('.service');
-    var serviceTop = service.offset().top;
-    $(window).bind('scroll', function () {
-        var windowTop = $(this).scrollTop();
-        if (windowTop > serviceTop) {
-            $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aedf6c7282a79306d65c4ffbd9a5456f5848ecb3a26dd480eca749a350882b286&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>')
-            $(window).unbind('scroll')
-        }
-    });
-
-    //Карта яндекса - Мозаика
-
-    var service = $('.abonement--one');
-    var serviceTop = service.offset().top;
-    $(window).bind('scroll', function () {
-        var windowTop = $(this).scrollTop();
-        if (windowTop > serviceTop) {
-            $('#map-mozaika').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af52a2a80ed81730f62111b8ba628c62f4ab3931be3e7063533c360f9cc789ba0&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>')
-            $(window).unbind('scroll')
-        }
-    });
-
     //Модальное окно
 
     var modal = $('.modal'),
-        modalBtn = $('[data-toggle=modal]'),
+    
+        modalCall = $('.modal-call'),
+        modalCallBtn = $('[data-toggle=modal-call]'),
         closeBtn = $('.modal__close');
-    fenetre = $('.thanks'),
+
+        modalWrite = $('.modal-write'),
+        modalWriteBtn = $('[data-toggle=modal-write]'),
+
+
+        fenetre = $('.thanks'),
         fenetreBtn = $('[data-toggle=thanks]'),
         closeFenetreBtn = $('.thanks__close');
+        
 
-    modalBtn.on('click', function () {
-        modal.toggleClass('modal--visible');
+    modalCallBtn.on('click', function () {
+        modalCall.toggleClass('modal--visible');
+    });
+    modalWriteBtn.on('click', function () {
+        modalWrite.toggleClass('modal--visible');
     });
 
+
     closeBtn.on('click', function () {
-        modal.toggleClass('modal--visible');
+        modalCall.toggleClass('modal--visible');
+    });
+    closeWriteBtn.on('click', function () {
+        modalWrite.toggleClass('modal--visible');
     });
 
     //Окно благодарности
@@ -474,9 +445,34 @@ $(document).ready(function () {
 
     // маска для номера телефона
     $('[type=tel]').mask('+7(000) 000-00-00', {
-        placeholder: "+7 (__) ___-__-__"
+        placeholder: "Ваш номер телефона..."
     });
     $('[type=tel2]').mask('+7(000) 000-00-00', {
         placeholder: "Ваш номер телефона"
     });
+
+    //Карта яндекса - Щёлково
+
+    var service = $('.service');
+    var serviceTop = service.offset().top;
+    $(window).bind('scroll', function () {
+        var windowTop = $(this).scrollTop();
+        if (windowTop > serviceTop) {
+            $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aedf6c7282a79306d65c4ffbd9a5456f5848ecb3a26dd480eca749a350882b286&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>')
+            $(window).unbind('scroll')
+        }
+    });
+
+    //Карта яндекса - Мозаика
+
+    var service = $('.abonement--one');
+    var serviceTop = service.offset().top;
+    $(window).bind('scroll', function () {
+        var windowTop = $(this).scrollTop();
+        if (windowTop > serviceTop) {
+            $('#map-mozaika').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af52a2a80ed81730f62111b8ba628c62f4ab3931be3e7063533c360f9cc789ba0&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>')
+            $(window).unbind('scroll')
+        }
+    });
+
 });
