@@ -118,29 +118,27 @@
             </div>
             <!-- /.menu -->
 
+
+            <!-- Пробуем меню-бургер -->
+
+            <section class="mobile-menu">
+                <div class="mobile-menu__wrap">
+                    <nav class="mobile-menu__nav" id="mobile-menu">
+                        <a href="index.html" class="mobile-menu__item">Клубы</a>
+                        <a href="#projects" class="mobile-menu__item">Услуги</a>
+                        <a href="#control" class="mobile-menu__item">Клубные карты</a>
+                        <a href="#team" class="mobile-menu__item">Расписание</a>
+                        <a href="#review" class="mobile-menu__item">Наши тренеры</a>
+                        <a href="#review" class="mobile-menu__item">Галерея</a>
+                        <a href="#review" class="mobile-menu__item">Наши акции</a>
+                        <a href="#contacts" class="mobile-menu__item">Контакты</a>
+                    </nav>
+                    <div class="mobile-menu__close"></div>
+                </div>
+            </section>
+            <!-- /.mobile-menu -->
+
         </header>
-
-
-        <!-- Пробуем меню-бургер -->
-
-        <section class="mobile-menu">
-            <div class="mobile-menu__wrap">
-                <nav class="mobile-menu__nav" id="mobile-menu">
-                    <a href="#index.html" class="mobile-menu__item">Клубы</a>
-                    <a href="#projects" class="mobile-menu__item">Услуги</a>
-                    <a href="#control" class="mobile-menu__item">Клубные карты</a>
-                    <a href="#team" class="mobile-menu__item">Расписание</a>
-                    <a href="#review" class="mobile-menu__item">Наши тренеры</a>
-                    <a href="#review" class="mobile-menu__item">Галерея</a>
-                    <a href="#review" class="mobile-menu__item">Наши акции</a>
-                    <a href="#contacts" class="mobile-menu__item">Контакты</a>
-                </nav>
-                <div class="mobile-menu__close"></div>
-            </div>
-        </section>
-        <!-- /.mobile-menu -->
-
-
         <main>
 
             <div class="section hero">
@@ -658,7 +656,7 @@
                 <!-- /.club-cards -->
             </section>
             <!-- /.abonement -->
-            <section class="footer">
+            <footer class="footer">
 
                 <div class="footer__wrap">
                     <div class="container">
@@ -803,11 +801,61 @@
                     <!-- /.container -->
                 </div>
 
-            </section>
+            </footer>
+<!--  Модальное окно -->
+
+            <div class="modal" id="fon">   
+                <div class="modal__dialog">
+                    <button class="modal__close"></button>
+                    <h2 class="modal__title">
+                        Обратный звонок
+                    </h2>
+                    <form action="send.php" method="POST" class="form modal__form" id="modal-window-form">
+                        <div class="input-group modal__input-group">
+            
+                            <input type="text" name="userName" class="input form__input modal__input input--light"
+                                id="user-name" placeholder="Ваше имя...">
+                        </div>
+                        <!-- /.input-group modal__input-group -->
+                        <div class="input-group modal__input-group">
+
+                            <input type="tel" name="userPhone" class="input form__input modal__input input--light"
+                                id="user-phone" placeholder="Ваш номер телефона...">
+    
+                        </div>
+
+                        <!-- /.input-group modal__input-group -->
+    
+                        <div class="input-group modal__input-group">
+                            <div class="policy modal__policy">
+    
+                                <input type="checkbox" name="policyCheckbox" id="policy-checkbox-modal"
+                                    class="policy__checkbox" checked>
+                                <label for="policy-checkbox-modal" class="policy__label">Я согласен на обработку персональных данных</label>
+                            </div>
+                            <!-- /.policy -->
+                        </div>
+                        <!-- /.input-group modal__input-group -->
+    
+                        <button class="button button--primary modal__button">Перезвоните мне</button>
+                    </form>
+                    <!-- /.form modal__form -->
+                </div>
+                <!-- /.modal__dialog -->
+            </div>
+            <!-- /.modal -->
+
+            <div class="thanks" id="thanks">
+                <div class="thanks__wrap">
+                    <button class="thanks__close"></button>
+                    <h2> Спасибо, что объявились!<br> За вами уже выехали!!!</h2>
+                </div>
+            </div>
 
 
 
-            <a href="#" id="scroll_top" title="Крутим вверх"></a>
+
+            <a href="#" id="scroll_top" class="scroll_top" title="Крутим вверх"></a>
             <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
             <script src="js/swiper.min.js"></script>
             <script src="js/jquery.fancybox.min.js"></script>

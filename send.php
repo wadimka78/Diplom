@@ -30,7 +30,7 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Новая заявка с сайта';
+    $mail->Subject = 'Заказ на клубную карту!';
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}, а почта его такая: ${userMail}, его вопрос: ${userQuestion}";
 
 
