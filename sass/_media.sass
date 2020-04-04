@@ -14,10 +14,14 @@
             transform: none
             top: 7%
             left: 5%
-
+    .club-cards
+        &__section-title
+            margin-top: 3.4rem  
 @media screen and  ( max-width: 1359px)
     html
         font-size: 13px
+    .container
+        width: 90%
     .slider-hero  //Главный слайдер
         &__layer
             right: 2%
@@ -28,20 +32,33 @@
     .service-record  //Самая верхняя строка экрана
         background: $title url('../img/first-page/record_fix.jpg') no-repeat center / cover
         background-attachment: fixed
-
+        & .form__input
+            font-size: 13px
     .club-cards
         &__label
             width: 100%
             padding: 1rem 0rem
         &__form > label:nth-child(2n)    
-            width: 24%
+            width: 23%
+            margin-right: 6px
+            &--one
+                width: 100%
+        &__block:nth-child(1)
+            width: 40%
+        &__block:nth-child(2)
+            width: 50%
+    .service-gallery
+        &__background 
+            transform: translateY(53%)
+    .activite 
+        justify-content: center
+        &__card
+            margin: 0.76rem 0.63rem !important
 
-
+            
 @media screen and  ( max-width: 1199px)
     html
         font-size: 12px
-    .container
-        width: 90%
     .slider-hero  //Главный слайдер
         &__layer
             right: 2%
@@ -64,42 +81,84 @@
             padding-top: 1.7rem
     .slider-hero__pagination 
         transform: translateY(-1.7rem)
-
-@media screen and (min-width: 1024px)and ( max-width: 1199px)
-    .club-cards
-        &__block:nth-child(1)
-            width: 40%
-        &__block:nth-child(2)
-            width: 60%
     .choose-club__adress
         margin-top: 5px
-    
-
+    input    
+        line-height: 13px
+    .abonement 
+        .club-cards 
+            .form__input
+                padding-top: 14px
+                padding-bottom: 14px
+                font-size: 13px
+    .service-gallery
+        &__background 
+            transform: translateY(60%)
 @media screen and  ( max-width: 1023px)      
     .container
         width: 90%
+    .row
+        flex-wrap: wrap
     .club-cards
         &__block:nth-child(1)
-            display: none
+            width: 55%
+            margin-bottom: 1.5rem
         &__block:nth-child(2)
-            width: 100%
+            width: 90%
         &__form
             padding: 0
             justify-content: space-between
+            transform: none
         &__label 
-            width: 9rem
             line-height: 2rem
         &__select
             padding-top: 1.6rem
-
+        &__dropdown-content
+            width: 100%
+        &__policy-label
+            position: relative
+            bottom: -2rem
+            left: 2.3rem
     .slider-hero__pagination 
         transform: translateY(-1rem)
 
-
-@media screen and  (min-width: 760px)and ( max-width: 1023px)
     .top-header
+        padding: 1rem 02rem
+        height: auto
+        &__select 
+            order: -1
+            transform: none
+            margin: 0
+            flex-basis: 32%
+        &__wrap
+            flex-wrap: wrap
         &__record
-            display: none
+            flex-basis: 32%
+            display: flex
+            justify-content: flex-end
+            margin: 0
+        &__logo
+            flex-basis: 32%
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+            margin: 0
+        &__contacts
+            flex-basis: 37%
+            margin-left: 0
+            margin-top: 0.5rem
+        &__call
+            flex-basis: 37%
+            margin-top: 1rem
+        & .container 
+            width: 95%
+        &__ouvert
+            background-color: unset
+            & .select__button
+                border-radius: 20px 20px 0px 0px
+                background-color: $primary
+                z-index: 5
+@media screen and  (min-width: 760px)and ( max-width: 1023px)
     .footer
         &__menu
             margin-left: -1rem
@@ -130,7 +189,9 @@
     .choose-club
         &__image-bottom
             display: none
-
+    .service-gallery
+        &__background 
+            transform: translateY(69%)
 @media screen and  ( min-width: 761px)
     .mobile-menu
         display: none
@@ -139,29 +200,9 @@
 @media screen and  ( max-width: 760px)
     .container 
         width: 95%
-    .top-header
-        padding: 1rem 02rem
-        height: auto
-        &__select 
-            order: -1
-            transform: none
-            margin: auto
-            margin-left: 0rem
-        &__wrap
-            flex-wrap: wrap
-        &__record
-            flex-basis: 30%
-        &__logo
-            flex-basis: 30%
-        &__contacts
-            flex-basis: 45%
-            margin-left: 0
-            margin-top: 0.5rem
-        &__call
-            flex-basis: 45%
-            margin-top: 1rem
-    #top-menu
+    #top-menu, .footer__checkbox
         display: none
+
     .sale
         &__border-block
             width: 24rem
@@ -215,13 +256,86 @@
             width: 80%
         &__section-title 
             margin: -1.5rem auto 1.5rem auto
+    .service-gallery
+        &__background 
+            transform: translateY(63%)
+@media screen and  ( max-width: 700px)
+    .service-gallery
+        &__background 
+            transform: translateY(61%)
+
+@media screen and  ( max-width: 650px)
+    .service-gallery
+        &__background 
+            transform: translateY(53%)
+
+
 @media screen and  ( min-width: 576px)         
     .slide-mobile
         display: none
+    .choose
+        &__choose-club:nth-child(1)   
+            margin-right: 15px
+        &__choose-club:nth-child(2)
+            margin-left: 15px
 @media screen and  ( max-width: 575px)
+
+    .service-gallery
+        &__background 
+            background: none
     .slide-desktop
         display: none
     .service-record
+            height: 26rem
             &__form 
                 flex-direction: column
-
+            &__section-title 
+                line-height: 2.3rem
+            &__policy
+                transform: translateX(5%)
+            &__input-group 
+                width: 75%
+            &__button 
+                width: 50%
+    .choose
+        &__wrap
+            flex-wrap: wrap
+        &__choose-club
+            width: 100%
+    .footer
+        &__menu
+            display: none
+        &__row
+            justify-content: space-around
+    .top-header
+        &__record
+            display: none
+        &__select 
+            order: 1
+            display: flex
+            justify-content: center
+            margin-top: 1rem
+            flex-basis: 100%
+        &__logo
+            flex-basis: 100%
+        &__contacts
+            flex-basis: 48%
+            order: 2
+            text-align: center
+            margin-right: 0
+        &__call
+            flex-basis: 48%
+            order: 3
+            text-align: center
+    .club-cards
+        &__form > label:nth-child(2n) 
+            width: 45%
+            margin: auto
+            margin-bottom: 10px
+    
+@media screen and  ( max-width: 411px)
+    .service-record
+            &__input-group 
+                width: 100%
+            &__button
+                width: 60%

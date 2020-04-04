@@ -106,22 +106,22 @@ var serviceSwiper = new Swiper('.slider-service', {
             spaceBetween: 15
         },
         // when window width is >= 480px
-        768: {
+        576: {
             slidesPerView: 2,
             spaceBetween: 15
         },
         // when window width is >= 768px
         990: {
             slidesPerView: 3,
-            spaceBetween: 15
+            spaceBetween: 35
         },
         // when window width is >= 768px
-        1200: {
+        1024: {
             slidesPerView: 4,
             spaceBetween: 15
         },
         // when window width is >= 62.857rem
-        1360: {
+        1200: {
             slidesPerView: 5,
             spaceBetween: 15
         }

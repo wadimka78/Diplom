@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Roboto-MediumItalic';
   src: url("../fonts/roboto/Roboto-MediumItalic.woff") format("woff"), url("../fonts/roboto/Roboto-MediumItalic.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'Roboto-Medium';
   src: url("../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../fonts/roboto/Roboto-Medium.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: 'Roboto-LightItalic';
   src: url("../fonts/roboto/Roboto-LightItalic.woff") format("woff"), url("../fonts/roboto/Roboto-LightItalic.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'Roboto-Thin';
   src: url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2");
-  font-weight: 200;
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
@@ -33,7 +33,7 @@
 @font-face {
   font-family: 'Roboto-Light';
   src: url("../fonts/roboto/Roboto-Light.woff") format("woff"), url("../fonts/roboto/Roboto-Light.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -41,7 +41,7 @@
 @font-face {
   font-family: 'Roboto-Italic';
   src: url("../fonts/roboto/Roboto-Italic.woff") format("woff"), url("../fonts/roboto/Roboto-Italic.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -49,7 +49,7 @@
 @font-face {
   font-family: 'Roboto-BoldItalic';
   src: url("../fonts/roboto/Roboto-BoldItalic.woff") format("woff"), url("../fonts/roboto/Roboto-BoldItalic.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -57,7 +57,7 @@
 @font-face {
   font-family: 'Roboto-Bold';
   src: url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -65,7 +65,7 @@
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -610,14 +610,14 @@ button:active, button:focus {
 }
 
 .contacts {
-  font-family: "Roboto-Light";
+  font-family: "Roboto";
   text-align: right;
   line-height: 1.45rem;
 }
 
 .phone {
   font-size: 1.22rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.714rem;
   letter-spacing: .08rem;
 }
@@ -829,7 +829,6 @@ button:active, button:focus {
   position: absolute;
   bottom: 4.7rem;
   left: 7.3rem;
-  width: 100%;
 }
 
 .club-cards__policy-label--one {
@@ -890,6 +889,11 @@ button:active, button:focus {
   color: #1e1c34;
   text-align: center;
   line-height: 1.071rem;
+}
+
+.service-record__policy-label::before {
+  left: -10px;
+  top: -2px;
 }
 
 .abonement .club-cards .form__input {
@@ -963,6 +967,10 @@ button:active, button:focus {
           align-items: center;
 }
 
+.top-header__call button {
+  font-size: 14px;
+}
+
 .top-header__select {
   position: relative;
   margin-left: auto;
@@ -1024,7 +1032,7 @@ button:active, button:focus {
   overflow: auto;
   z-index: 37;
   padding: 25px 0px 5px 2.143rem;
-  border-radius: 0 7px 7px 7px;
+  border-radius: 7px;
   width: 18.929rem;
   border: none;
   top: 2.714rem;
@@ -1159,7 +1167,7 @@ button:active, button:focus {
   line-height: 1.286rem;
   text-transform: uppercase;
   color: #fff;
-  height: 4.714rem;
+  height: 4.514rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1190,14 +1198,6 @@ button:active, button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.choose__choose-club:nth-child(1) {
-  margin-right: 15px;
-}
-
-.choose__choose-club:nth-child(2) {
-  margin-left: 15px;
 }
 
 .choose__title {
@@ -1236,8 +1236,8 @@ button:active, button:focus {
 }
 
 .service-record__policy {
-  -webkit-transform: translateX(62%);
-          transform: translateX(62%);
+  -webkit-transform: translateX(67%);
+          transform: translateX(67%);
   margin-top: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1256,6 +1256,7 @@ button:active, button:focus {
 .service-record__button {
   padding: 1rem 2.7rem;
   margin-left: 0.5rem;
+  font-size: 14px;
 }
 
 .service-record__form {
@@ -1414,8 +1415,8 @@ button:active, button:focus {
   top: 14.5%;
   z-index: 10;
   color: white;
-  -webkit-transform: translateX(-55.9%);
-          transform: translateX(-55.9%);
+  -webkit-transform: translateX(74.45%);
+          transform: translateX(74.45%);
   text-align: left;
 }
 
@@ -1960,11 +1961,17 @@ button:active, button:focus {
     top: 7%;
     left: 5%;
   }
+  .club-cards__section-title {
+    margin-top: 3.4rem;
+  }
 }
 
 @media screen and (max-width: 1359px) {
   html {
     font-size: 13px;
+  }
+  .container {
+    width: 90%;
   }
   .slider-hero__layer {
     right: 2%;
@@ -1979,21 +1986,43 @@ button:active, button:focus {
     background: #2e2e2e url("../img/first-page/record_fix.jpg") no-repeat center/cover;
     background-attachment: fixed;
   }
+  .service-record .form__input {
+    font-size: 13px;
+  }
   .club-cards__label {
     width: 100%;
     padding: 1rem 0rem;
   }
   .club-cards__form > label:nth-child(2n) {
-    width: 24%;
+    width: 23%;
+    margin-right: 6px;
+  }
+  .club-cards__form > label:nth-child(2n)--one {
+    width: 100%;
+  }
+  .club-cards__block:nth-child(1) {
+    width: 40%;
+  }
+  .club-cards__block:nth-child(2) {
+    width: 50%;
+  }
+  .service-gallery__background {
+    -webkit-transform: translateY(53%);
+            transform: translateY(53%);
+  }
+  .activite {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .activite__card {
+    margin: 0.76rem 0.63rem !important;
   }
 }
 
 @media screen and (max-width: 1199px) {
   html {
     font-size: 12px;
-  }
-  .container {
-    width: 90%;
   }
   .slider-hero__layer {
     right: 2%;
@@ -2025,17 +2054,20 @@ button:active, button:focus {
     -webkit-transform: translateY(-1.7rem);
             transform: translateY(-1.7rem);
   }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
-  .club-cards__block:nth-child(1) {
-    width: 40%;
-  }
-  .club-cards__block:nth-child(2) {
-    width: 60%;
-  }
   .choose-club__adress {
     margin-top: 5px;
+  }
+  input {
+    line-height: 13px;
+  }
+  .abonement .club-cards .form__input {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 13px;
+  }
+  .service-gallery__background {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
   }
 }
 
@@ -2043,35 +2075,110 @@ button:active, button:focus {
   .container {
     width: 90%;
   }
+  .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .club-cards__block:nth-child(1) {
-    display: none;
+    width: 55%;
+    margin-bottom: 1.5rem;
   }
   .club-cards__block:nth-child(2) {
-    width: 100%;
+    width: 90%;
   }
   .club-cards__form {
     padding: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-transform: none;
+            transform: none;
   }
   .club-cards__label {
-    width: 9rem;
     line-height: 2rem;
   }
   .club-cards__select {
     padding-top: 1.6rem;
   }
+  .club-cards__dropdown-content {
+    width: 100%;
+  }
+  .club-cards__policy-label {
+    position: relative;
+    bottom: -2rem;
+    left: 2.3rem;
+  }
   .slider-hero__pagination {
     -webkit-transform: translateY(-1rem);
             transform: translateY(-1rem);
   }
+  .top-header {
+    padding: 1rem 02rem;
+    height: auto;
+  }
+  .top-header__select {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-transform: none;
+            transform: none;
+    margin: 0;
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+  }
+  .top-header__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .top-header__record {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 0;
+  }
+  .top-header__logo {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0;
+  }
+  .top-header__contacts {
+    -ms-flex-preferred-size: 37%;
+        flex-basis: 37%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .top-header__call {
+    -ms-flex-preferred-size: 37%;
+        flex-basis: 37%;
+    margin-top: 1rem;
+  }
+  .top-header .container {
+    width: 95%;
+  }
+  .top-header__ouvert {
+    background-color: unset;
+  }
+  .top-header__ouvert .select__button {
+    border-radius: 20px 20px 0px 0px;
+    background-color: #ffd11a;
+    z-index: 5;
+  }
 }
 
 @media screen and (min-width: 760px) and (max-width: 1023px) {
-  .top-header__record {
-    display: none;
-  }
   .footer__menu {
     margin-left: -1rem;
   }
@@ -2110,6 +2217,10 @@ button:active, button:focus {
   .choose-club__image-bottom {
     display: none;
   }
+  .service-gallery__background {
+    -webkit-transform: translateY(69%);
+            transform: translateY(69%);
+  }
 }
 
 @media screen and (min-width: 761px) {
@@ -2125,43 +2236,7 @@ button:active, button:focus {
   .container {
     width: 95%;
   }
-  .top-header {
-    padding: 1rem 02rem;
-    height: auto;
-  }
-  .top-header__select {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    -webkit-transform: none;
-            transform: none;
-    margin: auto;
-    margin-left: 0rem;
-  }
-  .top-header__wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .top-header__record {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-  }
-  .top-header__logo {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-  }
-  .top-header__contacts {
-    -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
-  .top-header__call {
-    -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
-    margin-top: 1rem;
-  }
-  #top-menu {
+  #top-menu, .footer__checkbox {
     display: none;
   }
   .sale__border-block {
@@ -2235,23 +2310,132 @@ button:active, button:focus {
   .service-record__section-title {
     margin: -1.5rem auto 1.5rem auto;
   }
+  .service-gallery__background {
+    -webkit-transform: translateY(63%);
+            transform: translateY(63%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .service-gallery__background {
+    -webkit-transform: translateY(61%);
+            transform: translateY(61%);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .service-gallery__background {
+    -webkit-transform: translateY(53%);
+            transform: translateY(53%);
+  }
 }
 
 @media screen and (min-width: 576px) {
   .slide-mobile {
     display: none;
   }
+  .choose__choose-club:nth-child(1) {
+    margin-right: 15px;
+  }
+  .choose__choose-club:nth-child(2) {
+    margin-left: 15px;
+  }
 }
 
 @media screen and (max-width: 575px) {
+  .service-gallery__background {
+    background: none;
+  }
   .slide-desktop {
     display: none;
+  }
+  .service-record {
+    height: 26rem;
   }
   .service-record__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .service-record__section-title {
+    line-height: 2.3rem;
+  }
+  .service-record__policy {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  .service-record__input-group {
+    width: 75%;
+  }
+  .service-record__button {
+    width: 50%;
+  }
+  .choose__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .choose__choose-club {
+    width: 100%;
+  }
+  .footer__menu {
+    display: none;
+  }
+  .footer__row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .top-header__record {
+    display: none;
+  }
+  .top-header__select {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1rem;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .top-header__logo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .top-header__contacts {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: center;
+    margin-right: 0;
+  }
+  .top-header__call {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    text-align: center;
+  }
+  .club-cards__form > label:nth-child(2n) {
+    width: 45%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .service-record__input-group {
+    width: 100%;
+  }
+  .service-record__button {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */
