@@ -105,12 +105,19 @@
                 <div class="container">
                     <nav class="nav menu__nav" id="top-menu">
                         <a href="#home-page" class="nav__item">Клубы</a>
+                        <span class="menu__border"></span>
                         <a href="#projects" class="nav__item">Услуги</a>
+                        <span class="menu__border"></span>
                         <a href="#control" class="nav__item">Клубные карты</a>
+                        <span class="menu__border"></span>
                         <a href="#team" class="nav__item">Расписание</a>
+                        <span class="menu__border"></span>
                         <a href="#review" class="nav__item">Наши тренеры</a>
+                        <span class="menu__border"></span>
                         <a href="#review" class="nav__item">Галерея</a>
+                        <span class="menu__border"></span>
                         <a href="#review" class="nav__item">Наши акции</a>
+                        <span class="menu__border"></span>
                         <a href="#contacts" class="nav__item">Контакты</a>
                     </nav>
                 </div>
@@ -234,7 +241,7 @@
                                     <!-- /.image-bottom -->
                                     <div class="choose-club__contacts schedule--contacts">
                                         <span class="choose-club__name">Единый телефон: </span>
-                                        <div class="span choose-club__adress">+ 7 (495) 266-02-78
+                                        <div class="span choose-club__adress"><a href="tel:+ 7 (495) 266-02-78">+ 7 (495) 266-02-78</a>
                                         </div>
                                     </div>
                                 </div>
@@ -245,8 +252,9 @@
                                     <!-- /.image-bottom -->
                                     <div class="choose-club__contacts schedule--contacts">
                                         <span class="choose-club__name">E-mail: </span>
-                                        <div class="span choose-club__adress">sell@letofit.ru
+                                        <div class="span choose-club__adress">  <a href="mailto:sell@letofit.ru"><span>sell@letofit.ru</span></a>
                                         </div>
+
                                     </div>
                                 </div>
                                 <!-- /.image-bottom -->
@@ -396,7 +404,7 @@
 
 
                                     <label>
-                                        <input type="radio" checked id="select-month-1" name="select_card"
+                                        <input type="radio" checked id="select-month-1" name="select_month"
                                             class="club-cards__input--hidden" id="select_card" value="1 месяц"
                                             checked></label>
                                     <label  class="club-cards__label club-cards__label--one" for="select-month-1">
@@ -417,7 +425,7 @@
 
 
                                     <label>
-                                        <input type="radio" id="select-month-2" name="select_card" id="select_card"
+                                        <input type="radio" id="select-month-2" name="select_month" id="select_card"
                                             class="club-cards__input--hidden" value="3 месяца"></label>
                                     <label class="club-cards__label club-cards__label--one" for="select-month-2">
 
@@ -436,7 +444,7 @@
                                     </label>
 
                                     <label>
-                                        <input type="radio" id="select-month-3" name="select_card" id="select_card"
+                                        <input type="radio" id="select-month-3" name="select_month" id="select_card"
                                             class="club-cards__input--hidden" value="6 месяцев"></label>
                                     <label  class="club-cards__label club-cards__label--one" for="select-month-3">
                                         <span class="club-cards__label--title-one">9
@@ -454,7 +462,7 @@
 
 
                                     <label>
-                                        <input type="radio" id="select-month-4" name="select_card" id="select_card"
+                                        <input type="radio" id="select-month-4" name="select_month" id="select_card"
                                             class="club-cards__input--hidden" value="12 месяцев - дневная"></label>
                                     <label  class="club-cards__label club-cards__label--one" for="select-month-4">
                                         <span class="club-cards__label--title-one">12
@@ -472,7 +480,7 @@
                                     </label>
 
                                     <label>
-                                        <input type="radio" id="select-month-5" name="select_card" id="select_card"
+                                        <input type="radio" id="select-month-5" name="select_month" id="select_card"
                                             class="club-cards__input--hidden" value="12 месяцев - соло"></label>
                                     <label  class="club-cards__label club-cards__label--one" for="select-month-5">
                                         <span class="club-cards__label--title-one">12
@@ -491,14 +499,14 @@
 
                                     <!-- Формы ввода имени и номера телефона -->
                                     <div class="club-cards__input-wrap club-cards__input-wrap--one">
-                                        <div class="club-cards__input-group club-cards__input-group--one">
+                                        <div class="club-cards__input-group club-cards__input-group--one club-cards__input-group--one--name">
                                             <!--  -->
                                             <input type="text" name="userName"
                                                 class="input form__input club-cards__input club-cards__input--one"
                                                 id="user-name-club-cards" placeholder="Ваше имя *">
                                         </div>
                                         <!-- /.input-group -->
-                                        <div class="club-cards__input-group club-cards__input-group--one">
+                                        <div class="club-cards__input-group club-cards__input-group--one club-cards__input-group--one--phone">
                                             <!--  -->
                                             <input type="tel" name="userPhone"
                                                 class="input form__input club-cards__input club-cards__input--one"
@@ -683,7 +691,7 @@
                             <div class="policy service-record__policy">
                                 <input type="checkbox" name="service-recordCheckbox" id="policy-checkbox"
                                     class="policy__checkbox club-cards__checkbox" checked>
-                                <label for="policy-checkbox" class="policy__label service-record__policy-label">я
+                                <label for="policy-checkbox" class="policy__label service-record__policy-label service-record__policy-label--check">я
                                     согласен на обработку персональных данных</label>
                             </div>
                             <!-- /.policy -->
@@ -837,11 +845,16 @@
                             <!-- /.col-50 last-row__block -->
                             <div class="last-row__block">
                                 <div class="social last-row__social">
-                                    <img src="img/icons/vk.png" alt="иконка ВК">
-                                    <img src="img/icons/inst.png" alt="иконка Инстаграмма">
-                                    <img src="img/icons/youtube.png" alt="иконка Ютуба">
-                                    <img src="img/icons/fb.png" alt="иконка Фейсбука">
-                                    <img src="img/icons/twitter.png" alt="иконка Твиттера">
+
+                                    <a target="_blank" href="https://vk.com/glo_academy"><img src="img/icons/vk.png" alt="иконка ВК"></a>
+                                    
+                                    <a target="_blank" href="https://www.instagram.com/glo_web_academy/">    <img src="img/icons/inst.png" alt="иконка Инстаграмма"></a>
+                                    
+                                    <a target="_blank" href="https://www.youtube.com/c/gloacademychannel"><img src="img/icons/youtube.png" alt="иконка Ютуба"></a>
+
+                                    <a target="_blank" href="https://www.facebook.com/gloacademy1/"> <img src="img/icons/fb.png" alt="иконка Фейсбука"></a>
+                                    
+                                    <a target="_blank" href="https://t.me/glo_academy"> <img src="img/icons/twitter.png" alt="иконка Твиттера"></a>
                                 </div>
                             </div>
                             <!-- /.col-50 last-row__block -->

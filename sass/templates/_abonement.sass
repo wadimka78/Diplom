@@ -34,6 +34,8 @@
         position: relative
         display: flex
         padding-top: 0.85rem
+        & label
+            position: relative
     &__checkbox-wrap
         position: relative
         padding-left: 2.3rem
@@ -41,12 +43,12 @@
         text-align: left
         letter-spacing: -0.6px
         & .club-cards
-            &__checkbox:checked + label::before
+            &__checkbox:checked ~ label::before
                 left: -2.2rem
                 top: 1rem
-            &__checkbox + label::before
+            &__checkbox ~ label::before
                 left: -2.2rem
-                top: 1rem  
+                top: 1rem
     &__form
         padding-left: 3.5rem
     &__input-wrap

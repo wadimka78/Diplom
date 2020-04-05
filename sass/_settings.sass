@@ -20,6 +20,26 @@ button:active, button:focus
     outline: none
 .container
     max-width: 1140px
+.menu
+    background: url('../img/menu_bg.png') no-repeat center / cover
+    font-family: Roboto
+    font-size: 1rem
+    font-weight: 400
+    text-transform: uppercase
+    color: $light
+    display: flex
+    position: relative
+    &__nav
+        display: flex
+        justify-content: space-between
+    & a
+        line-height: 4.6rem
+    &__border
+        border-left: 1px dotted rgba(255,255,255,.3)
+        padding:  1.1rem 0rem
+        margin: auto
+
+
 
 .button
     font-size: 14px
@@ -34,9 +54,7 @@ button:active, button:focus
     cursor: pointer
     &--secondary
         background-color: unset
-        color: $primary
-    
-
+        color: $primary   
 
 .section
     &-title
@@ -89,3 +107,9 @@ button:active, button:focus
 
 .choose__choose-club a:hover + .lazyload2
     transform: scale(1.09)
+    
+div.invalid
+    position: absolute
+    color: tomato
+    margin-top: 5px
+    left: 15px

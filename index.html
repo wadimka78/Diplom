@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="top-header__record" data-toggle="modal-write">
-                        <img src="img/first-page/icon_2.png" alt="иконка записи" >
+                        <img src="img/first-page/icon_2.png" alt="иконка записи">
                         <span>Записаться на<br> бесплатный визит</span>
                     </div>
 
@@ -104,12 +104,19 @@
                 <div class="container">
                     <nav class="nav menu__nav" id="top-menu">
                         <a href="#home-page" class="nav__item">Клубы</a>
+                        <span class="menu__border"></span>
                         <a href="#projects" class="nav__item">Услуги</a>
+                        <span class="menu__border"></span>
                         <a href="#control" class="nav__item">Клубные карты</a>
+                        <span class="menu__border"></span>
                         <a href="#team" class="nav__item">Расписание</a>
+                        <span class="menu__border"></span>
                         <a href="#review" class="nav__item">Наши тренеры</a>
+                        <span class="menu__border"></span>
                         <a href="#review" class="nav__item">Галерея</a>
+                        <span class="menu__border"></span>
                         <a href="#review" class="nav__item">Наши акции</a>
+                        <span class="menu__border"></span>
                         <a href="#contacts" class="nav__item">Контакты</a>
                     </nav>
                 </div>
@@ -398,15 +405,13 @@
                             <button class="button button--primary service-record__button">Записаться</button>
 
                             <div class="policy service-record__policy">
-                                <input type="checkbox" name="service-recordCheckbox" id="policy-checkbox"
+                                <input type="checkbox" name="controlCheckbox" id="policy-checkbox"
                                     class="policy__checkbox club-cards__checkbox" checked>
-                                <label for="policy-checkbox" class="policy__label service-record__policy-label">я
+
+                                <label for="policy-checkbox"
+                                    class="policy__label service-record__policy-label service-record__policy-label--check">я
                                     согласен на обработку персональных данных</label>
                             </div>
-
-
-
-
 
 
 
@@ -546,16 +551,15 @@
                                 <form action="send.php" method="POST" class="form club-cards__form">
 
                                     <label>
-                                        <input type="radio" checked id="select-month-1" name="select_card"
-                                            class="club-cards__input--hidden" id="select_card" value="1 месяц"
-                                            checked></label>
+                                        <input type="radio" id="select-month-1" name="select_month"
+                                            class="club-cards__input--hidden" value="1 месяц" checked></label>
                                     <label for="select-month-1">
                                         <span class="club-cards__label">1 месяц</span></label>
 
 
 
                                     <label>
-                                        <input type="radio" id="select-month-2" name="select_card" id="select_card"
+                                        <input type="radio" id="select-month-2" name="select_month"
                                             class="club-cards__input--hidden" value="3 месяца"></label>
                                     <label for="select-month-2"><span class="club-cards__label">3
                                             месяца</span></label>
@@ -564,7 +568,7 @@
 
 
                                     <label>
-                                        <input type="radio" id="select-month-3" name="select_card" id="select_card"
+                                        <input type="radio" id="select-month-3" name="select_month"
                                             class="club-cards__input--hidden" value="6 месяцев"></label><label
                                         for="select-month-3"><span class="club-cards__label">6
                                             месяцев</span></label>
@@ -573,36 +577,39 @@
 
 
                                     <label>
-                                        <input type="radio" id="select-month-4" name="select_card" id="select_card"
+                                        <input type="radio" id="select-month-4" name="select_month"
                                             class="club-cards__input--hidden" value="12 месяцев"></label>
                                     <label for="select-month-4"><span class="club-cards__label">12
                                             месяцев</span></label>
 
 
 
-                                    <div class="club-cards__checkbox-wrap">
+                                    <div class="club-cards__checkbox-wrap club-cards__checkbox-wrap--main">
                                         <!--  Чекбокс "Мозаика" -->
                                         <div class="policy club-cards__select">
-                                            <input type="checkbox" name="club-cardsCheckbox" id="mozaika-checkbox"
-                                                class="policy__checkbox club-cards__checkbox" checked>
-                                            <label for="mozaika-checkbox"
-                                                class="policy__label club-cards__policy-select">
+
+                                            <!--  Радиобокс "Мозаика" -->
+
+                                            <input type="radio" id="select-club-mozaika" name="select_club"
+                                                class="club-cards__checkbox club-cards__input--hidden club-cards__checkbox--select-club"
+                                                value="Выбираю Мозаику!" checked="checked">
+
+                                            <label for="select-club-mozaika">
                                                 <div class="choose-club__contacts">
                                                     <span class="choose-club__name">Лето"Мозаика"</span>
                                                     <div class="span choose-club__adress">Россия, Москва, 7-ая
-                                                        Кожуховская
-                                                        ул,
-                                                        9
+                                                        Кожуховская ул, 9
                                                     </div>
                                                 </div>
                                             </label>
-                                        </div>
-                                        <!--  Чекбокс "Щёлково" -->
-                                        <div class="policy club-cards__select">
-                                            <input type="checkbox" name="club-cardsCheckbox" id="shelkovo-checkbox"
-                                                class="policy__checkbox club-cards__checkbox">
-                                            <label for="shelkovo-checkbox"
-                                                class="policy__label club-cards__policy-select">
+
+                                            <!--  Радиобокс "Щёлково" -->
+
+                                            <input type="radio" id="select-club-shelkovo" name="select_club"
+                                                class="club-cards__checkbox club-cards__input--hidden club-cards__checkbox--select-club"
+                                                value="Выбираю Щёлково!">
+
+                                            <label for="select-club-shelkovo">
                                                 <div class="choose-club__contacts">
                                                     <span class="choose-club__name">Лето "Щёлково"</span>
                                                     <div class="span choose-club__adress">Россия, г.Щёлково, ул.
@@ -613,16 +620,20 @@
                                         </div>
                                     </div>
                                     <!-- /.choose-club__checkbox-wrap -->
+
+
+
+
                                     <!-- Формы ввода имени и номера телефона -->
                                     <div class="club-cards__input-wrap">
-                                        <div class="club-cards__input-group">
+                                        <div class="club-cards__input-group club-cards__input-group--name">
                                             <!--  -->
                                             <input type="text" name="userName"
                                                 class="input form__input club-cards__input" id="user-name-club-cards"
                                                 placeholder="Ваше имя *">
                                         </div>
                                         <!-- /.input-group -->
-                                        <div class="club-cards__input-group">
+                                        <div class="club-cards__input-group club-cards__input-group--phone">
                                             <!--  -->
                                             <input type="tel" name="userPhone"
                                                 class="input form__input club-cards__input" id="user-phone-club-cards"
@@ -634,7 +645,7 @@
 
                                     <!--  Чекбокс "Бронирование карты" -->
                                     <div class="policy club-cards__policy">
-                                        <input type="checkbox" name="club-cardsCheckbox" id="booking-checkbox"
+                                        <input type="checkbox" name="controlCheckbox2" id="booking-checkbox"
                                             class="policy__checkbox club-cards__checkbox" checked>
                                         <label for="booking-checkbox" class="policy__label club-cards__policy-label">я
                                             согласен на обработку персональных данных</label>
@@ -668,7 +679,7 @@
 
 
                             <div class="footer__menu">
-                                <nav class="nav footer__nav" id="footer-menu">
+                                <nav class="nav footer__nav" id="footer-menu-left">
                                     <span class="footer__title">"Лето"</span>
                                     <a href="#home-page" class="footer__nav--item">Клубы</a>
                                     <a href="#projects" class="footer__nav--item">Новости</a>
@@ -680,7 +691,7 @@
                             </div>
                             <!-- /.footer__menu -->
                             <div class="footer__menu">
-                                <nav class="nav footer__nav" id="footer-menu">
+                                <nav class="nav footer__nav" id="footer-menu-right">
                                     <span class="footer__title">Клиентам</span>
                                     <a href="#control" class="footer__nav--item">Клубные карты</a>
                                     <a href="#team" class="footer__nav--item">Расписание</a>
@@ -693,29 +704,13 @@
                                 <span class="footer__title">Выбрать клуб</span>
                                 <div class="footer__checkbox-wrap">
 
-
-
-                                    <!--  Чекбокс футер - "Мозаика" -->
-                                    <!--                       <div class="policy club-cards__select">
-                                        <input type="checkbox" name="mozaikaCheckbox" id="footer-mozaika-checkbox"
-                                            class="policy__checkbox footer__checkbox" checked>
-                                        <label for="footer-mozaika-checkbox"
-                                            class="policy__label club-cards__policy-select">
-                                            <div class="choose-club__contacts choose-club__contacts--footer">
-                                                <span class="choose-club__name">Лето"Мозаика"</span>
-                                                <div class="span choose-club__adress">г. Москва, 7-ая Кожуховская
-                                                    ул, 9
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div> -->
                                     <!--     форма -->
                                     <form action="send.php" method="POST" class="footer__form">
 
 
 
                                         <input type="radio" id="footer-mozaika-checkbox" class="footer__button--radio"
-                                            name="footer-radio" value="Клуб Мозаика">
+                                            name="footer-radio" value="Клуб Мозаика" checked>
 
                                         <label for="footer-mozaika-checkbox"><span
                                                 class="footer__label--radio">Лето"Мозаика"</span>
@@ -736,21 +731,6 @@
                                         </label>
                                     </form>
                                     <!-- /.form -->
-
-                                    <!--  Чекбокс футер - "Щёлково" -->
-                                    <!--                                     <div class="policy club-cards__select">
-                                        <input type="checkbox" name="shelkovoCheckbox" id="footer-shelkovo-checkbox"
-                                            class="policy__checkbox footer__checkbox">
-                                        <label for="footer-shelkovo-checkbox"
-                                            class="policy__label club-cards__policy-select">
-                                            <div class="choose-club__contacts choose-club__contacts--footer">
-                                                <span class="choose-club__name">Лето "Щёлково"</span>
-                                                <div class="span choose-club__adress">г.Щёлково, ул.
-                                                    Советская, дом 16
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div>-->
                                 </div>
                             </div>
                             <!-- /.footer__checkbox -->
@@ -779,16 +759,27 @@
                         </div>
                         <div class="row footer__last-row last-row">
                             <div class="last-row__block">
-                                <span class="last-row__copywrite">© GLO Academy, 2020. Мне всё равно, а им - приятно).</span>
+                                <span class="last-row__copywrite">© GLO Academy, 2020. Мне всё равно, а им -
+                                    приятно).</span>
                             </div>
                             <!-- /.col-50 last-row__block -->
                             <div class="last-row__block">
                                 <div class="social last-row__social">
-                                    <img src="img/icons/vk.png" alt="иконка ВК">
-                                    <img src="img/icons/inst.png" alt="иконка Инстаграмма">
-                                    <img src="img/icons/youtube.png" alt="иконка Ютуба">
-                                    <img src="img/icons/fb.png" alt="иконка Фейсбука">
-                                    <img src="img/icons/twitter.png" alt="иконка Твиттера">
+
+                                    <a target="_blank" href="https://vk.com/glo_academy"><img src="img/icons/vk.png"
+                                            alt="иконка ВК"></a>
+
+                                    <a target="_blank" href="https://www.instagram.com/glo_web_academy/"> <img
+                                            src="img/icons/inst.png" alt="иконка Инстаграмма"></a>
+
+                                    <a target="_blank" href="https://www.youtube.com/c/gloacademychannel"><img
+                                            src="img/icons/youtube.png" alt="иконка Ютуба"></a>
+
+                                    <a target="_blank" href="https://www.facebook.com/gloacademy1/"> <img
+                                            src="img/icons/fb.png" alt="иконка Фейсбука"></a>
+
+                                    <a target="_blank" href="https://t.me/glo_academy"> <img src="img/icons/twitter.png"
+                                            alt="иконка Твиттера"></a>
                                 </div>
                             </div>
                             <!-- /.col-50 last-row__block -->
@@ -800,84 +791,92 @@
                 </div>
 
             </footer>
-<!--  Модальное окно "Перезвоните мне" -->
+            <!--  Модальное окно "Перезвоните мне" -->
 
-            <div class="modal modal-call" id="fon">   
+            <div class="modal modal-call" id="fon">
                 <div class="modal__dialog">
                     <button class="modal__close"></button>
                     <h2 class="modal__title">
                         Обратный звонок
                     </h2>
-                    <form action="send.php" method="POST" class="form modal__form" id="modal-window-form">
+                    <form action="send.php" method="POST" class="form modal__form" id="modal-callback">
                         <div class="input-group modal__input-group">
-            
+
                             <input type="text" name="userName" class="input form__input modal__input modal__input--top"
                                 id="user-name" placeholder="Ваше имя...">
                         </div>
                         <!-- /.input-group modal__input-group -->
                         <div class="input-group modal__input-group">
 
-                            <input type="tel" name="userPhone" class="input form__input modal__input modal__input--bottom"
-                                id="user-phone" placeholder="Ваш номер телефона...">
-    
+                            <input type="tel" name="userPhone"
+                                class="input form__input modal__input modal__input--bottom" id="user-phone"
+                                placeholder="Ваш номер телефона...">
+
                         </div>
 
                         <!-- /.input-group modal__input-group -->
-    
+
                         <div class="input-group modal__input-group">
                             <div class="policy modal__policy">
-    
-                                <input type="checkbox" name="policyCheckbox" id="policy-checkbox-modal"
-                                    class="policy__checkbox policy__checkbox club-cards__checkbox modal__policy--checkbox" checked>
-                                <label for="policy-checkbox-modal" class="policy__label ">Я согласен на обработку <br>персональных данных</label>
+
+                                <input type="checkbox" name="policyCheckbox" id="modal-callback2"
+                                    class="policy__checkbox policy__checkbox club-cards__checkbox modal__policy--checkbox"
+                                    checked>
+                                <label for="policy-checkbox-modal" class="policy__label ">Я согласен на обработку
+                                    <br>персональных данных</label>
                             </div>
                             <!-- /.policy -->
                         </div>
                         <!-- /.input-group modal__input-group -->
-    
-                        <button class="button button--primary modal__button" data-toggle="modal-call">Перезвоните мне</button>
+
+                        <button class="button button--primary modal__button" data-toggle="modal-call">Перезвоните
+                            мне</button>
                     </form>
                     <!-- /.form modal__form -->
                 </div>
                 <!-- /.modal__dialog -->
             </div>
             <!-- /.modal -->
-<!--  Модальное окно "Записаться на визит" -->
+            <!--  Модальное окно "Записаться на визит" -->
 
-            <div class="modal modal-write" id="modal-write">   
+            <div class="modal modal-write" id="modal-write">
                 <div class="modal__dialog">
-                    <button class="modal__close"></button>
+                    <button class="modal__close modal__close2"></button>
                     <h2 class="modal__title">
                         Записаться на визит
                     </h2>
                     <form action="send.php" method="POST" class="form modal__form" id="modal-window-form">
                         <div class="input-group modal__input-group">
-            
+
                             <input type="text" name="userName" class="input form__input modal__input modal__input--top"
-                                id="user-name" placeholder="Ваше имя...">
+                                placeholder="Ваше имя...">
                         </div>
                         <!-- /.input-group modal__input-group -->
                         <div class="input-group modal__input-group">
 
-                            <input type="tel" name="userPhone" class="input form__input modal__input modal__input--bottom"
-                                id="user-phone" placeholder="Ваш номер телефона...">
-    
+                            <input type="tel" name="userPhone"
+                                class="input form__input modal__input modal__input--bottom"
+                                placeholder="Ваш номер телефона...">
+
                         </div>
 
                         <!-- /.input-group modal__input-group -->
-    
+
                         <div class="input-group modal__input-group">
                             <div class="policy modal__policy">
-    
+
                                 <input type="checkbox" name="policyCheckbox" id="policy-checkbox-modal"
-                                    class="policy__checkbox policy__checkbox club-cards__checkbox modal__policy--checkbox" checked>
-                                <label for="policy-checkbox-modal" class="policy__label ">Я согласен на обработку <br>персональных данных</label>
+                                    class="policy__checkbox policy__checkbox club-cards__checkbox modal__policy--checkbox"
+                                    checked>
+                                <label for="policy-checkbox-modal" class="policy__label ">Я согласен на обработку
+                                    <br>персональных данных</label>
                             </div>
                             <!-- /.policy -->
                         </div>
                         <!-- /.input-group modal__input-group -->
-    
-                        <button class="button button--primary modal__button" data-toggle="modal-write">Записаться</button>
+
+                        <button class="button button--primary modal__button"
+                            data-toggle="modal-write">Записаться</button>
                     </form>
                     <!-- /.form modal__form -->
                 </div>
@@ -891,7 +890,7 @@
             <div class="thanks" id="thanks">
                 <div class="thanks__wrap">
                     <button class="thanks__close"></button>
-                    <h2> Спасибо, что объявились!<br> За вами уже выехали!!!</h2>
+                    <h2>Физкульт-привет!</h2>
                 </div>
             </div>
 
@@ -906,9 +905,8 @@
             <script src="js/jquery.validate.js"></script>
             <script src="js/jquery.mask.min.js"></script>
             <script src="js/main.js"></script>
-    </div>
-    <!-- /.container -->
-    </main>
+            <!-- /.container -->
+        </main>
     </div>
 </body>
 

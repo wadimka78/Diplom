@@ -65,9 +65,13 @@ $(document).ready(function () {
     }
     s.on("click", function () {
         p(r)
-    }), t.on("click", function () {
+    }), 
+    
+    t.on("click", function () {
         p(o)
-    }), l.on("click", function () {
+    }),
+    
+    l.on("click", function () {
         c(r), c(o), c(n)
     }), 
     

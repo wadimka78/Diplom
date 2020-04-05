@@ -205,37 +205,58 @@ $(document).ready(function () {
 
     //Модальное окно
 
-    var modal = $('.modal'),
-    
-        modalCall = $('.modal-call'),
-        modalCallBtn = $('[data-toggle=modal-call]'),
-        closeBtn = $('.modal__close');
+    var
+        callModal = $('.modal-call'),
+        callModalBtn = $('[data-toggle=modal-call]'),
+        callModalcloseBtn = $('.modal__close'),
 
-        modalWrite = $('.modal-write'),
-        modalWriteBtn = $('[data-toggle=modal-write]'),
+        writeModal = $('.modal-write'),
+        writeModalBtn = $('[data-toggle=modal-write]'),
+        writeModalcloseBtn = $('.modal__close2'),
 
 
         fenetre = $('.thanks'),
         fenetreBtn = $('[data-toggle=thanks]'),
         closeFenetreBtn = $('.thanks__close');
-        
-
-    modalCallBtn.on('click', function () {
-        modalCall.toggleClass('modal--visible');
-    });
-    modalWriteBtn.on('click', function () {
-        modalWrite.toggleClass('modal--visible');
-    });
 
 
-    closeBtn.on('click', function () {
-        modalCall.toggleClass('modal--visible');
+    callModalBtn.on('click', function () {
+        callModal.toggleClass('modal--visible');
     });
-    closeWriteBtn.on('click', function () {
-        modalWrite.toggleClass('modal--visible');
+    writeModalBtn.on('click', function () {
+        writeModal.toggleClass('modal--visible');
     });
+
+
+
+    callModalcloseBtn.on('click', function () {
+        callModal.toggleClass('modal--visible');
+    });
+    writeModalcloseBtn.on('click', function () {
+        writeModal.toggleClass('modal--visible');
+    });
+
+    /*Закрытие по фону*/
+
+    $(document).click(function (e) {
+        if ($(e.target).is('.modal-call')) {
+            callModal.toggleClass('modal--visible');
+        }
+    });
+
+    $(document).click(function (e) {
+        if ($(e.target).is('.modal-write')) {
+            writeModal.toggleClass('modal--visible');
+        }
+    });
+
+
 
     //Окно благодарности
+
+    var fenetre = $('.thanks'),
+        fenetreBtn = $('[data-toggle=thanks]'),
+        closeFenetreBtn = $('.thanks__close');
 
     fenetreBtn.on('click', function () {
         fenetre.toggleClass('thanks--visible');
@@ -245,14 +266,6 @@ $(document).ready(function () {
         fenetre.toggleClass('thanks--visible');
     });
 
-
-    /*Закрытие по фону*/
-
-    $(document).click(function (e) {
-        if ($(e.target).is('.modal')) {
-            modal.toggleClass('modal--visible');
-        }
-    });
 
     /*Закрытие по кнопке*/
 
@@ -285,6 +298,12 @@ $(document).ready(function () {
     //Модальное окно
     $('.modal__form').validate({
         errorClass: "invalid",
+        errorPlacement: function (error, element) {
+            if (element.attr("type") == "checkbox") {
+                return element.next('label').append(error);
+            }
+            error.insertAfter($(element));
+        },
         rules: {
             // строчное правило {required:true}
             userName: {
@@ -345,6 +364,12 @@ $(document).ready(function () {
 
     $('.service-record__form').validate({
         errorClass: "invalid",
+        errorPlacement: function (error, element) {
+            if (element.attr("type") == "checkbox") {
+                return element.next('label').append(error);
+            }
+            error.insertAfter($(element));
+        },
         rules: {
             // строчное правило {required:true}
             userName: {
@@ -362,15 +387,69 @@ $(document).ready(function () {
         }, // сообщения
         messages: {
             userName: {
-                required: "Имя обязательно",
+                required: "Давайте знакомиться!",
                 minlength: "Врёшь, сволочь!",
                 maxlength: "Чувак, у тебя залипла клава!"
             },
             userPhone: {
-                required: "Телефон обязателен. Всё обязательно!",
+                required: "А номерок забыли!",
                 minlength: "Добавь циферек, жалко что ли ?"
             },
             controlCheckbox: {
+                required: "Ничё не забыл?"
+            }
+        },
+        submitHandler: function (form) {
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form).serialize(),
+                success: function (response) {
+                    $(form)[0].reset();
+                    modal.removeClass('modal--visible');
+                    fenetre.toggleClass('thanks--visible');
+                }
+            });
+        }
+    });
+
+
+    //Секция "Клубные карты"
+
+    $('.club-cards__form').validate({
+        errorClass: "invalid",
+        errorPlacement: function (error, element) {
+            if (element.attr("type") == "checkbox") {
+                return element.next('label').append(error);
+            }
+            error.insertAfter($(element));
+        },
+        rules: {
+            // строчное правило {required:true}
+            userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 15
+            },
+            userPhone: {
+                required: true,
+                minlength: 8
+            },
+            controlCheckbox2: {
+                required: true
+            },
+        }, // сообщения
+        messages: {
+            userName: {
+                required: "Ваше имя?",
+                minlength: "Врёшь, сволочь!",
+                maxlength: "Чувак, у тебя залипла клава!"
+            },
+            userPhone: {
+                required: "Номерок забыли!",
+                minlength: "Добавь циферек, жалко что ли ?"
+            },
+            controlCheckbox2: {
                 required: "Ничё не забыл?"
             }
         },
@@ -448,7 +527,7 @@ $(document).ready(function () {
         placeholder: "Ваш номер телефона..."
     });
     $('[type=tel2]').mask('+7(000) 000-00-00', {
-        placeholder: "Ваш номер телефона"
+        placeholder: "Ваш номер телефона *"
     });
 
     //Карта яндекса - Щёлково

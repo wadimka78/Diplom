@@ -78,7 +78,8 @@
         &--one
             margin-top: 3rem
         &--mozaika
-            margin-top: 3.4rem
+            margin-top: 3.5rem
+            margin-bottom: 4rem
     &__button
         width: 8.57rem
         margin: 0px 2px
@@ -103,7 +104,11 @@
             width: 10.2rem
         &--title-one
             padding-top: 0.9rem
-        
+        &:hover
+            background-color: $primary
+            border: 1px solid $primary
+            color: $primary-text
+
     &__booking
         width: unset
         margin-top: 3.7rem
@@ -120,8 +125,9 @@
             width: 100%
     &__select
         position: relative
-        display: flex
-        padding-top: 0.85rem
+        & label
+            position: relative
+            padding-top: 0.93rem
         //Блок абонементов на страници КОНКРЕТНОГО клуба
     &__price
         font-size: 1.15rem
@@ -161,6 +167,14 @@
         margin-top: 1rem
         &--one
             margin-top: 1.1rem
+        &--name
+            & div.invalid
+                bottom: 0px
+                left: 5rem
+        &--phone
+            & div.invalid
+                bottom: 30px
+                left: 5rem
     &__input
         border: 1px solid rgba(39, 25, 48, 0.14)
         border-radius: 50px
@@ -181,20 +195,34 @@
 
     /* Hover */
     &__label:hover
-        color: #666
+        cursor: pointer
 
     
     &__policy-label
         position: absolute
         bottom: 4.7rem
         left: 7.3rem
+        text-transform: uppercase
+        font-size: 11px
+        font-weight: 400
         &--one
             position: relative
             bottom: -2.34rem
             left: 3.9rem
         &::before
-            left: -2.2rem
-            top: 0
+            left: -2.2rem        
+            content: ''
+            position: absolute
+            display: inline-block
+            width: 1em
+            height: 1em
+            flex-shrink: 0
+            flex-grow: 0
+            font-size: 1.357rem
+            border: 1px solid #adb5bd
+            border-radius: 0.25em
+            margin-right: 0.5em
+
     &__checkbox
         position: absolute
         z-index: -1
@@ -217,11 +245,9 @@
         border: 1px solid #adb5bd
         border-radius: 0.25em
         margin-right: 0.5em
-    
+
     &__checkbox:checked + label::before 
         background: $primary url(../img/icons/check.svg) no-repeat center
-    // content: "\2228"
-    // content: "\2713"
         position: absolute
         border: none
         background-color: $primary
@@ -231,9 +257,24 @@
         text-align: center
         line-height: 1.071rem
 .service-record
-    &__policy-label::before 
-        left: -10px
-        top: -2px
+    &__policy-label
+        text-transform: uppercase
+        font-size: 11px
+        font-weight: 400
+        &::before 
+            left: -10px
+            top: -2px
+        &--check::before
+            left: -6px
+            top: -3px
+            width: 17px !important
+            height: 17px !important
+            border: none !important
+            border-radius: unset !important
+            background: $light
+        &--check:checked + label::before 
+            background: $primary url(../img/icons/check.svg) no-repeat center
+            
 .abonement
     & .club-cards
         & .form
@@ -254,12 +295,13 @@
            // transform: none
 .active-month
     & .club-cards__label, &.club-cards__label--one
-            background-color: $primary
-            border: 1px solid $primary
-            color: $primary-text
+        background-color: $primary
+        border: 1px solid $primary
+        color: $primary-text
 
-/*Кнопка прокрутки*/
-/*Кнопка прокрутки*/
+
+    /*Кнопка прокрутки*/
+    /*Кнопка прокрутки*/
 .scroll_top 
     display: none
     position: fixed
