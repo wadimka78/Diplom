@@ -205,7 +205,7 @@ $(document).ready(function () {
 
     //Модальное окно
 
-    var
+    var 
         callModal = $('.modal-call'),
         callModalBtn = $('[data-toggle=modal-call]'),
         callModalcloseBtn = $('.modal__close'),
@@ -267,13 +267,6 @@ $(document).ready(function () {
     });
 
 
-    /*Закрытие по кнопке*/
-
-    $(document).keydown(function (e) {
-        if (e.keyCode === 27) {
-            modal.toggleClass('modal--visible');
-        }
-    });
 
     /*Кнопка прокрутки*/
     $(window).scroll(function () {
@@ -295,7 +288,7 @@ $(document).ready(function () {
 
     //Валидация форм
 
-    //Модальное окно
+    //Модальное окно  - Позвоните мне
     $('.modal__form').validate({
         errorClass: "invalid",
         errorPlacement: function (error, element) {
@@ -315,35 +308,12 @@ $(document).ready(function () {
                 required: true,
                 minlength: 8
             },
-            // правило-объект (блок)
-            userEmail: {
-                required: true,
-                email: true
-            },
             policyCheckbox: {
                 required: true
-            },
-            userQuestion: "required"
-
-        }, // сообщения
-        messages: {
-            userName: {
-                required: "Имя обязательно",
-                minlength: "Врёшь, сволочь!",
-                maxlength: "Чувак, у тебя залипла клава!"
-            },
-            userPhone: {
-                required: "Тэляфон тожэ обызатэлэн!!!",
-                minlength: "Добавь циферек, жалко что ли ?"
-            },
-            userEmail: {
-                required: "Заполните поле",
-                email: "Введите что-то типа name@domain.ru"
-            },
-            policyCheckbox: {
-                required: "Поставь галку, редиска!"
             }
-        },
+
+        }, 
+
         submitHandler: function (form) {
             $.ajax({
                 type: "POST",
@@ -352,12 +322,55 @@ $(document).ready(function () {
                 success: function (response) {
                     console.log(modal);
                     $(form)[0].reset();
-                    modal.removeClass('modal--visible');
+                    callModal.removeClass('modal--visible');
+                    writeModal.removeClass('modal--visible');
                     fenetre.toggleClass('thanks--visible');
                 }
             });
         }
     });
+
+ //Модальное окно - "Записаться на бесплатный визит"
+ $('.modal__form-write').validate({
+    errorClass: "invalid",
+    errorPlacement: function (error, element) {
+        if (element.attr("type") == "checkbox") {
+            return element.next('label').append(error);
+        }
+        error.insertAfter($(element));
+    },
+    rules: {
+        // строчное правило {required:true}
+        userName: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+        },
+        userPhone: {
+            required: true,
+            minlength: 8
+        },
+        policyCheckbox2: {
+            required: true
+        }
+
+    }, 
+
+    submitHandler: function (form) {
+        $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: $(form).serialize(),
+            success: function (response) {
+                console.log(modal);
+                $(form)[0].reset();
+                callModal.removeClass('modal--visible');
+                writeModal.removeClass('modal--visible');
+                fenetre.toggleClass('thanks--visible');
+            }
+        });
+    }
+});
 
 
     //Секция "Записаться на бесплатный визит"
@@ -375,7 +388,7 @@ $(document).ready(function () {
             userName: {
                 required: true,
                 minlength: 2,
-                maxlength: 15
+                maxlength: 50
             },
             userPhone: {
                 required: true,
@@ -429,7 +442,7 @@ $(document).ready(function () {
             userName: {
                 required: true,
                 minlength: 2,
-                maxlength: 15
+                maxlength: 50
             },
             userPhone: {
                 required: true,
@@ -467,7 +480,58 @@ $(document).ready(function () {
         }
     });
 
+  //Секция "Клубные карты"
 
+    $('.club-cards__form').validate({
+        errorClass: "invalid",
+        errorPlacement: function (error, element) {
+            if (element.attr("type") == "checkbox") {
+                return element.next('label').append(error);
+            }
+            error.insertAfter($(element));
+        },
+        rules: {
+            // строчное правило {required:true}
+            userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 50
+            },
+            userPhone: {
+                required: true,
+                minlength: 8
+            },
+            controlCheckbox2: {
+                required: true
+            },
+        }, // сообщения
+        messages: {
+            userName: {
+                required: "Ваше имя?",
+                minlength: "Врёшь, сволочь!",
+                maxlength: "Чувак, у тебя залипла клава!"
+            },
+            userPhone: {
+                required: "Номерок забыли!",
+                minlength: "Добавь циферек, жалко что ли ?"
+            },
+            controlCheckbox2: {
+                required: "Ничё не забыл?"
+            }
+        },
+        submitHandler: function (form) {
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form).serialize(),
+                success: function (response) {
+                    $(form)[0].reset();
+                    modal.removeClass('modal--visible');
+                    fenetre.toggleClass('thanks--visible');
+                }
+            });
+        }
+    });
     //Футер
 
     $('.footer__form').validate({
@@ -522,6 +586,8 @@ $(document).ready(function () {
     });
 
 
+    
+
     // маска для номера телефона
     $('[type=tel]').mask('+7(000) 000-00-00', {
         placeholder: "Ваш номер телефона..."
@@ -529,6 +595,24 @@ $(document).ready(function () {
     $('[type=tel2]').mask('+7(000) 000-00-00', {
         placeholder: "Ваш номер телефона *"
     });
+
+
+    let bubu = document.querySelectorAll('.club-cards__input');
+    let hold = document.querySelectorAll('.star');
+    
+    for(let i = 0; i < bubu.length; i++){
+      bubu[i].addEventListener('input', function(){
+        hold[i].style.display = ( this.value == "" ) ? 'inline' : 'none';
+      });
+    }
+
+
+
+
+
+
+
+
 
     //Карта яндекса - Щёлково
 

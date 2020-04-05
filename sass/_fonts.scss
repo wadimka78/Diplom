@@ -33,6 +33,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Roboto-Light';
     src: url('../fonts/roboto/Roboto-Light.woff') format('woff'),
@@ -55,7 +56,7 @@
     font-family: 'Roboto-BoldItalic';
     src: url('../fonts/roboto/Roboto-BoldItalic.woff') format('woff'),
         url('../fonts/roboto/Roboto-BoldItalic.woff2') format('woff2');
-     font-weight: 700;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -77,3 +78,43 @@
     font-style: normal;
     font-display: swap;
 }
+
+/* .star span {
+    color: $primary;
+} 
+ 
+.club-cards__input-group {
+    position: relative;
+    margin: 5px;
+    height: 43px;
+} 
+
+ .star {
+    position: absolute;
+    left: 19px;
+    top: 12px;
+    z-index: -1;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+}
+ 
+ .club-cards__input {
+    position: absolute;
+    background-color: transparent;
+} 
+       outline: none;
+  height: 22px;
+  border: 1px solid #123;
+  padding: 2px 4px;
+  box-sizing: border-box; 
+
+
+ .club-cards__input:focus~.star {
+    color: #94939a;
+} 
+
+ .abonement .club-cards .form__input {
+    left: 0;
+    padding: 0;
+} */

@@ -43,7 +43,6 @@
         font-weight: 700
         line-height: 22.98px
 
-
     &__form
         display: flex
 
@@ -56,7 +55,9 @@
             margin-top: 26px
         &--bottom
             margin-top: 12px
-        
+        &.invalid
+            border: 2px solid tomato
+
     &__policy
         margin: 16px auto 10px 70px
         color: $light
@@ -77,6 +78,7 @@
         margin: 6px auto auto 66px
     & div.invalid 
         bottom: -1.286rem
+        display: none !important
 
 
     //Окно благодарности
@@ -123,3 +125,5 @@
 .thanks--visible 
     opacity: 1
     visibility: visible
+.modal__policy--checkbox.invalid + label::before 
+    border: 2px solid tomato !important

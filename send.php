@@ -2,6 +2,8 @@
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
+$userClub = $_POST['select_club'];
+$userMonth = $_POST['select_month'];
 
 // Load Composer's autoloader
 require 'phpmailer/PHPMailer.php';
@@ -26,12 +28,13 @@ try {
     //Recipients
     $mail->setFrom('myglocourse@gmail.com', 'Вадим');
     $mail->addAddress('vadimkashkin@mail.ru');     // Add a recipient
+    $mail->addAddress('diplom_mytest@mail.ru');     // Add a recipient
 
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Заказ на клубную карту!';
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}, а почта его такая: ${userMail}, его вопрос: ${userQuestion}";
+    $mail->Body    = "Здравствуйте, меня зовут : ${userName}, мой номер телефона : ${userPhone}, я хотел (а) бы заниматься в клубе ${userClub}, и меня интересует абонемент на ${userMonth}";
 
 
     $mail->send();

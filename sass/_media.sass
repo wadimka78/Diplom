@@ -262,7 +262,14 @@
             &--one
                 transform: none
         &__frost 
-            padding: 0     
+            padding: 0  
+        &__policy-label
+                &--booking
+                    & div.invalid
+                        left: 2.7rem
+                        bottom: -7.4rem
+    
+
     .location
         &__map > ymaps
             height: 350px !important
@@ -363,6 +370,11 @@
                     left: 3rem
             &--phone           
                 margin-bottom: 1rem 
+        &__policy-label
+            &--booking
+                & div.invalid
+                    left: -2.286rem
+                    bottom: -2rem
     .schedule
         &__wrap
             flex-wrap: wrap
