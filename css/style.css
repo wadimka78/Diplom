@@ -71,17 +71,16 @@
   font-display: swap;
 }
 
-/* .star span {
-    color: $primary;
-} 
- 
+/* 
+.star span {
+    color: black
+}
 .club-cards__input-group {
     position: relative;
     margin: 5px;
     height: 43px;
-} 
-
- .star {
+}
+.star {
     position: absolute;
     left: 19px;
     top: 12px;
@@ -90,26 +89,27 @@
     font-size: 15px;
     font-weight: 300;
 }
- 
- .club-cards__input {
+
+.club-cards__input {
     position: absolute;
     background-color: transparent;
-} 
-       outline: none;
+}
+
+ outline: none;
   height: 22px;
   border: 1px solid #123;
   padding: 2px 4px;
-  box-sizing: border-box; 
+  box-sizing: border-box;  
 
 
- .club-cards__input:focus~.star {
+.club-cards__input:focus~.star {
     color: #94939a;
-} 
+}
 
- .abonement .club-cards .form__input {
+.abonement .club-cards .form__input {
     left: 0;
     padding: 0;
-} */
+}*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -899,13 +899,13 @@ div.invalid {
 }
 
 .club-cards__input-group--name div.invalid {
-  bottom: 0px;
-  left: 5rem;
+  bottom: -8.8rem;
+  left: 21px;
 }
 
 .club-cards__input-group--phone div.invalid {
-  bottom: 30px;
-  left: 5rem;
+  bottom: -6.9rem;
+  left: 21px;
 }
 
 .club-cards__input {
@@ -2309,6 +2309,22 @@ div.invalid {
     padding-bottom: 1.32rem;
     margin-top: 5rem;
   }
+  .club-cards__input-group {
+    display: block;
+    margin-top: 1rem;
+    position: relative;
+    height: 43px;
+  }
+  .club-cards__input-group--name div.invalid {
+    bottom: -10.9rem;
+  }
+  .club-cards__input-group--phone div.invalid {
+    bottom: -8.7rem;
+  }
+  .club-cards__policy-label--booking div.invalid {
+    bottom: -7.8rem;
+    left: -2rem;
+  }
   .location__map > ymaps {
     height: 450px !important;
   }
@@ -2377,6 +2393,15 @@ div.invalid {
   }
   .club-cards__policy-label--one {
     left: 4.5rem;
+  }
+  .club-cards__input-group--name div.invalid {
+    bottom: -11.2rem;
+  }
+  .club-cards__input-group--phone div.invalid {
+    bottom: -8.7rem;
+  }
+  .club-cards__policy-label--booking div.invalid {
+    left: -0.5rem;
   }
   .slider-hero__pagination {
     -webkit-transform: translateY(-1rem);
@@ -2510,9 +2535,17 @@ div.invalid {
   .club-cards__frost {
     padding: 0;
   }
+  .club-cards__input-group--name div.invalid {
+    font-size: 1.2rem;
+  }
+  .club-cards__input-group--phone div.invalid {
+    bottom: -8.4rem;
+    font-size: 1.2rem;
+  }
   .club-cards__policy-label--booking div.invalid {
-    left: 2.7rem;
+    left: -0.4rem;
     bottom: -7.4rem;
+    font-size: 1.2rem;
   }
   .location__map > ymaps {
     height: 350px !important;
@@ -2633,7 +2666,7 @@ div.invalid {
   }
   .club-cards__input-group--name, .club-cards__input-group--phone {
     position: relative;
-    margin-bottom: 1.7rem;
+    margin-bottom: 2.7rem;
   }
   .club-cards__input-group--name div.invalid, .club-cards__input-group--phone div.invalid {
     bottom: unset;
@@ -2643,8 +2676,16 @@ div.invalid {
     margin-bottom: 1rem;
   }
   .club-cards__policy-label--booking div.invalid {
-    left: -2.286rem;
+    left: -2.3rem;
     bottom: -2rem;
+  }
+  .club-cards__input-group--name div.invalid {
+    bottom: -2.2rem;
+    font-size: 1.2rem;
+  }
+  .club-cards__input-group--phone div.invalid {
+    bottom: -2.4rem;
+    font-size: 1.2rem;
   }
   .schedule__wrap {
     -ms-flex-wrap: wrap;

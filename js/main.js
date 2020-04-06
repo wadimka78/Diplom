@@ -206,13 +206,15 @@ $(document).ready(function () {
     //Модальное окно
 
     var 
+        fenetre = $('.thanks'),
+
         callModal = $('.modal-call'),
         callModalBtn = $('[data-toggle=modal-call]'),
-        callModalcloseBtn = $('.modal__close'),
+        callModalcloseBtn = $('.close-call'),
 
         writeModal = $('.modal-write'),
         writeModalBtn = $('[data-toggle=modal-write]'),
-        writeModalcloseBtn = $('.modal__close2'),
+        writeModalcloseBtn = $('.close-write'),
 
 
         fenetre = $('.thanks'),
@@ -322,8 +324,7 @@ $(document).ready(function () {
                 success: function (response) {
                     console.log(modal);
                     $(form)[0].reset();
-                    callModal.removeClass('modal--visible');
-                    writeModal.removeClass('modal--visible');
+                //   callModal.removeClass('modal--visible');
                     fenetre.toggleClass('thanks--visible');
                 }
             });
@@ -364,8 +365,6 @@ $(document).ready(function () {
             success: function (response) {
                 console.log(modal);
                 $(form)[0].reset();
-                callModal.removeClass('modal--visible');
-                writeModal.removeClass('modal--visible');
                 fenetre.toggleClass('thanks--visible');
             }
         });
@@ -401,15 +400,15 @@ $(document).ready(function () {
         messages: {
             userName: {
                 required: "Давайте знакомиться!",
-                minlength: "Врёшь, сволочь!",
+                minlength: "Ты китаец ?",
                 maxlength: "Чувак, у тебя залипла клава!"
             },
             userPhone: {
-                required: "А номерок забыли!",
-                minlength: "Добавь циферек, жалко что ли ?"
+                required: "Чиркните телефончик!",
+                minlength: "Хочу больше циферек!"
             },
             controlCheckbox: {
-                required: "Ничё не забыл?"
+                required: "И пеняй на себя!"
             }
         },
         submitHandler: function (form) {
@@ -419,7 +418,6 @@ $(document).ready(function () {
                 data: $(form).serialize(),
                 success: function (response) {
                     $(form)[0].reset();
-                    modal.removeClass('modal--visible');
                     fenetre.toggleClass('thanks--visible');
                 }
             });
@@ -427,58 +425,6 @@ $(document).ready(function () {
     });
 
 
-    //Секция "Клубные карты"
-
-    $('.club-cards__form').validate({
-        errorClass: "invalid",
-        errorPlacement: function (error, element) {
-            if (element.attr("type") == "checkbox") {
-                return element.next('label').append(error);
-            }
-            error.insertAfter($(element));
-        },
-        rules: {
-            // строчное правило {required:true}
-            userName: {
-                required: true,
-                minlength: 2,
-                maxlength: 50
-            },
-            userPhone: {
-                required: true,
-                minlength: 8
-            },
-            controlCheckbox2: {
-                required: true
-            },
-        }, // сообщения
-        messages: {
-            userName: {
-                required: "Ваше имя?",
-                minlength: "Врёшь, сволочь!",
-                maxlength: "Чувак, у тебя залипла клава!"
-            },
-            userPhone: {
-                required: "Номерок забыли!",
-                minlength: "Добавь циферек, жалко что ли ?"
-            },
-            controlCheckbox2: {
-                required: "Ничё не забыл?"
-            }
-        },
-        submitHandler: function (form) {
-            $.ajax({
-                type: "POST",
-                url: "send.php",
-                data: $(form).serialize(),
-                success: function (response) {
-                    $(form)[0].reset();
-                    modal.removeClass('modal--visible');
-                    fenetre.toggleClass('thanks--visible');
-                }
-            });
-        }
-    });
 
   //Секция "Клубные карты"
 
@@ -508,7 +454,7 @@ $(document).ready(function () {
         messages: {
             userName: {
                 required: "Ваше имя?",
-                minlength: "Врёшь, сволочь!",
+                minlength: "Не верю!",
                 maxlength: "Чувак, у тебя залипла клава!"
             },
             userPhone: {
@@ -526,16 +472,20 @@ $(document).ready(function () {
                 data: $(form).serialize(),
                 success: function (response) {
                     $(form)[0].reset();
-                    modal.removeClass('modal--visible');
                     fenetre.toggleClass('thanks--visible');
                 }
             });
         }
     });
     //Футер
-
     $('.footer__form').validate({
         errorClass: "invalid",
+        errorPlacement: function (error, element) {
+            if (element.attr("type") == "checkbox") {
+                return element.next('label').append(error);
+            }
+            error.insertAfter($(element));
+        },
         rules: {
             // строчное правило {required:true}
             userName: {
@@ -557,8 +507,8 @@ $(document).ready(function () {
         messages: {
             userName: {
                 required: "Имя обязательно",
-                minlength: "Врёшь, сволочь!",
-                maxlength: "Чувак, у тебя залипла клава!"
+                minlength: "Не прокатит!",
+                maxlength: "У тебя залипла клава!"
             },
             userPhone: {
                 required: "Телефон обязателен. Всё обязательно!",
@@ -578,7 +528,6 @@ $(document).ready(function () {
                 data: $(form).serialize(),
                 success: function (response) {
                     $(form)[0].reset();
-                    modal.removeClass('modal--visible');
                     fenetre.toggleClass('thanks--visible');
                 }
             });
@@ -589,14 +538,19 @@ $(document).ready(function () {
     
 
     // маска для номера телефона
+
+
     $('[type=tel]').mask('+7(000) 000-00-00', {
         placeholder: "Ваш номер телефона..."
     });
     $('[type=tel2]').mask('+7(000) 000-00-00', {
         placeholder: "Ваш номер телефона *"
     });
+    $('[type=tel3]').mask('+7(000) 000-00-00', {
+        placeholder: ""
+    });
 
-
+//Раскрашивание звёздочек
     let bubu = document.querySelectorAll('.club-cards__input');
     let hold = document.querySelectorAll('.star');
     

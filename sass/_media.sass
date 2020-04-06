@@ -128,6 +128,24 @@
                 padding-top: 1.35rem
                 padding-bottom: 1.32rem
                 margin-top: 5rem
+        &__input-group
+            display: block
+            margin-top: 1rem
+            position: relative
+            height: 43px
+            &--name
+                & div.invalid
+                    bottom: -10.9rem
+            &--phone
+                & div.invalid
+                    bottom: -8.7rem
+        &__policy-label
+            &--booking
+                & div.invalid
+                    bottom: -7.8rem
+                    left: -2rem
+
+
     .location
         &__map > ymaps
             height: 450px !important
@@ -177,6 +195,20 @@
             left: 2.3rem
             &--one
                 left: 4.5rem
+        &__input-group
+            &--name
+                & div.invalid
+                    bottom: -11.2rem
+            &--phone
+                & div.invalid
+                    bottom: -8.7rem
+        &__policy-label
+            &--booking
+                & div.invalid
+                    left: -0.5rem
+
+
+
     .slider-hero__pagination 
         transform: translateY(-1rem)
     .top-header
@@ -262,14 +294,21 @@
             &--one
                 transform: none
         &__frost 
-            padding: 0  
+            padding: 0
+        &__input-group
+            &--name
+                & div.invalid
+                    font-size: 1.2rem
+            &--phone
+                & div.invalid
+                    bottom: -8.4rem
+                    font-size: 1.2rem
         &__policy-label
-                &--booking
-                    & div.invalid
-                        left: 2.7rem
-                        bottom: -7.4rem
-    
-
+            &--booking
+                & div.invalid
+                    left: -0.4rem
+                    bottom: -7.4rem
+                    font-size: 1.2rem
     .location
         &__map > ymaps
             height: 350px !important
@@ -364,7 +403,7 @@
         &__input-group
             &--name, &--phone 
                 position: relative
-                margin-bottom: 1.7rem         
+                margin-bottom: 2.7rem         
                 & div.invalid
                     bottom: unset
                     left: 3rem
@@ -373,8 +412,18 @@
         &__policy-label
             &--booking
                 & div.invalid
-                    left: -2.286rem
+                    left: -2.3rem
                     bottom: -2rem
+        &__input-group
+            &--name
+                & div.invalid
+                    bottom: -2.2rem
+                    font-size: 1.2rem
+            &--phone
+                & div.invalid
+                    bottom: -2.4rem
+                    font-size: 1.2rem
+
     .schedule
         &__wrap
             flex-wrap: wrap

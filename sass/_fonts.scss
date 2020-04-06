@@ -78,18 +78,16 @@
     font-style: normal;
     font-display: swap;
 }
-
-/* .star span {
-    color: $primary;
-} 
- 
+/* 
+.star span {
+    color: black
+}
 .club-cards__input-group {
     position: relative;
     margin: 5px;
     height: 43px;
-} 
-
- .star {
+}
+.star {
     position: absolute;
     left: 19px;
     top: 12px;
@@ -98,23 +96,24 @@
     font-size: 15px;
     font-weight: 300;
 }
- 
- .club-cards__input {
+
+.club-cards__input {
     position: absolute;
     background-color: transparent;
-} 
-       outline: none;
+}
+
+ outline: none;
   height: 22px;
   border: 1px solid #123;
   padding: 2px 4px;
-  box-sizing: border-box; 
+  box-sizing: border-box;  
 
 
- .club-cards__input:focus~.star {
+.club-cards__input:focus~.star {
     color: #94939a;
-} 
+}
 
- .abonement .club-cards .form__input {
+.abonement .club-cards .form__input {
     left: 0;
     padding: 0;
-} */
+}*/
