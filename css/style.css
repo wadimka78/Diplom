@@ -789,6 +789,7 @@ div.invalid {
   padding: 0;
   border-radius: 0.3rem;
   width: 10.2rem;
+  opacity: 0.6;
 }
 
 .club-cards__label--title-one {
@@ -1082,6 +1083,7 @@ div.invalid {
   background-color: #ffd11a;
   border: 1px solid #ffd11a;
   color: #1e1c34;
+  opacity: 1;
 }
 
 .scroll_top {
@@ -2022,6 +2024,10 @@ div.invalid {
   display: flex;
 }
 
+.modal__form-write .modal__button {
+  width: 12rem;
+}
+
 .modal__input {
   margin-left: 14px;
   width: 241.7px;
@@ -2773,6 +2779,9 @@ div.invalid {
             transform: translateX(-50%);
     left: 50%;
     text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .service-record__button {
     width: 50%;
@@ -2867,6 +2876,10 @@ div.invalid {
   .club-cards__policy-label--one {
     left: 2.3rem;
     padding-right: 10px;
+    font-size: 10px;
+  }
+  .abonement .club-cards .club-cards__input-wrap--one .form__input {
+    width: 94%;
   }
 }
 

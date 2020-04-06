@@ -481,6 +481,7 @@
             transform: translateX(-50%)
             left: 50%
             text-align: center
+            width: fit-content
         &__button 
             width: 50%
         &__input-group 
@@ -542,10 +543,14 @@
             height: 250px !important
 
 @media screen and  ( max-width: 499px)
-    .club-cards__policy-label--one 
-        left: 2.3rem
-        padding-right: 10px
-
+    .club-cards
+        &__policy-label--one 
+            left: 2.3rem
+            padding-right: 10px
+            font-size: 10px
+    .abonement .club-cards
+        & .club-cards__input-wrap--one .form__input
+            width: 94%
 @media screen and  ( max-width: 411px)
     .service-record
         &__input-group
